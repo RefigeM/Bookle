@@ -1,0 +1,1001 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\color.css",
+      "PackagePath": "staticwebassets\\assets\\css\\color.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\icomoon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\icomoon.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\assets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\main.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\meanmenu.css",
+      "PackagePath": "staticwebassets\\assets\\css\\meanmenu.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\assets\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\404.png",
+      "PackagePath": "staticwebassets\\assets\\img\\404.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\GooglePay.png",
+      "PackagePath": "staticwebassets\\assets\\img\\GooglePay.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\Mastercard2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Mastercard2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\PayPal.png",
+      "PackagePath": "staticwebassets\\assets\\img\\PayPal.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\about.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\affirm.png",
+      "PackagePath": "staticwebassets\\assets\\img\\affirm.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\amazon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\amazon.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\banner\\book-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\book-1.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\banner\\book-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\book-2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\banner\\book-3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\book-3.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\banner\\book-banner-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\book-banner-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\banner\\book-banner-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\book-banner-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\banner\\book-banner-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\book-banner-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-categori\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-categori\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-categori\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-categori\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-categori\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-categori\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-categori\\04.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-categori\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-categori\\05.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-categori\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-categori\\06.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-categori\\06.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-categori\\circle-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-categori\\circle-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\04.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\05.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\06.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\06.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\07.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\07.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\08.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\09.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\10.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\book\\11.png",
+      "PackagePath": "staticwebassets\\assets\\img\\book\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\boy-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\boy-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\chevron-down.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\chevron-down.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\chevron-right.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\chevron-right.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\circle-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\circle-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\contact.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\cta-banner.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta-banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\cta-banner2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta-banner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\cutomerio.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cutomerio.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\dropbox.png",
+      "PackagePath": "staticwebassets\\assets\\img\\dropbox.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\facebook.png",
+      "PackagePath": "staticwebassets\\assets\\img\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\favicon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\girl-shape-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\girl-shape-2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\girl-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\girl-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\google.png",
+      "PackagePath": "staticwebassets\\assets\\img\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\bg-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\bg-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\bg-shape2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\bg-shape2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\book.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\book.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\book1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\book1.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\book2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\book2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\frame-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\frame-2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\frame-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\frame-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\frame.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\frame.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\hero-book.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\hero-book.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\hero-girl.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\hero-girl.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\hero2-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\hero2-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\hero2-shape1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\hero2-shape1.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\hero2-shape2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\hero2-shape2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\hero\\xstar.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\xstar.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-1.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-10.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-10.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-11.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-11.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-12.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-12.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-13.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-13.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-14.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-14.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-15.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-15.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-16.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-16.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-17.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-17.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-18.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-18.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-19.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-19.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-20.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-20.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-21.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-21.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-22.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-22.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-23.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-23.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-3.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-4.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-4.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-5.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-5.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-6.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-6.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-7.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-7.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-8.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-8.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\icon-9.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon-9.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\icon\\shuffle.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\shuffle.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\logo\\black-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\black-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\logo\\white-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\white-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\mastercard.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mastercard.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\13.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\14.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\15.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\16.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\comment-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\comment-2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\comment.png",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\comment.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\post-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\post-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\post-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\post-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\post-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\post-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\pp3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\pp3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\pp4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\pp4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\news\\pp5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\pp5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\payoneer.png",
+      "PackagePath": "staticwebassets\\assets\\img\\payoneer.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\plane-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\plane-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\popupBg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\popupBg.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\registrationbg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\registrationbg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-banner.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-cart\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-cart\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-cart\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-cart\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-cart\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-cart\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-cart\\post-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-cart\\post-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\04.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\05.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\review.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\review.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\sm-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\sm-1.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\sm-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\sm-2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\sm-3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\sm-3.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\sm-4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\sm-4.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-details\\sm-5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-details\\sm-5.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-list\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-list\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-list\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-list\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-list\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-list\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\shop-list\\04.png",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-list\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\signUpbg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\signUpbg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\sign\\create.png",
+      "PackagePath": "staticwebassets\\assets\\img\\sign\\create.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\sign\\fb.png",
+      "PackagePath": "staticwebassets\\assets\\img\\sign\\fb.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\sign\\google.png",
+      "PackagePath": "staticwebassets\\assets\\img\\sign\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\sign\\login.png",
+      "PackagePath": "staticwebassets\\assets\\img\\sign\\login.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\bg-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\bg-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\details.png",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\details.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\team\\shape-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\shape-img.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\client-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-1.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\client-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\client-3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-3.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\client-4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-4.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\client-5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-5.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\logo1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\logo1.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\logo2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\testimonial\\shape.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\shape.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\top-book\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\top-book\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\top-book\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\top-book\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\top-book\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\top-book\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\top-book\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\top-book\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\top-book\\04.png",
+      "PackagePath": "staticwebassets\\assets\\img\\top-book\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\top-book\\05.png",
+      "PackagePath": "staticwebassets\\assets\\img\\top-book\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\top-book\\06.png",
+      "PackagePath": "staticwebassets\\assets\\img\\top-book\\06.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\img\\visa-logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\visa-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\ajax-mail.js",
+      "PackagePath": "staticwebassets\\assets\\js\\ajax-mail.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\circle-progress.js",
+      "PackagePath": "staticwebassets\\assets\\js\\circle-progress.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\gsap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\gsap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\jquery.meanmenu.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.meanmenu.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\jquery.waypoints.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.waypoints.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\viewport.jquery.js",
+      "PackagePath": "staticwebassets\\assets\\js\\viewport.jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_about.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_animation.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_animation.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_contact.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_cta.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_cta.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_faq.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_faq.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_feature.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_feature.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_helping.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_helping.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_hero.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_hero.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_meanmenu.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_meanmenu.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_news.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_news.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_preloader.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_preloader.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_section.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_section.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_shop.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_team.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_team.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_testimonial.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_testimonial.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_typography.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\main.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\main.scss"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-duotone-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-duotone-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-duotone-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-duotone-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-light-300.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-light-300.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-thin-100.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-thin-100.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-thin-100.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-thin-100.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\webfonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Bookle.MVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Bookle.MVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Bookle.MVC.props",
+      "PackagePath": "build\\Bookle.MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Bookle.MVC.props",
+      "PackagePath": "buildMultiTargeting\\Bookle.MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Bookle.MVC.props",
+      "PackagePath": "buildTransitive\\Bookle.MVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bookle.MVC.props" />
+</Project>
