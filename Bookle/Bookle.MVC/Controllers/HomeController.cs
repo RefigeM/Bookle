@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Bookle.DAL.Contexts;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Bookle.MVC.Controllers
 {
 	public class HomeController : Controller
 	{
-		public IActionResult Index()
+		private readonly BookleDbContext _context;
+
+		public HomeController(BookleDbContext context)
 		{
-			return View();
+			_context = context;	
+		}
+
+		public async Task<IActionResult> Index()
+		{		
+			return View(await _context.Books.ToListAsync());
 		}
 	}
 }

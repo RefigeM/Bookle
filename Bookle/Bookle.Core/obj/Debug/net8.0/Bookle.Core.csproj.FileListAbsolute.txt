@@ -10,3 +10,6 @@ C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.Core\obj\Debug\net8.0\Boo
 C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.Core\obj\Debug\net8.0\refint\Bookle.Core.dll
 C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.Core\obj\Debug\net8.0\Bookle.Core.pdb
 C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.Core\obj\Debug\net8.0\ref\Bookle.Core.dll
+C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.Core\bin\Debug\net8.0\Bookle.Core.runtimeconfig.json
+C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.Core\obj\Debug\net8.0\Bookle.Core.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.Core\obj\Debug\net8.0\Bookle.Core.genruntimeconfig.cache

@@ -1,6 +1,90 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\css\\admin.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\css\\admin.styl",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\admin.styl"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\css\\slimselect.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\slimselect.css"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\css\\slimselect.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\slimselect.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\icon\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\icon\\favicon-32x32.png"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\img\\angle-down.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\angle-down.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\img\\section\\section.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\section\\section.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\img\\user.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\user.svg"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\js\\admin.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\admin.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\js\\slimselect.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\slimselect.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\js\\smooth-scrollbar.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\smooth-scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\webfont\\fonts\\tabler-icons.eot",
+      "PackagePath": "staticwebassets\\admin\\assets\\webfont\\fonts\\tabler-icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\webfont\\fonts\\tabler-icons.ttf",
+      "PackagePath": "staticwebassets\\admin\\assets\\webfont\\fonts\\tabler-icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\webfont\\fonts\\tabler-icons.woff",
+      "PackagePath": "staticwebassets\\admin\\assets\\webfont\\fonts\\tabler-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\webfont\\fonts\\tabler-icons.woff2",
+      "PackagePath": "staticwebassets\\admin\\assets\\webfont\\fonts\\tabler-icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\webfont\\tabler-icons.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\webfont\\tabler-icons.min.css"
+    },
+    {
       "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\all.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\all.min.css"
     },
@@ -811,6 +895,10 @@
     {
       "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\js\\wow.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\large_http___kitabal.az_img_books_5189426.jpg",
+      "PackagePath": "staticwebassets\\assets\\large_http___kitabal.az_img_books_5189426.jpg"
     },
     {
       "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\wwwroot\\assets\\scss\\_about.scss",

@@ -1,0 +1,97 @@
+﻿@model List<Book>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- main content -->
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- main title -->
+			<div class="col-12">
+				<div class="main__title">
+					<h2>Books</h2>
+
+					<a href="add-item.html" class="main__title-link">add item</a>
+				</div>
+			</div>
+			<!-- end main title -->
+			<!-- items -->
+			<div class="col-12">
+				<div class="catalog catalog--1">
+					<table class="catalog__table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>TITLE</th>
+								<th>AUTHOR</th>
+								<th>RATING</th>
+								<th>GENRE</th>
+								<th>FORMAT</th>
+								<th>PUBLISHED YEAR</th>
+								<th>LANGUAGE</th>
+								<th>ISDELETED</th>
+
+								<th>ACTIONS</th>
+							</tr>
+						</thead>
+
+						<tbody>
+						@foreach (var item in Model)
+							{
+								<tr>
+									<td>
+										<div class="catalog__text">@item.Id</div>
+									</td>
+									<td>
+										<div class="catalog__text"><a href="#">@item.Title</a></div>
+									</td>
+									<td>
+										<div class="catalog__text"><a href="#">@item.Author</a></div>
+									</td>
+									<td>
+										<div class="catalog__text catalog__text--rate">7.9</div>
+									</td>
+									
+									<td>
+										<div class="catalog__text">@item.Genre</div>
+									</td>
+									
+									<td>
+										<div class="catalog__text">@item.Format</div>
+									</td>
+
+									<td>
+										<div class="catalog__text">@item.PuslishedYear</div>
+									</td>
+									<td>
+										<div class="catalog__text">@item.Language</div>
+									</td>
+
+									<td>
+										<div class="catalog__text catalog__text--green">@item.IsDeleted</div>
+									</td>
+									<td>
+										<div class="catalog__btns">
+											<button type="button" data-bs-toggle="modal" class="catalog__btn catalog__btn--banned" data-bs-target="#modal-status">
+												<i class="ti ti-lock"></i>
+											</button>
+											<a href="#" class="catalog__btn catalog__btn--view">
+												<i class="ti ti-eye"></i>
+											</a>
+											<a href="add-item.html" class="catalog__btn catalog__btn--edit">
+												<i class="ti ti-edit"></i>
+											</a>
+											<button type="button" data-bs-toggle="modal" class="catalog__btn catalog__btn--delete" data-bs-target="#modal-delete">
+												<i class="ti ti-trash"></i>
+											</button>
+										</div>
+									</td>
+								</tr>
+
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end items -->

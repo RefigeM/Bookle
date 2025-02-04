@@ -16,3 +16,5 @@ C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.BL\obj\Debug\net8.0\Bookl
 C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.BL\obj\Debug\net8.0\refint\Bookle.BL.dll
 C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.BL\obj\Debug\net8.0\Bookle.BL.pdb
 C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.BL\obj\Debug\net8.0\ref\Bookle.BL.dll
+C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.BL\bin\Debug\net8.0\Bookle.BL.runtimeconfig.json
+C:\Users\ACER\OneDrive\Masaüstü\Bookle\Bookle\Bookle.BL\obj\Debug\net8.0\Bookle.BL.genruntimeconfig.cache
