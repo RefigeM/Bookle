@@ -47,7 +47,7 @@
 										<div class="catalog__text"><a href="#">@item.Title</a></div>
 									</td>
 									<td>
-										<div class="catalog__text"><a href="#">@item.Author</a></div>
+										<div class="catalog__text"><a href="#">@item.Author.AuthorName</a></div>
 									</td>
 									<td>
 										<div class="catalog__text catalog__text--rate">7.9</div>
@@ -69,22 +69,45 @@
 									</td>
 
 									<td>
-										<div class="catalog__text catalog__text--green">@item.IsDeleted</div>
+										@if (item.IsDeleted == true)
+										{
+											<div class="catalog__text catalog__text--red">@item.IsDeleted</div>
+
+										}
+										else
+										{
+											<div class="catalog__text catalog__text--green">@item.IsDeleted</div>
+
+										}
+
 									</td>
 									<td>
 										<div class="catalog__btns">
 											<button type="button" data-bs-toggle="modal" class="catalog__btn catalog__btn--banned" data-bs-target="#modal-status">
 												<i class="ti ti-lock"></i>
 											</button>
-											<a href="#" class="catalog__btn catalog__btn--view">
+											@if (item.IsDeleted == false)
+											{
+												<a asp-action="Hide" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--view">
+													<i class="ti ti-eye"></i>
+												</a>
+											}
+											else
+											{
+												<a asp-action="Show" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
 												<i class="ti ti-eye"></i>
 											</a>
+											}
+											
 											<a href="add-item.html" class="catalog__btn catalog__btn--edit">
 												<i class="ti ti-edit"></i>
 											</a>
-											<button type="button" data-bs-toggle="modal" class="catalog__btn catalog__btn--delete" data-bs-target="#modal-delete">
+
+											<a asp-action="Delete" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
 												<i class="ti ti-trash"></i>
-											</button>
+											</a>
+
+											
 										</div>
 									</td>
 								</tr>

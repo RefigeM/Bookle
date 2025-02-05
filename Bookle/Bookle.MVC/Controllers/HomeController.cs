@@ -15,7 +15,12 @@ namespace Bookle.MVC.Controllers
 
 		public async Task<IActionResult> Index()
 		{		
-			return View(await _context.Books.ToListAsync());
+			return View(await _context.Books.Include(b => b.Images).ToListAsync());
 		}
+		public async Task<IActionResult> Details() 
+		{
+			return View(await _context.Books.Include(b => b.Images).ToListAsync());			
+		}
+
 	}
 }

@@ -1,0 +1,31 @@
+1.Asp.net core empty 
+2.Models 
+Configurations
+3.DbContext
+4.appsetting.json
++addDbContext
+5.migration
+6.Modelleri Dbset'e elave edirik
+Yeniden migration edirik
+----------------------
+7.Controller yaradiriq
++ MapControllerRoute 
++addControllerWithview
+8.View yaradiriq
+Model'i controllerde gotururk , sonra onun tipini cshtml-de @model ile cagiririq
+onun usinglerini view importun daxilinde yaziriq
+
+-----------------
+vm yaradiriq
+[maxLength(32, ErrorMessage="32den cox olmamalidir"),Required]
+
+
+
+contexts
+models
+configurations
+view models
+extentions
+controllers
+views
+areas

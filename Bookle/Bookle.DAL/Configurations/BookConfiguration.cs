@@ -12,11 +12,6 @@ namespace Bookle.DAL.Configurations
 				.IsRequired()
 				.HasMaxLength(64);
 
-			builder.Property(b => b.Author)
-				.IsRequired()
-				.HasMaxLength(64)
-				.HasDefaultValue("Author was not found");
-
 			builder.Property(b => b.ShortDescription)
 			   .HasMaxLength(500);
 
