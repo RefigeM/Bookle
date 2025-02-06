@@ -20,17 +20,18 @@
             <form enctype="multipart/form-data" method="post">
 
                 <div class="form-group">
-                    <label class="text-white" asp-for="AuthorName">Fulname</label>
-                    <input class="form-control" asp-for="AuthorName">
-                    <span class="text-danger" asp-validation-for="AuthorName"></span>
+                    <input asp-for="AuthorName" type="text" class="sign__input" placeholder="Fulname">
+                    <span asp-for="AuthorName" class="text-danger" asp-validation-for="AuthorName"></span>
                 </div>
                 
                 <div class="form-group">
                     <label class="text-white" asp-for="File">File</label>
-                    <input class="form-control" asp-for="File">
+                    <input class="form-control" asp-for="File" style="color: white; background-color: #1a191f;">
                     <span class="text-danger" asp-validation-for="File"></span>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px">Submit</button>
+                </div>
             </form>
 
 			<!-- end form -->

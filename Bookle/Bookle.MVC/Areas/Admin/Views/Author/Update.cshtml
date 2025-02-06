@@ -1,0 +1,45 @@
+﻿@model AuthorUpdateVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update</h1>
+
+
+<!-- main content -->
+<main class="main">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- main title -->
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>Add new item</h2>
+                </div>
+            </div>
+            <!-- end main title -->
+            <!-- form -->
+            <form enctype="multipart/form-data" method="post">
+
+                <div class="form-group">
+                    <input asp-for="AuthorName" type="text" class="sign__input" placeholder="Fulname">
+                    <span asp-for="AuthorName" class="text-danger" asp-validation-for="AuthorName"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="d-flex">
+                        <img width="80px" src="@Url.Content(Model.FileUrl)" />
+                    </div>
+                    <label class="text-white" asp-for="File">File</label>
+                    <input  class="form-control" asp-for="File" style="color: white; background-color: #1a191f;">
+                    <span class="text-danger" asp-validation-for="File"></span>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px">Submit</button>
+                </div>
+            </form>
+
+            <!-- end form -->
+        </div>
+    </div>
+</main>
+<!-- end main content -->

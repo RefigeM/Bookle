@@ -1,0 +1,55 @@
+﻿@model Author
+@{
+    ViewData["Title"] = "Info";
+}
+
+<h1>Info</h1>
+
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- main title -->
+			<div class="col-12">
+				<div class="main__title">
+					<h2>Books</h2>
+
+				</div>
+			</div>
+			<!-- end main title -->
+			<!-- items -->
+			<div class="col-12">
+				<div class="catalog catalog--1">
+					<table class="catalog__table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Profil Image</th>
+								<th>Fullname</th>
+								<th>IsDeleted</th>
+
+
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>
+									<div class="catalog__text">@Model.Id</div>
+								</td>
+								<td><img src="@Url.Content(Model.AuthorImage)" width="70" /></td>
+								<td>
+									<div class="catalog__text"><a href="#">@Model.AuthorName</a></div>
+								</td>
+								<td>
+									<div class="catalog__text catalog__text--red">@Model.IsDeleted</div>
+
+								</td>
+								
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end items -->
+

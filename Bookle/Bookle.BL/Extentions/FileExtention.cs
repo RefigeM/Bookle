@@ -6,7 +6,9 @@ public static class FileExtention
 {
 	public static bool IsValidType(this IFormFile file, string type)
 	{
-		return file.ContentType.StartsWith(type);
+		var validExtensions = new List<string> { ".jpg", ".jpeg", ".png", ".gif" };
+		var fileExtension = Path.GetExtension(file.FileName).ToLower();
+		return validExtensions.Contains(fileExtension);
 	}
 	public static bool IsValidSize(this IFormFile file, int kb)
 	{

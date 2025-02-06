@@ -68,22 +68,71 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 					ModelState.AddModelError("File", "File must be less than 400kb");
 			}
 
+			
+
 			var imagePath = Path.Combine(_env.WebRootPath, "imgs", "authors");
 			Author author = new Author
 			{
-				AuthorName = vm.AuthorName,
-				AuthorImage = imagePath
+				AuthorName = vm.AuthorName
 			};
+
 			if (vm.File != null)
 			{
-				author.AuthorImage = await vm.File.UploadAsync(imagePath);
+				// Fayl serverə yüklənir və tam URL-yə yazılır
+				string newFileName = await vm.File.UploadAsync(imagePath);
+				author.AuthorImage = "/imgs/authors/" + newFileName;  // Tam URL burada verilir
 			}
 
 			await _context.Authors.AddAsync(author);
 			await _context.SaveChangesAsync();
 			return RedirectToAction(nameof(Index));
 		}
+		public async Task<ActionResult> Update(int? id)
+		{
+			if (id == null) return BadRequest();
+			var data = await _context.Authors.Where(x => x.Id == id)
+				.Select(x => new AuthorUpdateVM
+				{
+					AuthorName = x.AuthorName,
+					FileUrl = x.AuthorImage
+				}).FirstOrDefaultAsync();
+
+			if (data == null) return NotFound();
+			return View(data);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> Update(int? id, AuthorUpdateVM vm)
+		{
+			if (id == null) return BadRequest();
+			var data = await _context.Authors.Where(x => x.Id == id).FirstOrDefaultAsync();
+			if (data != null)
+			{
+				data.AuthorName = vm.AuthorName;
+
+				// Şəkil yüklənirsə, onu serverə yükləyirik
+				if (vm.File != null)
+				{
+					// Faylı serverə yükləyirik
+					string newFileName = await vm.File.UploadAsync("wwwroot/imgs/authors");
+
+					// Yüklənən şəkilin URL-ni bazaya yazırıq
+					data.AuthorImage = "/imgs/authors/" + newFileName;
+				}
+			}
+			await _context.SaveChangesAsync();
+
+			return RedirectToAction(nameof(Index));
+
+		}
+		public async Task<IActionResult> Info(int? id) 
+		{
+			if (id == null) return BadRequest();
+			var data = await _context.Authors.FindAsync(id);
+			if(data== null) return NotFound();	
+
+			return View(data);
+		}
+
 	}
 }
-
-

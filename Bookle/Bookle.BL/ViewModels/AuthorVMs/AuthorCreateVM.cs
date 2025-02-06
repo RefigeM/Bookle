@@ -11,6 +11,6 @@ public class AuthorCreateVM
 	[Required]
 	public IFormFile File { get; set; }
 	[Required]
-	public string imgUrl { get; set; }
+	public string? FileUrl { get; set; }
 
 }
