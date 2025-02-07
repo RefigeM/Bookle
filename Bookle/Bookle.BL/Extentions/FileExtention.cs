@@ -5,15 +5,13 @@ namespace Bookle.BL.Extentions;
 public static class FileExtention
 {
 	public static bool IsValidType(this IFormFile file, string type)
-	{
-		var validExtensions = new List<string> { ".jpg", ".jpeg", ".png", ".gif" };
-		var fileExtension = Path.GetExtension(file.FileName).ToLower();
-		return validExtensions.Contains(fileExtension);
-	}
+	   => file.ContentType.StartsWith(type);
+
 	public static bool IsValidSize(this IFormFile file, int kb)
 	{
 		return file.Length <= kb * 1024 * 1024;
 	}
+
 	public static async Task<string> UploadAsync(this IFormFile file, string directory)
 	{
 		string path = Path.Combine(directory);

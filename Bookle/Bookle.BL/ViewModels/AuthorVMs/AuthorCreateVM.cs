@@ -10,7 +10,6 @@ public class AuthorCreateVM
 	public string AuthorName { get; set; }
 	[Required]
 	public IFormFile File { get; set; }
-	[Required]
 	public string? FileUrl { get; set; }
 
 }

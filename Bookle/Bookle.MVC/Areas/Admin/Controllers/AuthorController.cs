@@ -55,36 +55,41 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Create(AuthorCreateVM vm)
 		{
-			if (vm.File == null)
-			{
-				ModelState.AddModelError("File", "File is required");
-			}
-			else
+			if (vm.File != null)
 			{
 				if (!vm.File.IsValidType("image"))
 					ModelState.AddModelError("File", "File must be an image");
 
-				if (!vm.File.IsValidSize(400))
-					ModelState.AddModelError("File", "File must be less than 400kb");
+				if (!vm.File.IsValidSize(400)) 
+					ModelState.AddModelError("File", "File must be less than 400KB");
+			}
+			else
+			{
+				ModelState.AddModelError("File", "File is required");
 			}
 
-			
+			if (!ModelState.IsValid)
+			{
+				return View(vm);
+			}
+			foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+			{
+				Console.WriteLine(error.ErrorMessage); 
+			}
 
 			var imagePath = Path.Combine(_env.WebRootPath, "imgs", "authors");
+
+			string newFileName = await vm.File.UploadAsync(imagePath);
+
 			Author author = new Author
 			{
-				AuthorName = vm.AuthorName
+				AuthorName = vm.AuthorName,
+				AuthorImage = "/imgs/authors/" + newFileName  
 			};
-
-			if (vm.File != null)
-			{
-				// Fayl serverə yüklənir və tam URL-yə yazılır
-				string newFileName = await vm.File.UploadAsync(imagePath);
-				author.AuthorImage = "/imgs/authors/" + newFileName;  // Tam URL burada verilir
-			}
 
 			await _context.Authors.AddAsync(author);
 			await _context.SaveChangesAsync();
+
 			return RedirectToAction(nameof(Index));
 		}
 		public async Task<ActionResult> Update(int? id)
