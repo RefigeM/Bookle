@@ -47,6 +47,14 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			return RedirectToAction(nameof(Index));
 
 		}
+		public async Task<IActionResult> Info(int? id)
+		{
+			if (id == null) return BadRequest();
+			var data = await _context.Authors.FindAsync(id);
+			if (data == null) return NotFound();
+
+			return View(data);
+		}
 
 		public ActionResult Create()
 		{
@@ -72,10 +80,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			{
 				return View(vm);
 			}
-			foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-			{
-				Console.WriteLine(error.ErrorMessage); 
-			}
+			
 
 			var imagePath = Path.Combine(_env.WebRootPath, "imgs", "authors");
 
@@ -129,14 +134,6 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 			return RedirectToAction(nameof(Index));
 
-		}
-		public async Task<IActionResult> Info(int? id) 
-		{
-			if (id == null) return BadRequest();
-			var data = await _context.Authors.FindAsync(id);
-			if(data== null) return NotFound();	
-
-			return View(data);
 		}
 
 	}

@@ -1,4 +1,5 @@
-﻿using Bookle.Core.Enums;
+﻿using Bookle.Core.Entities;
+using Bookle.Core.Enums;
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,8 +14,9 @@ public class BookCreateVM
 	[Required]
 	public int AuthorId { get; set; }
 
-	[StringLength(500)]
+	[MaxLength(500)]
 	public string? ShortDescription { get; set; }
+	[MaxLength(700)]
 
 	public string? Description { get; set; }
 
@@ -22,6 +24,7 @@ public class BookCreateVM
 
 	[Required]
 	public Genre Genre { get; set; }
+
 
 	[Required]
 	public Format Format { get; set; }
@@ -39,17 +42,35 @@ public class BookCreateVM
 	public int PageCount { get; set; }
 
 	[Required]
-	[Range(1, 1000)]
 	public int Price { get; set; }
 
 	[Required]
-	[StringLength(50)]
+	[MaxLength(50)]
 	public string Language { get; set; }
+
 	[Required(ErrorMessage ="File not selected")]
-	public IFormFile CoverImage { get; set; }
+	public IFormFile File { get; set; }
+	public string? FileUrl { get; set; }
 
-
-	//public string? CoverImageUrl { get; set; }
-
-	public List<string>? Images { get; set; }
+	//public List<string>? Images { get; set; }
+	public ICollection<IFormFile>? OtherFiles { get; set; }
+	public static implicit operator Book(BookCreateVM vm) 
+	{
+		return new Book
+		{
+			Title = vm.Title,
+			AuthorId = vm.AuthorId,
+			Language = vm.Language,
+			PuslishedYear = vm.PublishedYear,
+			Genre = vm.Genre,
+			Format = vm.Format,
+			Country = vm.Country,
+			ISBN = vm.ISBN,
+			PageCount = vm.PageCount,
+			Price = vm.Price,
+			Description = vm.Description,
+			ShortDescription = vm.ShortDescription,
+			RoleOfBook = vm.RoleOfBook
+		};
+	}
 }

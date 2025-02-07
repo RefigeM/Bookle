@@ -9,18 +9,18 @@ public static class FileExtention
 
 	public static bool IsValidSize(this IFormFile file, int kb)
 	{
-		return file.Length <= kb * 1024 * 1024;
+		return file.Length <= kb * 1024;
 	}
 
-	public static async Task<string> UploadAsync(this IFormFile file, string directory)
+	public static async Task<string> UploadAsync(this IFormFile file, params string[]  paths)
 	{
-		string path = Path.Combine(directory);
-		if (!Directory.Exists(path))
+		string uploadPath = Path.Combine(paths);
+		if (!Path.Exists(uploadPath))
 		{
-			Directory.CreateDirectory(path);
+			Directory.CreateDirectory(uploadPath);
 		}
 		string newFilename = Path.GetRandomFileName() + Path.GetExtension(file.FileName);
-		string fullPath = Path.Combine(path, newFilename);
+		string fullPath = Path.Combine(uploadPath, newFilename);
 
 		using (Stream st = File.Create(fullPath))
 		{
