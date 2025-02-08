@@ -14,8 +14,6 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 	public class BookController(BookleDbContext _context, IWebHostEnvironment _env) : Controller
 	{
-		
-
 		public async Task<IActionResult> Index()
 		{
 			return View(await _context.Books.Include(b => b.Images).Include(b => b.Author).ToListAsync());

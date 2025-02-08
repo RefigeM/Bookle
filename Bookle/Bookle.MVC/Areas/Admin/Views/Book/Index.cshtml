@@ -23,6 +23,7 @@
 						<thead>
 							<tr>
 								<th>ID</th>
+								<th>Book Image</th>
 								<th>TITLE</th>
 								<th>AUTHOR</th>
 								<th>RATING</th>
@@ -43,6 +44,8 @@
 									<td>
 										<div class="catalog__text">@item.Id</div>
 									</td>
+									<td><img src="@Url.Content(item.CoverImageUrl)" width="20" /></td>
+
 									<td>
 										<div class="catalog__text"><a href="#">@item.Title</a></div>
 									</td>

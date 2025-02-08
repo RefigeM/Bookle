@@ -35,7 +35,7 @@ public class BookCreateVM
 	public string? Country { get; set; }
 
 	[Required]
-	[Range(1900, 2100)]
+	[Range(1000, 2025)]
 	public int PublishedYear { get; set; }
 
 	[Range(1, 10000)]
