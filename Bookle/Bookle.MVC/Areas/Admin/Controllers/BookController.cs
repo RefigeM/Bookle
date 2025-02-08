@@ -51,6 +51,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 		{
 			ViewBag.Authors = await _context.Authors.Where(x => !x.IsDeleted).ToListAsync();
 			ViewBag.Languages = new SelectList(new List<string> { "English", "Azerbaijani", "Turkish", "French", "Spanish" });
+			ViewBag.Countries = new SelectList(new List<string> { "English", "Azerbaijani", "Turkish" });
 			ViewBag.Formats = new SelectList(Enum.GetNames(typeof(Format)));
 			ViewBag.Genres = new SelectList(Enum.GetNames(typeof(Genre)));
 

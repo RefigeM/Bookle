@@ -18,9 +18,9 @@ public class GenericRepository<T>(BookleDbContext _context) : IGenericRepository
 		await Table.Where(x => x.Id == id).ExecuteDeleteAsync();
 	}
 
-	public IQueryable<T> GetAll()
+	public async Task<List<T>> GetAllAsync()
 	{
-		return Table.AsQueryable();
+		return await Table.ToListAsync();
 	}
 
 	public async Task<T?> GetByIdAsync(int id)
@@ -33,9 +33,19 @@ public class GenericRepository<T>(BookleDbContext _context) : IGenericRepository
 		return Table.Where(expression).AsQueryable();
 	}
 
+
+
 	public async Task<bool> IsExistAsync(int id)
 	{
 		return await Table.AnyAsync(t => t.Id == id);
+	}
+
+	public async Task RestoreAsync(int id)
+	{
+		var author = await _context.Authors.FindAsync(id);
+		if (author == null) throw new Exception("Author not found");
+		author.IsDeleted = false;
+
 	}
 
 	public async Task<int> SaveAsync()
@@ -43,5 +53,10 @@ public class GenericRepository<T>(BookleDbContext _context) : IGenericRepository
 		return await _context.SaveChangesAsync();
 	}
 
-
+	public async Task SoftDeleteAsync(int id)
+	{
+		var author = await _context.Authors.FindAsync(id);
+		if (author == null) throw new Exception("Author not found");
+		author.IsDeleted = true;
+	}
 }

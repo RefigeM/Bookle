@@ -2,6 +2,7 @@ using Bookle.DAL.Contexts;
 using Bookle.DAL;
 
 using Microsoft.EntityFrameworkCore;
+using Bookle.BL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<BookleDbContext>(opt =>
 	opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSql"));
 });
 builder.Services.AddRepositories();
+builder.Services.AddServices();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

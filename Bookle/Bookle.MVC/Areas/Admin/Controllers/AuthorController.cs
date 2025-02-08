@@ -1,4 +1,5 @@
 ﻿using Bookle.BL.Extentions;
+using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.Core.Entities;
 using Bookle.DAL.Contexts;
@@ -9,48 +10,44 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
 
-	public class AuthorController(BookleDbContext _context, IWebHostEnvironment _env) : Controller
+	public class AuthorController(BookleDbContext _context, IWebHostEnvironment _env, IAuthorService _service) : Controller
 	{
 
 
 
 		public async Task<IActionResult> Index()
 		{
-			return View(await _context.Authors.ToListAsync());
+			return View(await _service.GetAllAuthorsAsync());
 		}
 		public async Task<IActionResult> Hide(int? id)
 		{
 			if (id == null) return BadRequest();
-			var data = await _context.Authors.FindAsync(id);
-			if (data == null) return NotFound();
-			data.IsDeleted = true;
-			await _context.SaveChangesAsync();
+			await _service.SoftDeleteAuthorAsync(id.Value);
+
 			return RedirectToAction(nameof(Index));
 		}
 		public async Task<IActionResult> Show(int? id)
 		{
 			if (id == null) return BadRequest();
-			var data = await _context.Authors.FindAsync(id);
-			if (data == null) return NotFound();
-			data.IsDeleted = false;
-			await _context.SaveChangesAsync();
+			await _service.RestoreAuthorAsync(id.Value);
+
 			return RedirectToAction(nameof(Index));
 		}
 
 		public async Task<IActionResult> Delete(int? id)
 		{
 			if (id == null) return BadRequest();
-			var data = await _context.Authors.FindAsync(id);
+			var data = await _service.GetAuthorById(id.Value);
 			if (data == null) return NotFound();
-			_context.Authors.Remove(data);
-			await _context.SaveChangesAsync();
+			await _service.DeleteAuthorAsync(id.Value);
 			return RedirectToAction(nameof(Index));
 
 		}
 		public async Task<IActionResult> Info(int? id)
 		{
 			if (id == null) return BadRequest();
-			var data = await _context.Authors.FindAsync(id);
+
+			var data = await _service.GetAuthorById(id.Value);
 			if (data == null) return NotFound();
 
 			return View(data);
@@ -68,7 +65,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 				if (!vm.File.IsValidType("image"))
 					ModelState.AddModelError("File", "File must be an image");
 
-				if (!vm.File.IsValidSize(400)) 
+				if (!vm.File.IsValidSize(400))
 					ModelState.AddModelError("File", "File must be less than 400KB");
 			}
 			else
@@ -80,7 +77,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			{
 				return View(vm);
 			}
-			
+
 
 			var imagePath = Path.Combine(_env.WebRootPath, "imgs", "authors");
 
@@ -89,12 +86,10 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			Author author = new Author
 			{
 				AuthorName = vm.AuthorName,
-				AuthorImage = "/imgs/authors/" + newFileName  
+				AuthorImage = "/imgs/authors/" + newFileName
+
 			};
-
-			await _context.Authors.AddAsync(author);
-			await _context.SaveChangesAsync();
-
+			await _service.AddAuthorAsync(author);
 			return RedirectToAction(nameof(Index));
 		}
 		public async Task<ActionResult> Update(int? id)

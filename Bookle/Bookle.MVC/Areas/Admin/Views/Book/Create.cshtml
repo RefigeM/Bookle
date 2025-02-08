@@ -97,7 +97,9 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<div  class="sign__group">
-										<input asp-for="Country" type="text" class="sign__input" placeholder="Country">
+										<select asp-for="Country" asp-items="ViewBag.Countries" type="text" class="sign__input" placeholder="Country">
+											<option disabled selected> Country</option>
+										</select>										
 										<span asp-validation-for="Country" class="text-danger"></span>
 
 									</div>
