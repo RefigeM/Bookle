@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yiI0cFsSt4o=",
+  "dgSpecHash": "5vg2HBlFUmM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Bookle\\Bookle\\Bookle.MVC\\Bookle.MVC.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\Bookle.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
