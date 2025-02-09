@@ -30,7 +30,7 @@
 									</div>
 								</div>
 								<div class="sign__group">
-									<select class="form-control" asp-for="AuthorId" asp-items='new SelectList(ViewBag.Authors, "Id", "AuthorName")'>
+									<select class="sign__input" asp-for="AuthorId" asp-items='new SelectList(ViewBag.Authors, "Id", "AuthorName")'>
 										<option disabled selected>Select Author</option>
 									</select>
 

@@ -13,8 +13,6 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 	public class AuthorController(BookleDbContext _context, IWebHostEnvironment _env, IAuthorService _service) : Controller
 	{
 
-
-
 		public async Task<IActionResult> Index()
 		{
 			return View(await _service.GetAllAuthorsAsync());
@@ -109,23 +107,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Update(int? id, AuthorUpdateVM vm)
 		{
-			if (id == null) return BadRequest();
-			var data = await _context.Authors.Where(x => x.Id == id).FirstOrDefaultAsync();
-			if (data != null)
-			{
-				data.AuthorName = vm.AuthorName;
-
-				// Şəkil yüklənirsə, onu serverə yükləyirik
-				if (vm.File != null)
-				{
-					// Faylı serverə yükləyirik
-					string newFileName = await vm.File.UploadAsync("wwwroot/imgs/authors");
-
-					// Yüklənən şəkilin URL-ni bazaya yazırıq
-					data.AuthorImage = "/imgs/authors/" + newFileName;
-				}
-			}
-			await _context.SaveChangesAsync();
+			await _service.UpdateAuthorAsync(id.Value, vm);
 
 			return RedirectToAction(nameof(Index));
 

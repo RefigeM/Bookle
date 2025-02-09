@@ -1,0 +1,89 @@
+﻿@model Book
+@{
+	ViewData["Title"] = "Info";
+}
+
+<h1>Info</h1>
+
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- main title -->
+			<div class="col-12">
+				<h2 class="text-white">Author Info</h2>
+
+				<div class="main__title">
+					<li class="sidebar__nav-item">
+						<a asp-action="Index" asp-controller="Author" class="sidebar__nav-link "><i class="ti ti-arrow-left"></i> <span>Go Back</span></a>
+					</li>
+
+				</div>
+			</div>
+			<!-- end main title -->
+			<!-- items -->
+			<div class="col-12">
+				<div class="catalog catalog--1">
+					<table class="catalog__table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Profil Image</th>
+								<th>Fullname</th>
+								<th>IsDeleted</th>
+								<th>ACTIONS</th>
+
+
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>
+									<div class="catalog__text">@Model.Id</div>
+								</td>
+								<td><img src="@Url.Content(Model.CoverImageUrl)" width="70" /></td>
+								<td>
+									<div class="catalog__text"><a href="#">@Model.Title</a></div>
+								</td>
+								<td>
+									<div class="catalog__text catalog__text--red">@Model.IsDeleted</div>
+
+								</td>
+								<td>
+									<div class="catalog__btns">
+
+
+										@if (Model.IsDeleted == false)
+										{
+											<a asp-action="Hide" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--banned">
+												<i class="ti ti-lock"></i>
+
+											</a>
+										}
+										else
+										{
+											<a asp-action="Show" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
+												<i class="ti ti-lock"></i>
+											</a>
+										}
+
+										<a asp-action="Update" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--edit">
+											<i class="ti ti-edit"></i>
+										</a>
+
+										<a asp-action="Delete" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
+											<i class="ti ti-trash"></i>
+										</a>
+
+
+									</div>
+								</td>
+
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end items -->
+

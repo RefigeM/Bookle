@@ -1,4 +1,5 @@
 ﻿using Bookle.BL.Extentions;
+using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.BookVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Enums;
@@ -6,48 +7,41 @@ using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
 
-	public class BookController(BookleDbContext _context, IWebHostEnvironment _env) : Controller
+	public class BookController(BookleDbContext _context, IWebHostEnvironment _env, IBookService _service) : Controller
 	{
 		public async Task<IActionResult> Index()
 		{
-			return View(await _context.Books.Include(b => b.Images).Include(b => b.Author).ToListAsync());
+			return View(await _service.GetAllBooksAsync());
 		}
-		public async Task<IActionResult> Delete(int id)
+		public async Task<IActionResult> Delete(int? id)
 		{
-			var data = await _context.Books.Include(b => b.Author).FirstOrDefaultAsync(b => b.Id == id);
+			if (id == null) return BadRequest();
+			var data = await _service.GetBookByIdAsync(id.Value);
 			if (data == null) return NotFound();
-			_context.Books.Remove(data);
-			await _context.SaveChangesAsync();
+			await _service.DeleteBookAsync(id.Value);
+
 			return RedirectToAction(nameof(Index));
 		}
-		public async Task<IActionResult> Hide(int id)
+		public async Task<IActionResult> Hide(int? id)
 		{
-			var data = await _context.Books.Include(b => b.Author).FirstOrDefaultAsync(b => b.Id == id);
-			if (data == null) return NotFound();
-			if (data != null)
-			{
-				data.IsDeleted = true;
-				await _context.SaveChangesAsync();
-			}
-			
-			return RedirectToAction(nameof(Index));
-		}
-		public async Task<IActionResult> Show(int id) 
-		{
-			var data = await _context.Books.Include(b => b.Author).FirstOrDefaultAsync(b => b.Id == id);
-			if (data == null) return NotFound();
-			data.IsDeleted = false;
-			await _context.SaveChangesAsync();
+			if (id == null) return BadRequest();
+			await _service.SoftDeleteBookAsync(id.Value);
 			return RedirectToAction(nameof(Index));
 
 		}
-		public async Task<IActionResult> Create() 
+		public async Task<IActionResult> Show(int? id)
+		{
+			if (id == null) return BadRequest();
+			await _service.RestoreBookAsync(id.Value);
+			return RedirectToAction(nameof(Index));
+
+		}
+		public async Task<IActionResult> Create()
 		{
 			ViewBag.Authors = await _context.Authors.Where(x => !x.IsDeleted).ToListAsync();
 			ViewBag.Languages = new SelectList(new List<string> { "English", "Azerbaijani", "Turkish", "French", "Spanish" });
@@ -61,7 +55,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Create(BookCreateVM vm)
 		{
-			if (vm.File != null) 
+			if (vm.File != null)
 			{
 				if (!vm.File.IsValidType("image"))
 					ModelState.AddModelError("File", "File must be an image");
@@ -81,7 +75,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 					ModelState.AddModelError("OtherFiles", fileNames + "is/are bigger than 400 kb.");
 				}
 			}
-			
+
 
 
 
@@ -94,11 +88,11 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 				return View(vm);
 			}
-			if (!await _context.Authors.AnyAsync(x => x.Id == vm.AuthorId)) 
+			if (!await _context.Authors.AnyAsync(x => x.Id == vm.AuthorId))
 			{
 				ViewBag.Author = await _context.Authors.Where(x => !x.IsDeleted).ToListAsync();
 				ModelState.AddModelError("AuthorId", "Author not found");
-				return View(vm);	
+				return View(vm);
 			}
 			Book book = vm;
 			book.CoverImageUrl = await vm.File!.UploadAsync(_env.WebRootPath, "imgs", "books");
@@ -113,11 +107,19 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			}
 			else
 			{
-				book.Images = new List<BookImage>();  
+				book.Images = new List<BookImage>();
 			}
-			await _context.Books.AddAsync(book);
-			await _context.SaveChangesAsync();	
-			return RedirectToAction(nameof(Index));	
+			await _service.AddBookAsync(book);
+			return RedirectToAction(nameof(Index));
 		}
+		public async Task<IActionResult> Info(int? id)
+		{
+			if (id == null) return BadRequest();
+			var book = await _service.GetBookByIdAsync(id.Value);
+			if (book == null) return NotFound();	
+			return View(book);
+		}
+
+
 	}
 }
