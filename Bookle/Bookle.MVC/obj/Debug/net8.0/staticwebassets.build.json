@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2NpXlMBzMriluy0j/1hRKwAYm9Xl2VC2wiKzl0vbWII=",
+  "Hash": "yf87jrktQqhvE+JPbK1/RetvOEpQL7IItF5MppbQfH0=",
   "Source": "Bookle.MVC",
   "BasePath": "_content/Bookle.MVC",
   "Mode": "Default",
@@ -6716,6 +6716,27 @@
       "OriginalItemSpec": "wwwroot\\imgs\\books\\fu0f5ccf.oki.jpg"
     },
     {
+      "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\gov0p4m0.qhg.jpg",
+      "SourceId": "Bookle.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\",
+      "BasePath": "_content/Bookle.MVC",
+      "RelativePath": "imgs/books/gov0p4m0.qhg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fb32i0qxna",
+      "Integrity": "tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\books\\gov0p4m0.qhg.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\gx5rb5je.1r0.png",
       "SourceId": "Bookle.MVC",
       "SourceType": "Discovered",
@@ -6758,6 +6779,27 @@
       "OriginalItemSpec": "wwwroot\\imgs\\books\\gxpuofdr.gs0.jpg"
     },
     {
+      "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\is2hyf21.hh4.jpg",
+      "SourceId": "Bookle.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\",
+      "BasePath": "_content/Bookle.MVC",
+      "RelativePath": "imgs/books/is2hyf21.hh4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b3mbjojfmz",
+      "Integrity": "l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\books\\is2hyf21.hh4.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\iwcbpdum.n21.jpg",
       "SourceId": "Bookle.MVC",
       "SourceType": "Discovered",
@@ -6777,6 +6819,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\books\\iwcbpdum.n21.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\l0v2w3yw.wti.jpg",
+      "SourceId": "Bookle.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\",
+      "BasePath": "_content/Bookle.MVC",
+      "RelativePath": "imgs/books/l0v2w3yw.wti#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b3mbjojfmz",
+      "Integrity": "l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\books\\l0v2w3yw.wti.jpg"
     },
     {
       "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\o3pcyy22.bsl.png",
@@ -6800,6 +6863,27 @@
       "OriginalItemSpec": "wwwroot\\imgs\\books\\o3pcyy22.bsl.png"
     },
     {
+      "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\po01ldax.e3h.jpg",
+      "SourceId": "Bookle.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\",
+      "BasePath": "_content/Bookle.MVC",
+      "RelativePath": "imgs/books/po01ldax.e3h#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b3mbjojfmz",
+      "Integrity": "l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\books\\po01ldax.e3h.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\powuac0r.p0i.jpg",
       "SourceId": "Bookle.MVC",
       "SourceType": "Discovered",
@@ -6819,6 +6903,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\books\\powuac0r.p0i.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\qqzej30x.yzu.jpg",
+      "SourceId": "Bookle.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\",
+      "BasePath": "_content/Bookle.MVC",
+      "RelativePath": "imgs/books/qqzej30x.yzu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fb32i0qxna",
+      "Integrity": "tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\books\\qqzej30x.yzu.jpg"
     },
     {
       "Identity": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\sqoizujt.vra.jpg",
@@ -33254,6 +33359,88 @@
       ]
     },
     {
+      "Route": "imgs/books/gov0p4m0.qhg.fb32i0qxna.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\gov0p4m0.qhg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198914"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:09:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fb32i0qxna"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/books/gov0p4m0.qhg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/books/gov0p4m0.qhg.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\gov0p4m0.qhg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198914"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:09:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4="
+        }
+      ]
+    },
+    {
       "Route": "imgs/books/gx5rb5je.1r0.png",
       "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\gx5rb5je.1r0.png",
       "Selectors": [],
@@ -33418,6 +33605,88 @@
       ]
     },
     {
+      "Route": "imgs/books/is2hyf21.hh4.b3mbjojfmz.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\is2hyf21.hh4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 17:04:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b3mbjojfmz"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/books/is2hyf21.hh4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/books/is2hyf21.hh4.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\is2hyf21.hh4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 17:04:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o="
+        }
+      ]
+    },
+    {
       "Route": "imgs/books/iwcbpdum.n21.b3mbjojfmz.jpg",
       "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\iwcbpdum.n21.jpg",
       "Selectors": [],
@@ -33486,6 +33755,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Sun, 09 Feb 2025 16:36:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/books/l0v2w3yw.wti.b3mbjojfmz.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\l0v2w3yw.wti.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:09:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b3mbjojfmz"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/books/l0v2w3yw.wti.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/books/l0v2w3yw.wti.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\l0v2w3yw.wti.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:09:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -33582,6 +33933,88 @@
       ]
     },
     {
+      "Route": "imgs/books/po01ldax.e3h.b3mbjojfmz.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\po01ldax.e3h.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:24:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b3mbjojfmz"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/books/po01ldax.e3h.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/books/po01ldax.e3h.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\po01ldax.e3h.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:24:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l4d0wknqKeEGTu4abS429zI0m29Zcc3qpGZAWi8sZ9o="
+        }
+      ]
+    },
+    {
       "Route": "imgs/books/powuac0r.p0i.4jrwajsyuk.jpg",
       "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\powuac0r.p0i.jpg",
       "Selectors": [],
@@ -33660,6 +34093,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-oPZlH3A6S7GxiZj/WARQokPwduNk8DFeEa6ZPVcT2Ik="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/books/qqzej30x.yzu.fb32i0qxna.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\qqzej30x.yzu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198914"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:24:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fb32i0qxna"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/books/qqzej30x.yzu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/books/qqzej30x.yzu.jpg",
+      "AssetFile": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\imgs\\books\\qqzej30x.yzu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198914"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 16:24:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tVB0sd/r4AGEW6W/GRlk5uVBMCg6cJPoooGTqxaQZ+4="
         }
       ]
     },

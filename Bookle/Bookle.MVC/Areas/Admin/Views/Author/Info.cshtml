@@ -53,23 +53,7 @@
 									<div class="catalog__btns">
 
 
-										@if (Model.IsDeleted == false)
-										{
-											<a asp-action="Hide" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--banned">
-												<i class="ti ti-lock"></i>
-
-											</a>
-										}
-										else
-										{
-											<a asp-action="Show" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
-												<i class="ti ti-lock"></i>
-											</a>
-										}
-										
-										<a asp-action="Update" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--edit">
-											<i class="ti ti-edit"></i>
-										</a>
+									
 
 										<a asp-action="Delete" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
 											<i class="ti ti-trash"></i>

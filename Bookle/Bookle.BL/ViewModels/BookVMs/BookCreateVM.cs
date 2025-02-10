@@ -54,6 +54,7 @@ public class BookCreateVM
 
 	//public List<string>? Images { get; set; }
 	public ICollection<IFormFile>? OtherFiles { get; set; }
+
 	public static implicit operator Book(BookCreateVM vm) 
 	{
 		return new Book

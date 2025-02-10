@@ -1,4 +1,5 @@
 ﻿using Bookle.BL.ViewModels.AuthorVMs;
+using Bookle.BL.ViewModels.BookVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Repositories;
 
@@ -12,5 +13,5 @@ public interface IBookService
 	Task DeleteBookAsync(int id);
 	Task RestoreBookAsync(int id);
 	Task SoftDeleteBookAsync(int id);
-	Task UpdateBookAsync(int id, AuthorUpdateVM vm);
+	Task UpdateBookAsync(int id, BookUpdateVM vm);
 }

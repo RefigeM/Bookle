@@ -72,40 +72,12 @@
 								<td>
 									<div class="catalog__text">@Model.Language</div>
 								</td>
-
 								<td>
-									@if (Model.IsDeleted == true)
-									{
-										<div class="catalog__text catalog__text--red">@Model.IsDeleted</div>
-
-									}
-									else
-									{
-										<div class="catalog__text catalog__text--green">@Model.IsDeleted</div>
-
-									}
-
+									<div class="catalog__text">@Model.IsDeleted</div>
 								</td>
+
 								<td>
-									<div class="catalog__btns">
-										@if (Model.IsDeleted == false)
-										{
-											<a asp-action="Hide" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--view">
-												<i class="ti ti-lock"></i>
-
-											</a>
-										}
-										else
-										{
-											<a asp-action="Show" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
-												<i class="ti ti-lock"></i>
-											</a>
-										}
-										
-
-										<a asp-action="Update" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--edit">
-											<i class="ti ti-edit"></i>
-										</a>
+								
 
 										<a asp-action="Delete" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
 											<i class="ti ti-trash"></i>
