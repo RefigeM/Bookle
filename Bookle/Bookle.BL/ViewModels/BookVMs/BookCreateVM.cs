@@ -29,7 +29,7 @@ public class BookCreateVM
 	[Required]
 	public Format Format { get; set; }
 
-	[StringLength(13)]
+	[RegularExpression(@"^(978|979)\d{10}$|^\d{9}[\dX]$", ErrorMessage = "Invalid ISBN format.")]
 	public string? ISBN { get; set; }
 
 	public string? Country { get; set; }
@@ -42,7 +42,7 @@ public class BookCreateVM
 	public int PageCount { get; set; }
 
 	[Required]
-	public int Price { get; set; }
+	public decimal Price { get; set; }
 
 	[Required]
 	[MaxLength(50)]
@@ -52,8 +52,7 @@ public class BookCreateVM
 	public IFormFile File { get; set; }
 	public string? FileUrl { get; set; }
 
-	//public List<string>? Images { get; set; }
-	public ICollection<IFormFile>? OtherFiles { get; set; }
+	
 
 	public static implicit operator Book(BookCreateVM vm) 
 	{
@@ -62,10 +61,10 @@ public class BookCreateVM
 			Title = vm.Title,
 			AuthorId = vm.AuthorId,
 			Language = vm.Language,
-			PuslishedYear = vm.PublishedYear,
+			PublishedYear = vm.PublishedYear,
 			Genre = vm.Genre,
 			Format = vm.Format,
-			Country = vm.Country,
+			PublishingCountry = vm.Country,
 			ISBN = vm.ISBN,
 			PageCount = vm.PageCount,
 			Price = vm.Price,

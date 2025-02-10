@@ -14,13 +14,12 @@ public class Book : BaseEntity
 	public Genre Genre { get; set; }
 	public Format Format { get; set; }
 	public string? ISBN { get; set; }
-	public string? Country { get; set; }
-	public int PuslishedYear { get; set; }
+	public string? PublishingCountry { get; set; }
+	public int PublishedYear { get; set; }
 	public int PageCount { get; set; }
-	public int Price { get; set; }
+	public decimal Price { get; set; }
 	public string Language { get; set; }
 	public string? CoverImageUrl { get; set; }
-	public ICollection<BookImage>? Images { get; set; }
 
 
 }

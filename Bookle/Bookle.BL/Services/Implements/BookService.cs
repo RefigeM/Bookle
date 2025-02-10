@@ -63,12 +63,12 @@ public class BookService(IBookRepository _repo, BookleDbContext _context) : IBoo
 		book.ShortDescription = vm.ShortDescription;
 		book.AuthorId = vm.AuthorId;
 		book.ISBN = vm.ISBN;
-		book.Country = vm.Country;
+		book.PublishingCountry = vm.Country;
 		book.Format = vm.Format;
 		book.Genre = vm.Genre;
 		book.PageCount = vm.PageCount;
 		book.Language = vm.Language;
-		book.PuslishedYear = vm.PublishedYear;
+		book.PublishedYear = vm.PublishedYear;
 		book.RoleOfBook = vm.RoleOfBook;
 		book.ShortDescription = vm.ShortDescription;
 

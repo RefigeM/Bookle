@@ -62,19 +62,19 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 				if (!vm.File.IsValidSize(400))
 					ModelState.AddModelError("File", "File must be less than 400");
 			}
-			if (vm.OtherFiles != null && vm.OtherFiles.Any())
-			{
-				if (!vm.OtherFiles.All(x => x.IsValidType("image")))
-				{
-					string fileNames = string.Join(',', vm.OtherFiles.Where(x => !x.IsValidType("image")).Select(x => x.FileName));
-					ModelState.AddModelError("OtherFiles", fileNames + "is/are not an image");
-				}
-				if (!vm.OtherFiles.All(x => x.IsValidSize(400)))
-				{
-					string fileNames = string.Join(',', vm.OtherFiles.Where(x => !x.IsValidSize(400)).Select(x => x.FileName));
-					ModelState.AddModelError("OtherFiles", fileNames + "is/are bigger than 400 kb.");
-				}
-			}
+			//if (vm.OtherFiles != null && vm.OtherFiles.Any())
+			//{
+			//	if (!vm.OtherFiles.All(x => x.IsValidType("image")))
+			//	{
+			//		string fileNames = string.Join(',', vm.OtherFiles.Where(x => !x.IsValidType("image")).Select(x => x.FileName));
+			//		ModelState.AddModelError("OtherFiles", fileNames + "is/are not an image");
+			//	}
+			//	if (!vm.OtherFiles.All(x => x.IsValidSize(400)))
+			//	{
+			//		string fileNames = string.Join(',', vm.OtherFiles.Where(x => !x.IsValidSize(400)).Select(x => x.FileName));
+			//		ModelState.AddModelError("OtherFiles", fileNames + "is/are bigger than 400 kb.");
+			//	}
+			//}
 
 
 
@@ -99,24 +99,24 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			Book book = vm;
 			book.CoverImageUrl = await vm.File!.UploadAsync(_env.WebRootPath, "imgs", "books");
 
-			if (vm.OtherFiles != null && vm.OtherFiles.Any())
-			{
-				book.Images = new List<BookImage>();
+			//if (vm.OtherFiles != null && vm.OtherFiles.Any())
+			//{
+			//	book.Images = new List<BookImage>();
 
-				foreach (var file in vm.OtherFiles)
-				{
-					string uploadedFilePath = await file.UploadAsync(_env.WebRootPath, "imgs", "books");
-					book.Images.Add(new BookImage
-					{
-						Book = book,
-						ImageUrl = uploadedFilePath
-					});
-				}
-			}
-			else
-			{
-				book.Images = new List<BookImage>();
-			}
+			//	foreach (var file in vm.OtherFiles)
+			//	{
+			//		string uploadedFilePath = await file.UploadAsync(_env.WebRootPath, "imgs", "books");
+			//		book.Images.Add(new BookImage
+			//		{
+			//			Book = book,
+			//			ImageUrl = uploadedFilePath
+			//		});
+			//	}
+			//}
+			//else
+			//{
+			//	book.Images = new List<BookImage>();
+			//}
 
 			await _service.AddBookAsync(book);
 			return RedirectToAction(nameof(Index));
@@ -149,8 +149,8 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 				Genre = book.Genre,
 				Format = book.Format,
 				ISBN = book.ISBN,
-				Country = book.Country,
-				PublishedYear = book.PuslishedYear,
+				Country = book.PublishingCountry,
+				PublishedYear = book.PublishedYear,
 				PageCount = book.PageCount,
 				Price = book.Price,
 				Language = book.Language,

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bookle.DAL.Migrations
 {
     [DbContext(typeof(BookleDbContext))]
-    [Migration("20250204140400_BooksAuthorImagesTables")]
-    partial class BooksAuthorImagesTables
+    [Migration("20250210182030_BookAuthorTables")]
+    partial class BookAuthorTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,10 +68,6 @@ namespace Bookle.DAL.Migrations
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Country")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<string>("CoverImageUrl")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
@@ -109,8 +105,12 @@ namespace Bookle.DAL.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("PuslishedYear")
+                    b.Property<int>("PublishedYear")
                         .HasColumnType("int");
+
+                    b.Property<string>("PublishingCountry")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("RoleOfBook")
                         .HasMaxLength(255)
@@ -135,41 +135,6 @@ namespace Bookle.DAL.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("Bookle.Core.Entities.BookImage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BookId");
-
-                    b.ToTable("BookImages");
-                });
-
             modelBuilder.Entity("Bookle.Core.Entities.Book", b =>
                 {
                     b.HasOne("Bookle.Core.Entities.Author", "Author")
@@ -181,25 +146,9 @@ namespace Bookle.DAL.Migrations
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("Bookle.Core.Entities.BookImage", b =>
-                {
-                    b.HasOne("Bookle.Core.Entities.Book", "Book")
-                        .WithMany("Images")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Book");
-                });
-
             modelBuilder.Entity("Bookle.Core.Entities.Author", b =>
                 {
                     b.Navigation("Books");
-                });
-
-            modelBuilder.Entity("Bookle.Core.Entities.Book", b =>
-                {
-                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

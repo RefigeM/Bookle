@@ -24,10 +24,10 @@ namespace Bookle.DAL.Configurations
 			builder.Property(b => b.ISBN)
 				.HasMaxLength(20);
 
-			builder.Property(b => b.Country)
+			builder.Property(b => b.PublishingCountry)
 				.HasMaxLength(100);
 
-			builder.Property(b => b.PuslishedYear)
+			builder.Property(b => b.PublishedYear)
 				.IsRequired();
 
 			builder.Property(b => b.PageCount)
@@ -44,10 +44,7 @@ namespace Bookle.DAL.Configurations
 			builder.Property(b => b.CoverImageUrl)
 				.HasMaxLength(500);
 
-			builder.HasMany(b => b.Images)
-				.WithOne(i => i.Book)
-				.HasForeignKey(i => i.BookId)
-				.OnDelete(DeleteBehavior.Cascade);
+			
 		}
 	}
 }

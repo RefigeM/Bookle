@@ -115,7 +115,7 @@
                     <div class="swiper-slide">
                         <div class="shop-box-items style-2">
                             <div class="book-thumb center">
-                                <a href="shop-details"><img src="assets/large_http___kitabal.az_img_books_5189426.jpg" alt="img"></a>
+                                <a href="shop-details"><img src="~/imgs/books/@item.CoverImageUrl" alt="img" width="150"></a>
                                 <ul class="shop-icon d-grid justify-content-center align-items-center">
                                     <li>
                                         <a href="shop-cart.html"><i class="far fa-heart"></i></a>
@@ -132,7 +132,7 @@
                                 </ul>
                             </div>
                             <div class="shop-content">
-                                <h5> Design Low Book </h5>
+                                <h5> @item.Format</h5>
                                 <h3><a href="shop-details.html">@item.Title <br> Erna</a></h3>
                                 <ul class="price-list">
                                     <li>$ @item.Price</li>
