@@ -116,7 +116,6 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 		{
 			if (id == null) return BadRequest();
 			var book = await _service.GetBookByIdAsync(id.Value);
-			if (book == null) return NotFound();	
 			return View(book);
 		}
 

@@ -27,12 +27,17 @@
 						<thead>
 							<tr>
 								<th>ID</th>
-								<th>Profil Image</th>
-								<th>Fullname</th>
-								<th>IsDeleted</th>
+								<th>Book Image</th>
+								<th>TITLE</th>
+								<th>AUTHOR</th>
+								<th>RATING</th>
+								<th>GENRE</th>
+								<th>FORMAT</th>
+								<th>PUBLISHED YEAR</th>
+								<th>LANGUAGE</th>
+								<th>ISDELETED</th>
+
 								<th>ACTIONS</th>
-
-
 							</tr>
 						</thead>
 
@@ -41,44 +46,74 @@
 								<td>
 									<div class="catalog__text">@Model.Id</div>
 								</td>
-								<td><img src="@Url.Content(Model.CoverImageUrl)" width="70" /></td>
+								<td><img src="~/imgs/books/@Model.CoverImageUrl" width="50" /></td>
+
 								<td>
 									<div class="catalog__text"><a href="#">@Model.Title</a></div>
 								</td>
 								<td>
-									<div class="catalog__text catalog__text--red">@Model.IsDeleted</div>
+									<div class="catalog__text"><a href="#">@Model.Author.AuthorName</a></div>
+								</td>
+								<td>
+									<div class="catalog__text catalog__text--rate">7.9</div>
+								</td>
+
+								<td>
+									<div class="catalog__text">@Model.Genre</div>
+								</td>
+
+								<td>
+									<div class="catalog__text">@Model.Format</div>
+								</td>
+
+								<td>
+									<div class="catalog__text">@Model.PuslishedYear</div>
+								</td>
+								<td>
+									<div class="catalog__text">@Model.Language</div>
+								</td>
+
+								<td>
+									@if (Model.IsDeleted == true)
+									{
+										<div class="catalog__text catalog__text--red">@Model.IsDeleted</div>
+
+									}
+									else
+									{
+										<div class="catalog__text catalog__text--green">@Model.IsDeleted</div>
+
+									}
 
 								</td>
 								<td>
 									<div class="catalog__btns">
-
-
 										@if (Model.IsDeleted == false)
 										{
-											<a asp-action="Hide" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--banned">
+											<a asp-action="Hide" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--view">
 												<i class="ti ti-lock"></i>
 
 											</a>
 										}
 										else
 										{
-											<a asp-action="Show" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
+											<a asp-action="Show" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
 												<i class="ti ti-lock"></i>
 											</a>
 										}
+										
 
-										<a asp-action="Update" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--edit">
+										<a asp-action="Update" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--edit">
 											<i class="ti ti-edit"></i>
 										</a>
 
-										<a asp-action="Delete" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
+										<a asp-action="Delete" asp-asp-controller="Book" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
 											<i class="ti ti-trash"></i>
 										</a>
 
 
 									</div>
 								</td>
-
 							</tr>
 
 						</tbody>
