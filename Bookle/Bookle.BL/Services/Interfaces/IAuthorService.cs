@@ -12,4 +12,5 @@ public interface IAuthorService
 	Task RestoreAuthorAsync(int id);
 	Task SoftDeleteAuthorAsync(int id);
 	Task UpdateAuthorAsync(int id,AuthorUpdateVM vm);
+	Task<List<BookCountOfAuthor>> GetBookCountOfAuthor(int? id);
 }

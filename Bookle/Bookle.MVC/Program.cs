@@ -3,6 +3,8 @@ using Bookle.DAL;
 
 using Microsoft.EntityFrameworkCore;
 using Bookle.BL;
+using Bookle.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,17 @@ builder.Services.AddDbContext<BookleDbContext>(opt =>
 builder.Services.AddRepositories();
 builder.Services.AddServices();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddIdentity<User, IdentityRole>(opt =>
+{
+	opt.User.RequireUniqueEmail = true;
+	opt.Password.RequiredLength = 3;
+	opt.Password.RequireDigit = false;
+	opt.Password.RequireLowercase = false;
+	opt.Password.RequireUppercase = false;
+	opt.Lockout.MaxFailedAccessAttempts = 1;
+	opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(int.MaxValue);
+}).AddDefaultTokenProviders().AddEntityFrameworkStores<BookleDbContext>();
 
 var app = builder.Build();
 

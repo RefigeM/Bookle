@@ -5,6 +5,8 @@ using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Bookle.BL.Services.Implements;
 
@@ -38,6 +40,11 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		return author;
 	}
 
+	public Task<List<BookCountOfAuthor>> GetBookCountOfAuthor(int? id)
+	{
+		throw new NotImplementedException();
+	}
+
 	public async Task RestoreAuthorAsync(int id)
 	{
 		await _repo.RestoreAsync(id);
@@ -64,5 +71,5 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		await _repo.SaveAsync();
 	}
 
-	
+
 }

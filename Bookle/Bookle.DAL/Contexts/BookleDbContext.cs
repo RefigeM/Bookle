@@ -1,9 +1,10 @@
 ﻿using Bookle.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bookle.DAL.Contexts;
 
-public class BookleDbContext : DbContext
+public class BookleDbContext : IdentityDbContext<User>
 {
 	public BookleDbContext(DbContextOptions options) : base(options)
 	{
