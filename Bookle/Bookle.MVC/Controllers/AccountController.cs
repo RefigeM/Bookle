@@ -30,11 +30,11 @@ namespace Bookle.MVC.Controllers
 				{
 					ModelState.AddModelError("", err.Description);
 				}
-			}
-			if (!ModelState.IsValid)
-				return View();
+				return View(vm);
 
-			return View();
+			}
+
+			return RedirectToAction("Index", "Home");
 		}
 		public IActionResult Login()
 		{
