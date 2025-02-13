@@ -4,6 +4,7 @@ using Bookle.BL.ViewModels.BookVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Enums;
 using Bookle.DAL.Contexts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+	[Authorize]
+
 
 	public class BookController(BookleDbContext _context, IWebHostEnvironment _env, IBookService _service) : Controller
 	{

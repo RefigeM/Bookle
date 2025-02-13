@@ -3,12 +3,14 @@ using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.Core.Entities;
 using Bookle.DAL.Contexts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+	[Authorize]
 
 	public class AuthorController(BookleDbContext _context, IWebHostEnvironment _env, IAuthorService _service) : Controller
 	{

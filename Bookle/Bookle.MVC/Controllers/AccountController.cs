@@ -1,11 +1,13 @@
-﻿using Bookle.BL.ViewModels.AuthsVMs;
+﻿using Bookle.BL.Extentions;
+using Bookle.BL.ViewModels.AuthsVMs;
 using Bookle.Core.Entities;
+using Bookle.Core.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bookle.MVC.Controllers
 {
-	public class AccountController(UserManager<User> _userManager, SignInManager<User> _signManager) : Controller
+	public class AccountController(UserManager<User> _userManager, SignInManager<User> _signManager,RoleManager<IdentityRole> _roleManager) : Controller
 	{
 		public IActionResult Register()
 		{
@@ -31,7 +33,16 @@ namespace Bookle.MVC.Controllers
 					ModelState.AddModelError("", err.Description);
 				}
 				return View(vm);
+			}
+			var roleResult = await _userManager.AddToRoleAsync(user, nameof(Role.User));
 
+			if (!roleResult.Succeeded)
+			{
+				foreach (var err in roleResult.Errors)
+				{
+					ModelState.AddModelError("", err.Description);
+				}
+				return View(vm);
 			}
 			return RedirectToAction("Login", "Account");
 		}
@@ -72,5 +83,15 @@ namespace Bookle.MVC.Controllers
 			return RedirectToAction("Index", "Home");
 
 		}
+		//public async Task<IActionResult> CreateRoles()
+		//{
+		//	foreach (Role item in Enum.GetValues(typeof(Role)))
+		//	{
+		//		await _roleManager.CreateAsync(new IdentityRole(item.GetRole()));
+		//	}
+		//	return Ok();
+		//}
+
+
 	}
 }

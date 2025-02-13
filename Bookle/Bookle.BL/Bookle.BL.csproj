@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bookle.DAL\Bookle.DAL.csproj" />
+	  <ProjectReference Include="..\Bookle.DAL\Bookle.DAL.csproj" />
   </ItemGroup>
 
 </Project>
