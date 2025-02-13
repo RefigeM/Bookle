@@ -65,19 +65,20 @@
 
 			<div class="panel card-sign">
 				<div class="card-title-sign mt-3 text-end">
-					<h2 class="title text-uppercase font-weight-bold m-0"><i class="bx bx-user-circle me-1 text-6 position-relative top-5"></i> Sign Up</h2>
+					<h2 class="title text-uppercase font-weight-bold m-0"><i class="bx bx-user-circle me-1 text-6 position-relative top-5"></i>Sign In</h2>
 				</div>
 				<div class="card-body">
 					<form method="post">
 						<div style="margin-top: 30px;" class="form-group mb-3">
+							<div>
 							<label>Username or Email</label>
 							<div class="input-group">
 								<input asp-for="UsernameOrEmail"  type="text" class="form-control form-control-lg" />
 								<span class="input-group-text">
 									<i class="bx bx-user text-4"></i>
 								</span>
-								<span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
-
+							</div>
+							<span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
 							</div>
 							<label style="margin-top: 20px;">Password</label>
 
@@ -86,9 +87,10 @@
 								<span class="input-group-text">
 									<i class="bx bx-lock text-4"></i>
 								</span>
-								<span asp-validation-for="Password" class="text-danger"></span>
-
 							</div>
+							
+							<span asp-validation-for="Password" class="text-danger"></span>
+
 						</div>
 												
 						<div class="text-danger" asp-validation-summary="ModelOnly"></div>
@@ -100,7 +102,7 @@
 								<button type="submit" class="btn btn-primary mt-2">Sign Up</button>
 							</div>
 						</div>
-						<p class="text-center">Already have an account? <a action="Login" controller="Account">Sign In!</a></p>
+						<p class="text-center">Don't have an account yet? <a asp-action="Register" asp-asp-controller="Account">Sign Up!</a></p>
 
 					</form>
 				</div>
