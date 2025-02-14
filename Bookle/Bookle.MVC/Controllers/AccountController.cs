@@ -55,7 +55,7 @@ namespace Bookle.MVC.Controllers
 			return View();
 		}
 		[HttpPost]
-		public async Task<IActionResult> Login(LoginVM vm)
+		public async Task<IActionResult> Login(LoginVM vm, string? returnUrl = null)
 		{
 			if (!ModelState.IsValid) return View();
 			User user = null;
@@ -84,9 +84,18 @@ namespace Bookle.MVC.Controllers
 				return View();
 
 			}
-			return RedirectToAction("Index", "Home");
 
+			if (string.IsNullOrWhiteSpace(returnUrl))
+			{
+				if (await _userManager.IsInRoleAsync(user, "Admin"))
+				{
+					return RedirectToAction("Index", new { Controller = "Dashboard", Area = "Admin" });
+				}
+				return RedirectToAction("Index", "Home");
+			}
+			return LocalRedirect(returnUrl);
 		}
+
 		public async Task<IActionResult> CreateRoles()
 		{
 			foreach (Role item in Enum.GetValues(typeof(Role)))

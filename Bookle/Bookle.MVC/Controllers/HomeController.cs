@@ -20,12 +20,13 @@ namespace Bookle.MVC.Controllers
 		{
 			return View(await _service.GetAllBooksAsync());
 		}
-		public async Task<IActionResult> Details() 
+		public async Task<IActionResult> Details(int? id) 
 		{
-			return View(await _context.Books.ToListAsync());			
+			if (id == null) return BadRequest();
+				return View(await _service.GetBookByIdAsync(id.Value));			
 		}
 		public async Task<IActionResult> AccessDenied() 
-		{
+		{			
 			return View();
 		}
 

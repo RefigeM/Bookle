@@ -133,7 +133,7 @@
                             </div>
                             <div class="shop-content">
                                 <h5> @item.Format</h5>
-                                <h3><a href="shop-details.html">@item.Title <br> Erna</a></h3>
+                                <h3><a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">@item.Title</a></h3>
                                 <ul class="price-list">
                                     <li>$ @item.Price</li>
                                 </ul>

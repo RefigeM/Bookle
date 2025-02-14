@@ -6804,9 +6804,13 @@ span {
   background: #F8F8F8;
   text-align: center;
   padding: 65px 40px;
+  max-width: 50% !important;
 }
+/*.shop-details-thumb img {
+    max-width: 30px !important;
+}*/
 @media (max-width: 767px) {
-  .shop-details-wrapper .shop-details-image .shop-details-thumb {
+    .shop-details-wrapper .shop-details-image .shop-details-thumb {
     padding: 40px 25px;
   }
 }
