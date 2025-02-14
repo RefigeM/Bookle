@@ -21973,6 +21973,10 @@
       "PackagePath": "staticwebassets\\admin\\assets\\webfont\\tabler-icons.min.css"
     },
     {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\assets\\black-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\black-logo.svg"
+    },
+    {
       "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\assets\\css\\all.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\all.min.css"
     },

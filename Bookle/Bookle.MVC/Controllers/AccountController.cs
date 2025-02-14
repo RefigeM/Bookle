@@ -2,15 +2,18 @@
 using Bookle.BL.ViewModels.AuthsVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bookle.MVC.Controllers
 {
-	public class AccountController(UserManager<User> _userManager, SignInManager<User> _signManager,RoleManager<IdentityRole> _roleManager) : Controller
+	public class AccountController(UserManager<User> _userManager, SignInManager<User> _signManager, RoleManager<IdentityRole> _roleManager) : Controller
 	{
+		private bool IsAuthenticated => HttpContext.User.Identity?.IsAuthenticated ?? false;
 		public IActionResult Register()
 		{
+			if (IsAuthenticated) return RedirectToAction("Index", "Home");
 			return View();
 		}
 		[HttpPost]
@@ -48,6 +51,7 @@ namespace Bookle.MVC.Controllers
 		}
 		public IActionResult Login()
 		{
+			if (IsAuthenticated) return RedirectToAction("Index", "Home");
 			return View();
 		}
 		[HttpPost]
@@ -83,15 +87,20 @@ namespace Bookle.MVC.Controllers
 			return RedirectToAction("Index", "Home");
 
 		}
-		//public async Task<IActionResult> CreateRoles()
-		//{
-		//	foreach (Role item in Enum.GetValues(typeof(Role)))
-		//	{
-		//		await _roleManager.CreateAsync(new IdentityRole(item.GetRole()));
-		//	}
-		//	return Ok();
-		//}
-
+		public async Task<IActionResult> CreateRoles()
+		{
+			foreach (Role item in Enum.GetValues(typeof(Role)))
+			{
+				await _roleManager.CreateAsync(new IdentityRole(item.GetRole()));
+			}
+			return Ok();
+		}
+		[Authorize]
+		public async Task<IActionResult> Logout()
+		{
+			await _signManager.SignOutAsync();
+			return RedirectToAction(nameof(Login));
+		}
 
 	}
 }

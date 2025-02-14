@@ -1,4 +1,5 @@
 ﻿using Bookle.BL.Extentions;
+using Bookle.BL.Helpers;
 using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.BookVMs;
 using Bookle.Core.Entities;
@@ -12,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-	[Authorize]
+	[Authorize(Roles =RoleConstants.Book)]
 
 
 	public class BookController(BookleDbContext _context, IWebHostEnvironment _env, IBookService _service) : Controller

@@ -24,6 +24,10 @@ namespace Bookle.MVC.Controllers
 		{
 			return View(await _context.Books.ToListAsync());			
 		}
+		public async Task<IActionResult> AccessDenied() 
+		{
+			return View();
+		}
 
 	}
 }

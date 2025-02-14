@@ -1,5 +1,6 @@
 using Bookle.DAL.Contexts;
 using Bookle.DAL;
+using Bookle.BL.Extentions;
 
 using Microsoft.EntityFrameworkCore;
 using Bookle.BL;
@@ -19,11 +20,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddIdentity<User, IdentityRole>(opt =>
 {
 	opt.User.RequireUniqueEmail = true;
+	opt.SignIn.RequireConfirmedEmail = false;
 	opt.Password.RequiredLength = 3;
 	opt.Password.RequireDigit = false;
 	opt.Password.RequireLowercase = false;
 	opt.Password.RequireUppercase = false;
-	opt.Lockout.MaxFailedAccessAttempts = 1;
+	opt.Password.RequireNonAlphanumeric = false;
+	opt.Lockout.MaxFailedAccessAttempts = 2;
 	opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(int.MaxValue);
 }).AddDefaultTokenProviders().AddEntityFrameworkStores<BookleDbContext>();
 
@@ -43,7 +46,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.UseUserSeed();
 app.MapControllerRoute(
 			name: "areas",
 			pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
