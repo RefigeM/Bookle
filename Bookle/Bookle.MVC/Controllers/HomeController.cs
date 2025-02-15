@@ -1,4 +1,5 @@
-﻿using Bookle.BL.Services.Interfaces;
+﻿using Bookle.BL.Services.Implements;
+using Bookle.BL.Services.Interfaces;
 using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,11 +13,13 @@ namespace Bookle.MVC.Controllers
 	{
 		private readonly BookleDbContext _context;
 		private readonly IBookService _service;
+		private readonly IRatingService _ratingService;
 
-		public HomeController(BookleDbContext context, IBookService service)
+		public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService)
 		{
 			_context = context;	
 			_service= service;	
+			_ratingService= ratingService;	
 		}
 
 		public async Task<IActionResult> Index()
@@ -27,12 +30,12 @@ namespace Bookle.MVC.Controllers
 		{
 			if (id == null) return BadRequest();
 
-			var data = await _context.Books
+			var book = await _context.Books
 				.Include(x => x.BookRatings)
 				.Where(x => x.Id == id.Value && !x.IsDeleted)
 				.FirstOrDefaultAsync();
 
-			if (data is null) return NotFound();
+			if (book is null) return NotFound();
 
 			string? userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
 
@@ -43,43 +46,56 @@ namespace Bookle.MVC.Controllers
 					.Select(x => x.RatingRate)
 					.FirstOrDefaultAsync();
 
-				ViewBag.Rating = rating == 0 ? 5 : rating;
+				ViewBag.Rating = rating > 0 ? rating : 0; 
 			}
 			else
 			{
-				ViewBag.Rating = 5;
+				ViewBag.Rating = 0; 
 			}
 
-			return View(await _service.GetBookByIdAsync(id.Value));
+			return View(book);
 		}
+
 
 		public async Task<IActionResult> AccessDenied() 
 		{			
 			return View();
 		}
-		[Authorize]
-		public async Task<IActionResult> Rate(int? bookId, int rate = 1)
+		//[Authorize]
+		//public async Task<IActionResult> Rate(int? bookId, int rate = 1)
+		//{
+		//	if (!bookId.HasValue) return BadRequest();
+		//	string UserId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
+		//	if (!await _context.Books.AnyAsync(p => p.Id == bookId)) return NotFound();
+		//	var rating = await _context.BookRatings.Where(x => x.BookId == bookId && x.UserId == UserId).FirstOrDefaultAsync();
+		//	if (rating is null)
+		//	{
+		//		await _context.BookRatings.AddAsync(new Core.Entities.BookRating
+		//		{
+		//			BookId = bookId.Value,
+		//			RatingRate = rate,
+		//			UserId = UserId
+		//		});
+		//	}
+		//	else
+		//	{
+		//		rating.RatingRate = rate;
+		//	}
+
+		//	await _context.SaveChangesAsync();
+		//	return RedirectToAction(nameof(Details), new { id = bookId });
+		//}
+		[HttpPost]
+		public IActionResult SubmitRating(int bookId, int star)
 		{
-			if (!bookId.HasValue) return BadRequest();
-			string UserId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
-			if (!await _context.Books.AnyAsync(p => p.Id == bookId)) return NotFound();
-			var rating = await _context.BookRatings.Where(x => x.BookId == bookId && x.UserId == UserId).FirstOrDefaultAsync();
-			if (rating is null)
+			string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+
+			if (userId != null)
 			{
-				await _context.BookRatings.AddAsync(new Core.Entities.BookRating
-				{
-					BookId = bookId.Value,
-					RatingRate = rate,
-					UserId = UserId
-				});
-			}
-			else
-			{
-				rating.RatingRate = rate;
+				_ratingService.AddRating(bookId, userId, star);
 			}
 
-			await _context.SaveChangesAsync();
-			return RedirectToAction(nameof(Details), new { id = bookId });
+			return RedirectToAction("Details", new { id = bookId });
 		}
 
 	}

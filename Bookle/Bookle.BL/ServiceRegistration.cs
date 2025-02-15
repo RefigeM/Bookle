@@ -1,5 +1,6 @@
 ﻿using Bookle.BL.Services.Implements;
 using Bookle.BL.Services.Interfaces;
+using Bookle.Core.Entities;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bookle.BL
@@ -10,6 +11,7 @@ namespace Bookle.BL
 		{
 			services.AddScoped<IBookService, BookService>();
 			services.AddScoped<IAuthorService, AuthorService>();
+			services.AddScoped<IRatingService, RatingService>();
 
 			return services;	
 		}
