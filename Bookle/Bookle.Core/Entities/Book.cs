@@ -20,6 +20,8 @@ public class Book : BaseEntity
 	public decimal Price { get; set; }
 	public string Language { get; set; }
 	public string? CoverImageUrl { get; set; }
+	public ICollection<BookRating>? BookRatings { get; set; }
+
 
 
 }

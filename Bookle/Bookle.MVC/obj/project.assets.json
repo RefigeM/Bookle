@@ -7895,6 +7895,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Bookle.BL >= 1.0.0",
+      "Bookle.Core >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.12",
       "Microsoft.EntityFrameworkCore >= 8.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.12",
@@ -7936,6 +7937,9 @@
           "projectReferences": {
             "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.BL\\Bookle.BL.csproj": {
               "projectPath": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.BL\\Bookle.BL.csproj"
+            },
+            "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.Core\\Bookle.Core.csproj": {
+              "projectPath": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.Core\\Bookle.Core.csproj"
             }
           }
         }

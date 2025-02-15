@@ -6803,9 +6803,13 @@ span {
   border: 1px solid rgba(92, 112, 126, 0.3);
   background: #F8F8F8;
   text-align: center;
-  padding: 65px 40px;
-  max-width: 50% !important;
+  padding: 20% 40% 20% 10%;
+  width: 100%;
+  min-width: 99% !important;
+  max-width: 100% !important;
 }
+
+
 /*.shop-details-thumb img {
     max-width: 30px !important;
 }*/

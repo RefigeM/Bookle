@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bookle.BL\Bookle.BL.csproj" />
+    <ProjectReference Include="..\Bookle.Core\Bookle.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

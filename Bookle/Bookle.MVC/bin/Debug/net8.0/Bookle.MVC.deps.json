@@ -9,6 +9,7 @@
       "Bookle.MVC/1.0.0": {
         "dependencies": {
           "Bookle.BL": "1.0.0",
+          "Bookle.Core": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.12",
           "Microsoft.EntityFrameworkCore": "8.0.12",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.12",

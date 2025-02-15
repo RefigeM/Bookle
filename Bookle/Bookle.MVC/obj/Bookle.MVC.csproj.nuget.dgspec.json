@@ -301,6 +301,9 @@
             "projectReferences": {
               "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.BL\\Bookle.BL.csproj": {
                 "projectPath": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.BL\\Bookle.BL.csproj"
+              },
+              "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.Core\\Bookle.Core.csproj": {
+                "projectPath": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.Core\\Bookle.Core.csproj"
               }
             }
           }
