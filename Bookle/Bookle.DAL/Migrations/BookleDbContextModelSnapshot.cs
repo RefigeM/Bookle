@@ -170,6 +170,46 @@ namespace Bookle.DAL.Migrations
                     b.ToTable("BookRatings");
                 });
 
+            modelBuilder.Entity("Bookle.Core.Entities.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("Bookle.Core.Entities.User", b =>
                 {
                     b.Property<string>("Id")
@@ -405,6 +445,25 @@ namespace Bookle.DAL.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Bookle.Core.Entities.Comment", b =>
+                {
+                    b.HasOne("Bookle.Core.Entities.Book", "Book")
+                        .WithMany("Comments")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Bookle.Core.Entities.User", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -464,11 +523,15 @@ namespace Bookle.DAL.Migrations
             modelBuilder.Entity("Bookle.Core.Entities.Book", b =>
                 {
                     b.Navigation("BookRatings");
+
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("Bookle.Core.Entities.User", b =>
                 {
                     b.Navigation("BookRatings");
+
+                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

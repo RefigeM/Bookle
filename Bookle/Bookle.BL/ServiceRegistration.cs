@@ -12,6 +12,7 @@ namespace Bookle.BL
 			services.AddScoped<IBookService, BookService>();
 			services.AddScoped<IAuthorService, AuthorService>();
 			services.AddScoped<IRatingService, RatingService>();
+			services.AddScoped<ICommentService, CommentService>();
 
 			return services;	
 		}

@@ -14,12 +14,14 @@ namespace Bookle.MVC.Controllers
 		private readonly BookleDbContext _context;
 		private readonly IBookService _service;
 		private readonly IRatingService _ratingService;
+		private readonly ICommentService _commentService;
 
-		public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService)
+		public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService, ICommentService commentService)
 		{
 			_context = context;	
 			_service= service;	
 			_ratingService= ratingService;	
+			_commentService= commentService;	
 		}
 
 		public async Task<IActionResult> Index()
@@ -32,6 +34,8 @@ namespace Bookle.MVC.Controllers
 
 			var book = await _context.Books
 				.Include(x => x.BookRatings)
+				 .Include(x => x.Comments)
+				 .ThenInclude(x => x.User)
 				.Where(x => x.Id == id.Value && !x.IsDeleted)
 				.FirstOrDefaultAsync();
 
@@ -46,7 +50,8 @@ namespace Bookle.MVC.Controllers
 					.Select(x => x.RatingRate)
 					.FirstOrDefaultAsync();
 
-				ViewBag.Rating = rating > 0 ? rating : 0; 
+				ViewBag.Rating = rating > 0 ? rating : 0;
+				ViewBag.UserRating = rating;
 			}
 			else
 			{
@@ -97,6 +102,17 @@ namespace Bookle.MVC.Controllers
 
 			return RedirectToAction("Details", new { id = bookId });
 		}
+		[HttpPost]
+		public IActionResult AddComment(int bookId, string content)
+		{
+			string userId = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "";
 
+			if (string.IsNullOrWhiteSpace(userId))
+				return Unauthorized();
+
+			_commentService.AddComment(bookId, userId, content);
+
+			return RedirectToAction("Details", "Home", new { id = bookId });
+		}
 	}
 }

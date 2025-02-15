@@ -21,6 +21,7 @@ public class Book : BaseEntity
 	public string Language { get; set; }
 	public string? CoverImageUrl { get; set; }
 	public ICollection<BookRating>? BookRatings { get; set; }
+	public ICollection<Comment>? Comments { get; set; }
 
 
 
