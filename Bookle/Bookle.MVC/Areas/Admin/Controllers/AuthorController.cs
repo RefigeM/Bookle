@@ -38,11 +38,13 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 		public async Task<IActionResult> Delete(int? id)
 		{
 			if (id == null) return BadRequest();
-			var data = await _service.GetAuthorById(id.Value);
-			if (data == null) return NotFound();
-			await _service.DeleteAuthorAsync(id.Value);
-			return RedirectToAction(nameof(Index));
 
+			var author = await _service.GetAuthorById(id.Value);
+			if (author == null) return NotFound();
+
+			await _service.DeleteAuthorAsync(id.Value);
+
+			return RedirectToAction(nameof(Index));
 		}
 		public async Task<IActionResult> Info(int? id)
 		{

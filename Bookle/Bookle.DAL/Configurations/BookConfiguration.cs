@@ -44,7 +44,11 @@ namespace Bookle.DAL.Configurations
 			builder.Property(b => b.CoverImageUrl)
 				.HasMaxLength(500);
 
-			
+			builder.HasMany(b => b.BookRatings)
+		.WithOne(br => br.Book)
+		.HasForeignKey(br => br.BookId)
+		.OnDelete(DeleteBehavior.Cascade);
+
 		}
 	}
 }

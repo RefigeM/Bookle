@@ -66,30 +66,7 @@ namespace Bookle.MVC.Controllers
 		{			
 			return View();
 		}
-		//[Authorize]
-		//public async Task<IActionResult> Rate(int? bookId, int rate = 1)
-		//{
-		//	if (!bookId.HasValue) return BadRequest();
-		//	string UserId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
-		//	if (!await _context.Books.AnyAsync(p => p.Id == bookId)) return NotFound();
-		//	var rating = await _context.BookRatings.Where(x => x.BookId == bookId && x.UserId == UserId).FirstOrDefaultAsync();
-		//	if (rating is null)
-		//	{
-		//		await _context.BookRatings.AddAsync(new Core.Entities.BookRating
-		//		{
-		//			BookId = bookId.Value,
-		//			RatingRate = rate,
-		//			UserId = UserId
-		//		});
-		//	}
-		//	else
-		//	{
-		//		rating.RatingRate = rate;
-		//	}
-
-		//	await _context.SaveChangesAsync();
-		//	return RedirectToAction(nameof(Details), new { id = bookId });
-		//}
+	
 		[HttpPost]
 		public IActionResult SubmitRating(int bookId, int star)
 		{

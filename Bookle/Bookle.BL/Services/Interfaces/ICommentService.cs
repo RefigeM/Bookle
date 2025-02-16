@@ -1,4 +1,5 @@
-﻿using Bookle.Core.Entities;
+﻿using Bookle.BL.ViewModels.BookVMs;
+using Bookle.Core.Entities;
 
 namespace Bookle.BL.Services.Interfaces;
 
@@ -6,4 +7,12 @@ public interface ICommentService
 {
 	void AddComment(int bookId, string userId, string content);
 	List<Comment> GetCommentsByBookId(int bookId);
+	Task<List<Comment>> GetAllCommentsAsync();
+	Task<Comment> GetCommentByIdAsync(int id);
+	Task AddCommentAsync(Comment comment);
+	Task DeleteCommentAsync(int id);
+	Task RestoreCommentAsync(int id);
+	Task SoftDeleteCommentAsync(int id);
+	Task UpdateCommentAsync(int id, BookUpdateVM vm);
+	Task<List<Comment>> GetCommentWithBookAndUser();
 }

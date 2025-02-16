@@ -8,11 +8,25 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
 	[Authorize(Roles = "Admin")]
-	public class UserController(BookleDbContext _context, IWebHostEnvironment _env, IAuthorService _service) : Controller
+	public class UserController(IUserService _userService, IWebHostEnvironment _env, IAuthorService _service) : Controller
     {
         public async Task<IActionResult> Index()
-        {           
-            return View(await _context.Users.ToListAsync());
+        {
+            return View(await _userService.GetAllUsersAsync());
         }
-    }
+
+		[HttpGet("Delete/{userId}")]
+		public async Task<IActionResult> Delete([FromRoute] string userId)
+		{
+			if (string.IsNullOrEmpty(userId)) return BadRequest("Invalid User ID");
+
+			var user = await _userService.GetUserByIdAsync(userId);
+			if (user == null) return NotFound("User not found");
+
+			await _userService.DeleteUserAsync(userId);
+			return RedirectToAction(nameof(Index));
+		}
+
+
+	}
 }

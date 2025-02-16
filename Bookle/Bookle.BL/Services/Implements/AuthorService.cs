@@ -20,13 +20,39 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		await _repo.SaveAsync();
 	}
 
+	//public async Task DeleteAuthorAsync(int id)
+	//{
+	//	var author = await _repo.GetByIdAsync(id);
+	//	if (author == null) throw new NotFoundException();
+	//	await _repo.DeleteAsync(id);
+	//	await _repo.SaveAsync();
+	//}
 	public async Task DeleteAuthorAsync(int id)
 	{
+		// Müəllifi tapırıq
 		var author = await _repo.GetByIdAsync(id);
 		if (author == null) throw new NotFoundException();
-		await _repo.DeleteAsync(id);
+
+		// Əlaqəli kitabları tapırıq
+		var books = await _context.Books.Where(b => b.AuthorId == id).ToListAsync();
+
+		foreach (var book in books)
+		{
+			// Kitaba aid olan qiymətləndirmələri tapırıq və silirik
+			var ratings = await _context.BookRatings.Where(br => br.BookId == book.Id).ToListAsync();
+			_context.BookRatings.RemoveRange(ratings);
+		}
+
+		// Kitabları silirik
+		_context.Books.RemoveRange(books);
+
+		// Müəllifi silirik
+		_context.Authors.Remove(author);
+
+		// Dəyişiklikləri saxlayırıq
 		await _repo.SaveAsync();
 	}
+
 
 	public async Task<IEnumerable<Author>> GetAllAuthorsAsync()
 	{
