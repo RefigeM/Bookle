@@ -109,8 +109,7 @@
               "ViewState": "AgIAAB0AAAAAAAAAAAAAADcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T18:15:09.706Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "RelativeToolTip": "Bookle.DAL\\Migrations\\20250215192943_comment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:29:44.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T19:29:44.574Z"
             },
             {
               "$type": "Document",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "Bookle.BL\\Services\\Implements\\CommentService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:16:17.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T19:16:17.823Z"
             },
             {
               "$type": "Document",
@@ -159,7 +156,7 @@
               "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Home\\Details.cshtml",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Home\\Details.cshtml*",
               "RelativeToolTip": "Bookle.MVC\\Views\\Home\\Details.cshtml*",
-              "ViewState": "AgIAADkBAAAAAAAAAAAwwE0BAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAAAFIBAAB5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-15T12:33:05.028Z",
               "EditorCaption": ""
@@ -174,8 +171,7 @@
               "RelativeToolTip": "Bookle.BL\\ServiceRegistration.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAYwA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T12:39:19.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T12:39:19.219Z"
             },
             {
               "$type": "Document",
@@ -187,8 +183,7 @@
               "RelativeToolTip": "Bookle.Core\\Entities\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:21:25.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T19:21:25.576Z"
             },
             {
               "$type": "Document",
@@ -200,8 +195,7 @@
               "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\ICommentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:14:14.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T19:14:14.829Z"
             },
             {
               "$type": "Document",
@@ -213,8 +207,7 @@
               "RelativeToolTip": "Bookle.Core\\Entities\\Book.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAuwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:25:18.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T19:25:18.492Z"
             },
             {
               "$type": "Document",
@@ -226,8 +219,7 @@
               "RelativeToolTip": "Bookle.Core\\Entities\\Comment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:18:26.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T19:18:26.869Z"
             },
             {
               "$type": "Document",
@@ -239,8 +231,7 @@
               "RelativeToolTip": "Bookle.DAL\\Contexts\\BookleDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:22:19.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T19:22:19.203Z"
             },
             {
               "$type": "Document",

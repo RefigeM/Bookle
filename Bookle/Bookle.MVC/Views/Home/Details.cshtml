@@ -66,7 +66,18 @@
         /* Seçilmiş ulduz və ondan əvvəlkilər sarı olur */
         .star-rating input:checked ~ label {
             color: gold;
-        };
+        }
+
+    #terms
+    {
+    display: flex;
+    }
+
+    #message:focus {
+        border: 1px solid #66afe9; /* Mavi rəngli sərhəd */
+        box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Yüngül kölgə */
+        outline: none; /* Qara konturu silir */
+    }
 
    
 
@@ -247,8 +258,8 @@
                     <li class="nav-item" role="presentation">
                         <a href="#review" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1"
                            role="tab">
-                            <h6>reviews (3)</h6>
-                        </a>
+                        <h6>Reviews (@(Model.Comments != null ? Model.Comments.Count : 0))</h6>
+                    </a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -313,15 +324,19 @@
                     </div>
                     <div id="review" class="tab-pane fade" role="tabpanel">
                         <div class="review-items">
+                        <h3>Comments</h3>
+                        <hr>
+
                         @if (Model.Comments.Any())
                         {
                             <ul>
                                 @foreach (var comment in Model.Comments)
                                 {
+
                                     <li>
                                         <div class="review-wrap-area d-flex gap-4">
                                             <div class="review-thumb">
-                                                <img src="~/assets/img/shop-details/review.png" alt="img">
+                                                <img src="~/account/anonimUser.png" width="60px" style="border-radius:60%" alt="img">
                                             </div>
                                             <div class="review-content">
                                                 <div class="head-area d-flex flex-wrap gap-2 align-items-center justify-content-between">
@@ -330,10 +345,24 @@
                                                         <span>@(@comment.CreatedDate)</span>
                                                     </div>
                                                     <div class="star">
-@*                                                      ?????
- *@
 
-                           
+                                                        @foreach (var rating in Model.BookRatings)
+                                                        {
+                                                            if (comment.UserId == rating.UserId)
+                                                            {
+                                                                @for (int i = 0; i < rating.RatingRate; i++)
+                                                                {
+                                                                    <i class="fas fa-star" style="color: gold;"></i>
+
+                                                                }
+                                                                @for (int i = 0; i <5- rating.RatingRate; i++)
+                                                                {
+                                                                    <i class="fas fa-star"></i>
+
+                                                                }
+                                                            }
+                                                        }
+
                                                     </div>
                                                 </div>
                                                 <p class="mt-30 mb-4">
@@ -342,19 +371,26 @@
                                             </div>
                                         </div>
                                     </li>
+                                    <hr>
+
                                 }
                             </ul>
                         }
-                       
-                        
+                        else
+                        {
+                            <p>No comment yet</p>
+                        }
+
+
                             <div class="review-title mt-5 py-15 mb-30">
-                            <h4>Your Rating*</h4>
+                            <h4>Rate book*</h4>
 
                             @if (User.Identity?.IsAuthenticated ?? false)
                             {
 
                                 <form asp-action="SubmitRating" asp-controller="Home" method="post">
                                     <input type="hidden" name="bookId" value="@Model.Id" />
+                            <div style="display:flex; justify-content: space-between; width: 100px;" >
 
                                     <div class="star-rating">
                                         @for (int i = 5; i >= 1; i--) 
@@ -364,37 +400,33 @@
                                             <label for="star-@i">★</label>
                                         }
                                     </div>
-                                    <button type="submit" class="text-success">Submit Rating</button>
+                                        <button type="submit" class="btn btn-warning" style="margin-left:10px" ;>Rate</button>
+                                    </div>
+
+
                                 </form>                 
                                 }
-                            <h3>Şərhlər</h3>
+                                <br>
+                                <br>
 
-                            @if (Model.Comments.Any())
-                            {
-                                <ul>
-                                    @foreach (var comment in Model.Comments)
-                                    {
-                                        <li>
-                                            <b>@(@comment.User?.Fullname ?? "Anonim")</b>:
-                                            @comment.Content
-                                            <i>(@comment.CreatedDate.ToString("dd.MM.yyyy HH:mm"))</i>
-                                        </li>
-                                    }
-                                </ul>
-                            }
-                            else
-                            {
-                                <p>Hələ şərh yoxdur.</p>
-                            }
 
+                            <h4>Add Comment About the Book</h4>
+                            <br>
                             @if (User.Identity?.IsAuthenticated ?? false)
                             {
                                 <form asp-action="AddComment" asp-controller="Home" method="post">
                                     <input type="hidden" name="bookId" value="@Model.Id" />
-                                    <textarea name="content" required placeholder="Şərhinizi yazın..."></textarea>
-                                    <label class="form-check-label" for="flexRadioDefault12">
-                                        i accept your terms & conditions
-                                    </label>
+                                    
+                                    <div>
+                               <textarea id="text" name="Content" class="form-control ml-1 shadow-none textarea" style="height:150px;" required placeholder="Add Comment"></textarea>
+                                    </div>
+                                  <div id="terms">
+                                        <input type="checkbox" class="form-check-input"
+                                               name="flexRadioDefault" id="flexRadioDefault12">
+                                        <label class="form-check-label" for="flexRadioDefault12">
+                                             i accept your terms & conditions
+                                        </label>
+                                  </div>
                                  <button type="submit" class="theme-btn">
                                 Submit now
                             </button>              
@@ -405,8 +437,7 @@
                                 <p>Şərh yazmaq üçün <a asp-action="Login" asp-controller="Account">daxil olun</a>.</p>
                             }
 
-                  
-                            </div>
+                    </div>
                         </div>
                     </div>
                 </div>

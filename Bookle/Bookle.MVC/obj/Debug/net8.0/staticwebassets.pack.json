@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\account\\anonimUser.png",
+      "PackagePath": "staticwebassets\\account\\anonimUser.png"
+    },
+    {
       "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\account\\assets\\ajax\\ajax-datatables-sample.json",
       "PackagePath": "staticwebassets\\account\\assets\\ajax\\ajax-datatables-sample.json"
     },
