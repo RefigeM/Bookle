@@ -14,7 +14,7 @@
             <div class="col-12">
                 <div class="main__title">
                     <li class="sidebar__nav-item">
-                        <a asp-action="Index" asp-controller="Author" class="sidebar__nav-link "><i class="ti ti-arrow-left"></i> <span>Go Back</span></a>
+                        <a asp-action="Index" asp-controller="Comment" class="sidebar__nav-link "><i class="ti ti-arrow-left"></i> <span>Go Back</span></a>
                     </li>
                 </div>
             </div>
@@ -26,20 +26,22 @@
                     <input asp-for="Content" type="text" class="sign__input" placeholder="Content">
                     <span asp-for="Content" class="text-danger" asp-validation-for="Content"></span>
                 </div>
-                <div class="sign__group">
-                    <select class="sign__input" asp-for="UserId" asp-items='new SelectList(ViewBag.Authors, "Id", "UserName")'>
-                        <option disabled selected>Select Author</option>
-                    </select>
+                @if (ViewBag.Books != null && ViewBag.Authors != null)
+                {
+                    <div class="form-group" style="margin-top:25px";>
+                        <select class="sign__input" asp-for="BookId" asp-items="ViewBag.Books">
+                            <option disabled selected>Select Book</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-top:25px";>
+                        <select class="sign__input" asp-for="UserId" asp-items="ViewBag.Authors">
+                            <option disabled selected>Select Author</option>
+                        </select>
+                    </div>                   
+                }
+               
 
-                    <span asp-validation-for="UserId" class="text-danger"></span>
-                </div>
-                <div class="sign__group">
-                    <select class="sign__input" asp-for="BookId" asp-items='new SelectList(ViewBag.Authors, "Id", "BookTitle")'>
-                        <option disabled selected>Select Author</option>
-                    </select>
-
-                    <span asp-validation-for="BookId" class="text-danger"></span>
-                </div>
+              
               
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary" style="margin-top: 20px">Submit</button>

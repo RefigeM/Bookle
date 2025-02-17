@@ -17,9 +17,7 @@ public class BookCreateVM
 	[MaxLength(500)]
 	public string? ShortDescription { get; set; }
 	[MaxLength(700)]
-	[Required]
-	public string Description { get; set; }
-	[Required]
+	public string? Description { get; set; }
 	public string? RoleOfBook { get; set; }
 
 	[Required]

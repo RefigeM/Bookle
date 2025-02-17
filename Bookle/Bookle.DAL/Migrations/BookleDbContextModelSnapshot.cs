@@ -191,6 +191,9 @@ namespace Bookle.DAL.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -437,7 +440,8 @@ namespace Bookle.DAL.Migrations
                 {
                     b.HasOne("Bookle.Core.Entities.Book", "Book")
                         .WithMany("BookRatings")
-                        .HasForeignKey("BookId");
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Bookle.Core.Entities.User", "User")
                         .WithMany("BookRatings")
