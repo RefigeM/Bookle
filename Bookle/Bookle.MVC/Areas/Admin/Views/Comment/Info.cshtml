@@ -1,0 +1,74 @@
+﻿@model Comment
+
+<h1>Info</h1>
+
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- main title -->
+			<div class="col-12">
+				<h2 class="text-white">Comment Info</h2>
+
+				<div class="main__title">
+					<li class="sidebar__nav-item">
+						<a asp-action="Index" asp-controller="Comment" class="sidebar__nav-link "><i class="ti ti-arrow-left"></i> <span>Go Back</span></a>
+					</li>
+
+				</div>
+			</div>
+			<!-- end main title -->
+			<!-- items -->
+			<div class="col-12">
+				<div class="catalog catalog--1">
+					<table class="catalog__table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Book Image</th>
+								<th>Book</th>
+								<th>Author</th>
+								<th>User</th>
+								<th>Content</th>
+								<th>IsApproved</th>
+
+
+							</tr>
+						</thead>
+
+						<tbody>
+							
+								<tr>
+									<td>
+										<div class="catalog__text">@Model.Id</div>
+									</td>
+								<td><img src="~/imgs/books/@Model.Book.CoverImageUrl" width="40" /></td>
+
+									<td>
+									<div class="catalog__text">@Model.Book?.Title</div>
+									</td>
+									<td>
+									<div class="catalog__text">@Model.Book?.Author?.AuthorName</div>
+									</td>
+									<td>
+									<div class="catalog__text">@Model.User.Fullname</div>
+									</td>
+
+									@* 									<td><img src="@Url.Content(item.ProfilImage)" width="70" /></td>
+								*@
+									<td>
+									<div class="catalog__text"><a href="#">@Model.Content</a></div>
+									</td>
+									<td>
+									<div class="catalog__text"><a href="#">@Model.IsApproved</a></div>
+									</td>
+
+									
+								</tr>
+
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end items -->
+

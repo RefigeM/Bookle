@@ -10,10 +10,7 @@
 			<!-- main title -->
 			<div class="col-12">
 				<div class="main__title">
-
-					<h2 style="display: block;">Authors</h2>
-
-					<a asp-action="Create" asp-asp-controller="Author" class="main__title-link">add item</a>
+				<h2 style="display: block;">Comments</h2>
 				</div>
 			</div>
 			<!-- end main title -->
@@ -66,19 +63,19 @@
 									<td>
 										<div class="catalog__btns">
 
-
-
-											<a asp-action="Hide" asp-asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--view">
-												<i class="ti ti-lock"></i>
-											
-
-											</a>
-
-											<a asp-action="Show" asp-asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
-												<i class="ti ti-lock"></i>
-											</a>
-
-											<a asp-action="Info" asp-asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
+											@if (item.IsApproved == true)
+											{
+												<a asp-action="Toggle" asp-asp-controller="Comment" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
+													<i class="ti ti-lock"></i>
+												</a>
+											}
+											else
+											{
+												<a asp-action="Toggle" asp-asp-controller="Comment" asp-route-id="@item.Id" class="catalog__btn catalog__btn--view">
+													<i class="ti ti-lock"></i>
+												</a>										
+											}
+											<a asp-action="Info" asp-asp-controller="Comment" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
 												<i class="ti ti-eye"></i>
 											</a>
 

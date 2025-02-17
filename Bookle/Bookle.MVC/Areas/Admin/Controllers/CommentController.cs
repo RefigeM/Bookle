@@ -98,7 +98,20 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			return RedirectToAction(nameof(Index));
 
 		}
+		public async Task<IActionResult> Info(int? id)
+		{
+			if (id == null) return BadRequest();
+			var comment = await _service.GetCommentIdtWithDetailsAsync(id.Value);
+			return View(comment);
+		}
 
+		public async Task<IActionResult> Toggle(int? id) 
+		{
+		if(id == null) return BadRequest();
+			var comment = await _service.ToggleApprovalAsync(id.Value);
+			return RedirectToAction(nameof(Index));
+
+		}
 
 
 

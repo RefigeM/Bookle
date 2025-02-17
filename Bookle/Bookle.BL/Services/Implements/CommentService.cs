@@ -49,12 +49,21 @@ public class CommentService(BookleDbContext _context, ICommentRepository _repo) 
 		return comments;
 	}
 
+	public Task<Comment> GetCommentIdtWithDetailsAsync(int id)
+	{
+	return	_repo.GetCommentWithBookUserAuthorWithIdAsync(id);	
+	}
+
 	public async Task<Comment> GetCommentByIdAsync(int id)
 	{
-		var comment= await _repo.GetByIdAsync(id);
-		if(comment == null) throw new NotFoundException();	
-		return comment;	
+		var comment = await _repo.GetByIdAsync(id); 
+		if (comment == null)
+		{
+			throw new NotFoundException($"Comment with ID {id} not found.");
+		}
+		return comment;
 	}
+
 
 	public List<Comment> GetCommentsByBookId(int bookId)
 	{
@@ -79,6 +88,23 @@ public class CommentService(BookleDbContext _context, ICommentRepository _repo) 
 	{
 		throw new NotImplementedException();
 	}
+
+	public async Task<Comment> ToggleApprovalAsync(int id)
+	{
+		var comment = await _repo.GetCommentWithBookUserAuthorWithIdAsync(id);
+
+		if (comment == null)
+		{
+			throw new NotFoundException($"Comment with ID {id} not found.");
+		}
+
+		comment.IsApproved = !comment.IsApproved;
+
+		await _context.SaveChangesAsync();
+
+		return comment;
+	}
+
 
 	public async Task UpdateCommentAsync(int id, CommentUpdateVM vm)
 	{

@@ -16,4 +16,8 @@ public interface ICommentService
 	Task SoftDeleteCommentAsync(int id);
 	Task UpdateCommentAsync(int id, CommentUpdateVM vm);
 	Task<List<Comment>> GetCommentWithBookAndUser();
+	Task<Comment> ToggleApprovalAsync(int id);
+	Task<Comment> GetCommentIdtWithDetailsAsync(int id);
+
+
 }

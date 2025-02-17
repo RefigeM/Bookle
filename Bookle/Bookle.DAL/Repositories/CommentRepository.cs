@@ -10,19 +10,30 @@ namespace Bookle.DAL.Repositories
 		private readonly BookleDbContext _context;
 		public CommentRepository(BookleDbContext context) : base(context)
 		{
-			_context = context;	
+			_context = context;
 
 		}
 
 		public Task<List<Comment>> GetCommentWithBookAndUser()
 		{
-		var comment= 	_context.Comments
-				.Include(c => c.Book)  
-		.ThenInclude(b => b.Author)  
-		.Include(c => c.User)  
-		.ToListAsync();
+			var comment = _context.Comments
+					.Include(c => c.Book)
+			.ThenInclude(b => b.Author)
+			.Include(c => c.User)
+			.ToListAsync();
 			return comment;
 
+		}
+
+		public async Task<Comment> GetCommentWithBookUserAuthorWithIdAsync(int id)
+		{
+			var comment = await _context.Comments
+				.Include(c => c.Book)
+				.ThenInclude(b=> b.Author)
+				.Include(c => c.User) 
+				.FirstOrDefaultAsync(c => c.Id == id);  
+
+			return comment;
 		}
 	}
 }
