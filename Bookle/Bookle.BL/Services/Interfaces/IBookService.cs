@@ -8,6 +8,7 @@ namespace Bookle.BL.Services.Interfaces;
 public interface IBookService
 {
 	Task<IEnumerable<Book>> GetAllBooksAsync();
+	Task<IEnumerable<Book>> GetAllBooksWithDetailsAsync();
 	Task<Book> GetBookByIdAsync(int id);
 	Task AddBookAsync(Book book);
 	Task DeleteBookAsync(int id);

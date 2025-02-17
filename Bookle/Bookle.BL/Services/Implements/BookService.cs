@@ -27,6 +27,13 @@ public class BookService(IBookRepository _repo, BookleDbContext _context) : IBoo
 
 	public async Task<IEnumerable<Book>> GetAllBooksAsync()
 	{
+		var data = await _repo.GetAllAsync();
+		if (data == null) throw new NotFoundException();
+		return data;
+	}
+
+	public async Task<IEnumerable<Book>> GetAllBooksWithDetailsAsync()
+	{
 		var data = await _repo.GetAllWithDetailsAsync();
 		if (data == null) throw new NotFoundException();
 		return data;

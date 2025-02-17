@@ -1,4 +1,5 @@
 ﻿using Bookle.BL.ViewModels.BookVMs;
+using Bookle.BL.ViewModels.CommentVMs;
 using Bookle.Core.Entities;
 
 namespace Bookle.BL.Services.Interfaces;
@@ -13,6 +14,6 @@ public interface ICommentService
 	Task DeleteCommentAsync(int id);
 	Task RestoreCommentAsync(int id);
 	Task SoftDeleteCommentAsync(int id);
-	Task UpdateCommentAsync(int id, BookUpdateVM vm);
+	Task UpdateCommentAsync(int id, CommentUpdateVM vm);
 	Task<List<Comment>> GetCommentWithBookAndUser();
 }

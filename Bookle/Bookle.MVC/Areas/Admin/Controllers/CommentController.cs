@@ -21,5 +21,11 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 			return RedirectToAction(nameof(Index));
 		}
+		[HttpGet]
+		public async Task<IActionResult> Update(int? id)
+		{
+			return View();
+		}
+
 	}
 }

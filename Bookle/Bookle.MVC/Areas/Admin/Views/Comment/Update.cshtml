@@ -1,0 +1,53 @@
+﻿@model CommentUpdateVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update</h1>
+
+
+<!-- main content -->
+<main class="main">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- main title -->
+            <div class="col-12">
+                <div class="main__title">
+                    <li class="sidebar__nav-item">
+                        <a asp-action="Index" asp-controller="Author" class="sidebar__nav-link "><i class="ti ti-arrow-left"></i> <span>Go Back</span></a>
+                    </li>
+                </div>
+            </div>
+            <!-- end main title -->
+            <!-- form -->
+            <form enctype="multipart/form-data" method="post">
+
+                <div class="form-group">
+                    <input asp-for="Content" type="text" class="sign__input" placeholder="Content">
+                    <span asp-for="Content" class="text-danger" asp-validation-for="Content"></span>
+                </div>
+                <div class="sign__group">
+                    <select class="sign__input" asp-for="UserId" asp-items='new SelectList(ViewBag.Authors, "Id", "UserName")'>
+                        <option disabled selected>Select Author</option>
+                    </select>
+
+                    <span asp-validation-for="UserId" class="text-danger"></span>
+                </div>
+                <div class="sign__group">
+                    <select class="sign__input" asp-for="BookId" asp-items='new SelectList(ViewBag.Authors, "Id", "BookTitle")'>
+                        <option disabled selected>Select Author</option>
+                    </select>
+
+                    <span asp-validation-for="BookId" class="text-danger"></span>
+                </div>
+              
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px">Submit</button>
+                </div>
+            </form>
+
+            <!-- end form -->
+        </div>
+    </div>
+</main>
+<!-- end main content -->

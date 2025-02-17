@@ -1,6 +1,7 @@
 ﻿using Bookle.BL.Exceptions;
 using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.BookVMs;
+using Bookle.BL.ViewModels.CommentVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
@@ -79,12 +80,20 @@ public class CommentService(BookleDbContext _context, ICommentRepository _repo) 
 		throw new NotImplementedException();
 	}
 
-	public Task UpdateCommentAsync(int id, BookUpdateVM vm)
+	public async Task UpdateCommentAsync(int id, CommentUpdateVM vm)
 	{
-		throw new NotImplementedException();
+		var comment = await _repo.GetByIdAsync(id);
+		if(comment == null) throw new NotFoundException();
+
+		comment.BookId = vm.BookId;
+		comment.UserId=vm.UserId;
+		comment.Content = vm.Content;
+
+		await _repo.SaveAsync();
+
 	}
 
-	
 
-	
+
+
 }

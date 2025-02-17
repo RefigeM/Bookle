@@ -18,6 +18,7 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 	public async Task<IEnumerable<Book>> GetAllWithDetailsAsync()
 	{
 		return await _context.Books.Include(b => b.Author)
+			.Include(b => b.BookRatings)
 				.ToListAsync();
 	}
 
