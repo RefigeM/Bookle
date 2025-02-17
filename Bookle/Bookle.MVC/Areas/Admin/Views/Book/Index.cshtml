@@ -50,8 +50,10 @@
 										<div class="catalog__text"><a href="#">@item.Title</a></div>
 									</td>
 									<td>
-										<div class="catalog__text"><a href="#">@item.Author.AuthorName</a></div>
-									</td>
+    <div class="catalog__text">
+        <a href="#">@(item.Author != null ? item.Author.AuthorName : "Məlumat yoxdur")</a>
+    </div>
+</td>
 									<td>
 										<div class="catalog__text catalog__text--rate">7.9</div>
 									</td>
@@ -102,18 +104,19 @@
 											<a asp-action="Info" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
 												<i class="ti ti-eye"></i>
 											</a>
-											@if (item.Author.IsDeleted == true)
+											@if (item.Author != null && item.Author.IsDeleted == true)
 											{
-												<a asp-action="" asp-asp-controller="" asp-route-id="@item.Id" class="catalog__btn catalog__btn--black">
+												<a asp-action="" asp-controller="" asp-route-id="@item.Id" class="catalog__btn catalog__btn--black">
 													<i class="ti ti-edit"></i>
 												</a>
 											}
 											else
 											{
-												<a asp-action="Update" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
+												<a asp-action="Update" asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
 													<i class="ti ti-edit"></i>
 												</a>
 											}
+
 
 											
 
