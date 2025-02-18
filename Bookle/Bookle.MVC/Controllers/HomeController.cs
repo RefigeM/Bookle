@@ -1,5 +1,6 @@
 ﻿using Bookle.BL.Services.Implements;
 using Bookle.BL.Services.Interfaces;
+using Bookle.BL.ViewModels.HomeVM;
 using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,18 +16,29 @@ namespace Bookle.MVC.Controllers
 		private readonly IBookService _service;
 		private readonly IRatingService _ratingService;
 		private readonly ICommentService _commentService;
+		private readonly IAuthorService _authorService;
+		
 
-		public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService, ICommentService commentService)
+		public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService, ICommentService commentService,IAuthorService authorService)
 		{
 			_context = context;	
 			_service= service;	
 			_ratingService= ratingService;	
 			_commentService= commentService;	
+			_authorService= authorService;	
 		}
 
 		public async Task<IActionResult> Index()
 		{
-			return View(await _service.GetAllBooksWithDetailsAsync());
+			var books = await _service.GetAllBooksWithDetailsAsync();
+			var authors = await _authorService.GetAllAuthorProfilesAsync();
+			var model = new BooksAndAuthorsVM
+			{
+				Books = books.ToList(),
+				Authors = authors.ToList()
+
+			};
+			return View(model);
 		}
 		public async Task<IActionResult> Details(int? id)
 		{

@@ -11,9 +11,7 @@
 			<div class="col-12">
 				<div class="main__title">
 
-					<h2 style="display: block;">Authors</h2>
-
-					<a asp-action="Create" asp-asp-controller="Author" class="main__title-link">add item</a>
+					<h2 style="display: block;">Users</h2>
 				</div>
 			</div>
 			<!-- end main title -->
@@ -23,13 +21,12 @@
 					<table class="catalog__table">
 						<thead>
 							<tr>
-								<th>ID</th>
 								<th>Profil Image</th>
 								<th>Fullname</th>
+								<th>Username</th>
+								<th>Email</th>
+								<th>Id</th>
 								<th>IsDeleted</th>
-
-
-								<th>ACTIONS</th>
 							</tr>
 						</thead>
 
@@ -38,42 +35,25 @@
 							{
 								<tr>
 									<td>
-										<div class="catalog__text">@item.Id</div>
+										<img src="~/account/anonimUser.png" width="60px" style="border-radius:60%" alt="img">
 									</td>
-									<td><img src="@Url.Content(item.ProfilImage)" width="70" /></td>
 									<td>
 										<div class="catalog__text"><a href="#">@item.Fullname</a></div>
 									</td>
-									
 									<td>
-										<div class="catalog__btns">
-
-
-											
-												<a asp-action="Hide" asp-asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--view">
-													<i class="ti ti-lock"></i>
-
-												</a>
-											
-												<a asp-action="Show" asp-asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
-													<i class="ti ti-lock"></i>
-												</a>
-											
-											<a asp-action="Info" asp-asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
-												<i class="ti ti-eye"></i>
-											</a>
-
-											<a asp-action="Update" asp-asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
-												<i class="ti ti-edit"></i>
-											</a>
-
-											<a asp-action="Delete" asp-controller="User" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
-												<i class="ti ti-trash"></i>
-											</a>
-
-
-										</div>
+										<div class="catalog__text"><a href="#">@item.UserName</a></div>
 									</td>
+									<td>
+										<div class="catalog__text"><a href="#">@item.Email</a></div>
+									</td>
+									<td>
+										<div class="catalog__text">@item.Id</div>
+									</td>
+																		
+									<td>
+										<div class="catalog__text"><a href="#">@item.IsDeleted</a></div>
+									</td>
+									
 								</tr>
 
 							}
