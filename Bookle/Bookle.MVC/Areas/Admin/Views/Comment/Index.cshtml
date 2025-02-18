@@ -3,6 +3,10 @@
 	ViewData["Title"] = "Index";
 }
 
+@{
+	ViewData["Title"] = "Index";
+}
+
 <!-- main content -->
 <main class="main">
 	<div class="container-fluid">
@@ -10,7 +14,7 @@
 			<!-- main title -->
 			<div class="col-12">
 				<div class="main__title">
-				<h2 style="display: block;">Comments</h2>
+					<h2 style="display: block;">Comments</h2>
 				</div>
 			</div>
 			<!-- end main title -->
@@ -21,11 +25,12 @@
 						<thead>
 							<tr>
 								<th>ID</th>
-								<th>Book Image</th>
+								<th>Book</th>
 								<th>Book</th>
 								<th>Author</th>
 								<th>User</th>
 								<th>Content</th>
+								<th>Created date</th>
 								<th>IsApproved</th>
 
 
@@ -52,14 +57,18 @@
 										<div class="catalog__text">@item.User.Fullname</div>
 									</td>
 
-@* 									<td><img src="@Url.Content(item.ProfilImage)" width="70" /></td>
- *@									<td>
+									@* 									<td><img src="@Url.Content(item.ProfilImage)" width="70" /></td>
+								*@
+									<td>
 										<div class="catalog__text"><a href="#">@item.Content</a></div>
+									</td>
+									<td>
+										<div class="catalog__text"><a href="#">@item.CreatedDate</a></div>
 									</td>
 									<td>
 										<div class="catalog__text"><a href="#">@item.IsApproved</a></div>
 									</td>
-								
+
 									<td>
 										<div class="catalog__btns">
 
@@ -73,7 +82,7 @@
 											{
 												<a asp-action="Toggle" asp-asp-controller="Comment" asp-route-id="@item.Id" class="catalog__btn catalog__btn--view">
 													<i class="ti ti-lock"></i>
-												</a>										
+												</a>
 											}
 											<a asp-action="Info" asp-asp-controller="Comment" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
 												<i class="ti ti-eye"></i>
@@ -98,5 +107,4 @@
 				</div>
 			</div>
 			<!-- end items -->
-
 

@@ -4,7 +4,7 @@ namespace Bookle.Core.Repositories
 {
 	public interface ICommentRepository :IGenericRepository<Comment>
 	{
-		Task<List<Comment>> GetCommentWithBookAndUser();
+		Task<List<Comment>> GetAllCommentsWithDetailsAsync();
 		Task<Comment> GetCommentWithBookUserAuthorWithIdAsync(int id);
 	}
 }

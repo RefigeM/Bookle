@@ -20,7 +20,7 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 	{
 		public async Task<IActionResult> Index()
 		{
-			return View(await _service.GetAllBooksAsync());
+			return View(await _service.GetAllBooksWithDetailsAsync());
 		}
 		public async Task<IActionResult> Delete(int? id)
 		{

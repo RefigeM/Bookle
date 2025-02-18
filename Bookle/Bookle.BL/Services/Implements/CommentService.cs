@@ -76,7 +76,7 @@ public class CommentService(BookleDbContext _context, ICommentRepository _repo) 
 
 	public async Task<List<Comment>> GetCommentWithBookAndUser()
 	{
-		return await _repo.GetCommentWithBookAndUser();
+		return await _repo.GetAllCommentsWithDetailsAsync();
 	}
 
 	public Task RestoreCommentAsync(int id)

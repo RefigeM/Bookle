@@ -1,0 +1,91 @@
+﻿@model List<Comment>
+@{
+	ViewData["Title"] = "Index";
+}
+
+<!-- main content -->
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- main title -->
+			<div class="col-12">
+				<div class="main__title">
+				<h2 style="display: block;">Reviews</h2>
+				</div>
+			</div>
+			<!-- end main title -->
+			<!-- items -->
+			<div class="col-12">
+				<div class="catalog catalog--1">
+					<table class="catalog__table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Book</th>
+								<th>Author</th>
+								<th>User</th>
+								<th>Content</th>
+								<th>Rating</th>
+								<th>Created date</th>
+								<th>IsApproved</th>
+
+
+								<th>ACTIONS</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							@foreach (var item in Model)
+							{
+								<tr>
+									<td>
+										<div class="catalog__text">@item.Id</div>
+									</td>
+									<td>
+										<div class="catalog__text">@item.Book?.Title</div>
+									</td>
+									<td>
+										<div class="catalog__text">@item.Book?.Author?.AuthorName</div>
+									</td>
+									<td>
+										<div class="catalog__text">@item.User.Fullname</div>
+									</td>
+
+@* 									<td><img src="@Url.Content(item.ProfilImage)" width="70" /></td>
+ *@									<td>
+										<div class="catalog__text"><a href="#">@item.Content</a></div>
+									</td>
+									<td>
+										<div class="catalog__text catalog__text--rate">
+											@(item.Book.BookRatings?.Any() == true ? Math.Round(item.Book.BookRatings.Average(x => x.RatingRate), 1) : 0)
+										</div>
+									</td>
+									<td>
+										<div class="catalog__text"><a href="#">@item.CreatedDate</a></div>
+									</td>
+									<td>
+										<div class="catalog__text"><a href="#">@item.IsApproved</a></div>
+									</td>
+								
+									<td>
+										<div class="catalog__btns">
+											<a asp-action="Info" asp-asp-controller="Review" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
+												<i class="ti ti-eye"></i>
+											</a>
+											<a asp-action="Delete" asp-controller="Review" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
+												<i class="ti ti-trash"></i>
+											</a>
+
+
+										</div>
+									</td>
+								</tr>
+
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end items -->
+
+

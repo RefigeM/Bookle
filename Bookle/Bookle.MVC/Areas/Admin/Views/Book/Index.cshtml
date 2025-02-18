@@ -50,14 +50,15 @@
 										<div class="catalog__text"><a href="#">@item.Title</a></div>
 									</td>
 									<td>
-    <div class="catalog__text">
-        <a href="#">@(item.Author != null ? item.Author.AuthorName : "Məlumat yoxdur")</a>
-    </div>
-</td>
+                                    <div class="catalog__text">
+                                        <a href="#">@(item.Author != null ? item.Author.AuthorName : "Məlumat yoxdur")</a>
+                                       </div>
+                                      </td>
 									<td>
-										<div class="catalog__text catalog__text--rate">7.9</div>
-									</td>
-									
+										<div class="catalog__text catalog__text--rate">
+											@(item.BookRatings?.Any() == true ? Math.Round(item.BookRatings.Average(x => x.RatingRate), 1) : 0)
+										</div>
+									</td>									
 									<td>
 										<div class="catalog__text">@item.Genre</div>
 									</td>

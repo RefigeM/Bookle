@@ -14,11 +14,13 @@ namespace Bookle.DAL.Repositories
 
 		}
 
-		public Task<List<Comment>> GetCommentWithBookAndUser()
+		public Task<List<Comment>> GetAllCommentsWithDetailsAsync()
 		{
 			var comment = _context.Comments
 					.Include(c => c.Book)
 			.ThenInclude(b => b.Author)
+			.Include(c => c.Book)
+			.ThenInclude(b => b.BookRatings)
 			.Include(c => c.User)
 			.ToListAsync();
 			return comment;
@@ -28,10 +30,13 @@ namespace Bookle.DAL.Repositories
 		public async Task<Comment> GetCommentWithBookUserAuthorWithIdAsync(int id)
 		{
 			var comment = await _context.Comments
-				.Include(c => c.Book)
-				.ThenInclude(b=> b.Author)
-				.Include(c => c.User) 
-				.FirstOrDefaultAsync(c => c.Id == id);  
+		.Include(c => c.Book)
+			.ThenInclude(b => b.BookRatings)
+		.Include(c => c.Book)
+			.ThenInclude(b => b.Author) 
+		.Include(c => c.User)
+		.FirstOrDefaultAsync(c => c.Id == id);
+
 
 			return comment;
 		}
