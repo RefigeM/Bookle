@@ -13,6 +13,7 @@ public class BookleDbContext : IdentityDbContext<User>
 	public DbSet<Author> Authors { get; set; }
 	public DbSet<BookRating> BookRatings { get; set; }
 	public DbSet<Comment> Comments { get; set; }
+	public DbSet<Wishlist> Wishlists { get; set; }
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		modelBuilder.ApplyConfigurationsFromAssembly(typeof(BookleDbContext).Assembly);

@@ -1,0 +1,83 @@
+﻿@model List<Wishlist>
+
+
+
+<!-- Breadcumb Section Start -->
+<div class="breadcrumb-wrapper">
+    <div class="book1">
+        <img src="assets/img/hero/book1.png" alt="book">
+    </div>
+    <div class="book2">
+        <img src="assets/img/hero/book2.png" alt="book">
+    </div>
+    <div class="container">
+        <div class="page-heading">
+            <h1>Wishlist</h1>
+            <div class="page-header">
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+                    <li>
+                        Wishlist
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Shop Cart Section Start -->
+<div class="cart-section section-padding">
+    <div class="container">
+        <div class="main-cart-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Books</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+
+                                            <span class="d-flex gap-5 align-items-center">
+                                                <a asp-controller="Wishlist" asp-action="Index" class="remove-icon">
+                                                    <img src="assets/img/icon/icon-9.svg" alt="img">
+                                                </a>
+                                                <span class="cart">
+                                                    <img src="assets/img/shop-cart/01.png" alt="img">
+                                                </span>
+                                                <span class="cart-title">
+                                                    @item.Book.Title
+                                                </span>
+                                            </span>
+                                        </td>
+                                      
+                                       
+                                        <td>
+                                            <span class="subtotal-price">@item.Book.Author.AuthorName</span>
+                                        </td>
+                                    </tr>
+
+                                    
+                                }  
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

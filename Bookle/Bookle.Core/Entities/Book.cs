@@ -8,6 +8,7 @@ public class Book : BaseEntity
 	public string Title { get; set; }
 	public int AuthorId { get; set; }
 	public Author Author { get; set; }
+	public bool IsFeatured { get; set; }
 	public string? ShortDescription { get; set; }
 	public string? Description { get; set; }
 	public string? RoleOfBook { get; set; }
@@ -22,7 +23,7 @@ public class Book : BaseEntity
 	public string? CoverImageUrl { get; set; }
 	public ICollection<BookRating>? BookRatings { get; set; }
 	public ICollection<Comment>? Comments { get; set; }
-
+	public ICollection<Wishlist> Wishlist { get; set; } // Many-to-Many əlaqə
 
 
 }

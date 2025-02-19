@@ -1,57 +1,74 @@
-﻿using Bookle.BL.ViewModels.WishlistVMs;
+﻿using Bookle.Core.Entities;
+using Bookle.DAL.Contexts;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using System.Text.Json;
 
+[Authorize] 
 public class WishlistController : Controller
 {
-	[HttpGet]
-	public IActionResult AddToWishlist(int id, string title)
-	{
-		var wishlist = GetWishlistFromCookies();
+	private readonly BookleDbContext _context;
+	private readonly UserManager<User> _userManager;
 
-		if (wishlist.FirstOrDefault(x => x.Id == id) == null)
+	public WishlistController(BookleDbContext context, UserManager<User> userManager)
+	{
+		_context = context;
+		_userManager = userManager;
+	}
+
+	public async Task<IActionResult> Index()
+	{
+		var user = await _userManager.GetUserAsync(User);
+		var wishlist = _context.Wishlists
+			.Where(w => w.UserId == user.Id)
+			.Include(w => w.Book)
+			.ThenInclude(b => b.Author)
+			.ToList();
+
+		return View(wishlist);
+	}
+
+	public async Task<IActionResult> AddToWishlist(int bookId)
+	{
+		var user = await _userManager.GetUserAsync(User);
+
+		var book = await _context.Books.FindAsync(bookId);
+		if (book == null)
 		{
-			wishlist.Add(new WishlistCookieItemVM { Id = id, Title = title });
+			return NotFound("Kitab tapılmadı.");
 		}
 
-		string data = JsonSerializer.Serialize(wishlist);
-		HttpContext.Response.Cookies.Append("wishlist", data, new CookieOptions
+		var exists = await _context.Wishlists.AnyAsync(w => w.UserId == user.Id && w.BookId == bookId);
+		if (exists)
 		{
-			Expires = DateTime.UtcNow.AddDays(30),  
-			HttpOnly = true
-		});
-
-		return Ok(new { message = "Məhsul wishlist-ə elave edildi!" });
-	}
-
-	private List<WishlistCookieItemVM> GetWishlistFromCookies()
-	{
-		try
-		{
-			int userId = GetUserId();
-			string cookieKey = userId > 0 ? $"wishlist_{userId}" : "wishlist"; 
-
-			string? value = HttpContext.Request.Cookies[cookieKey];
-
-			return string.IsNullOrEmpty(value)
-				? new List<WishlistCookieItemVM>()
-				: JsonSerializer.Deserialize<List<WishlistCookieItemVM>>(value) ?? new List<WishlistCookieItemVM>();
+			return BadRequest("Bu kitab artıq wishlist-də var.");
 		}
-		catch (Exception)
+
+		var wishlist = new Wishlist
 		{
-			return new List<WishlistCookieItemVM>();
-		}
-	}
-	private int GetUserId()
-	{
-		return int.TryParse(User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int userId) ? userId : 0;
-	}
-	[HttpGet]
-	public IActionResult GetWishlist()
-	{
-		var wishlist = GetWishlistFromCookies(); 
-		return View(wishlist); 
+			UserId = user.Id,
+			BookId = bookId
+		};
+
+		_context.Wishlists.Add(wishlist);
+		await _context.SaveChangesAsync();
+
+		return RedirectToAction("Index");
 	}
 
+
+	public async Task<IActionResult> RemoveFromWishlist(int bookId)
+	{
+		var user = await _userManager.GetUserAsync(User);
+		var wishlistItem = _context.Wishlists.FirstOrDefault(w => w.UserId == user.Id && w.BookId == bookId);
+
+		if (wishlistItem != null)
+		{
+			_context.Wishlists.Remove(wishlistItem);
+			await _context.SaveChangesAsync();
+		}
+
+		return RedirectToAction("Index");
+	}
 }

@@ -75,7 +75,7 @@
                                 <a href="shop-details"><img src="~/imgs/books/@item.CoverImageUrl" alt="img" width="150"></a>
                                 <ul class="shop-icon d-grid justify-content-center align-items-center">
                                     <li>
-                                        <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-id="@item.Id" asp-route-title="@item.Title">
+                                        <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-bookId="@item.Id" asp-route-title="@item.Title">
                                             <i class="far fa-heart"></i>
                                         </a>
                                     </li>
