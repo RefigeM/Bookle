@@ -1,12 +1,15 @@
 ﻿using Bookle.BL.Services.Implements;
 using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.HomeVM;
+using Bookle.BL.ViewModels.WishlistVMs;
 using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Collections.Generic;
 using System.Security.Claims;
+using System.Text.Json;
 
 namespace Bookle.MVC.Controllers
 {
@@ -103,5 +106,62 @@ namespace Bookle.MVC.Controllers
 
 			return RedirectToAction("Details", "Home", new { id = bookId });
 		}
+
+
+		[HttpPost("add-to-wishlist/{id}")]
+		public IActionResult AddToWishlist(int id)
+		{
+			int userId = GetUserId(); // Hazırda login olan istifadəçini tapırıq
+			if (userId == 0)
+				return Unauthorized("İstifadəçi login olmayıb.");
+
+			var wishlist = GetWishlistFromCookies(userId);
+			var item = wishlist.FirstOrDefault(x => x.Id == id);
+
+			if (item is null)
+			{
+				wishlist.Add(new WishlistCookieItemVM { Id = id });
+			}
+
+			string data = JsonSerializer.Serialize(wishlist);
+			HttpContext.Response.Cookies.Append($"wishlist_{userId}", data, new CookieOptions
+			{
+				Expires = DateTime.UtcNow.AddDays(30),
+				HttpOnly = true
+			});
+
+			return Ok(new { message = "Məhsul wishlist-ə əlavə edildi!" });
+		}
+
+		[HttpGet("get-wishlist")]
+		public IActionResult GetWishlist()
+		{
+			int userId = GetUserId(); // Hazırda login olan istifadəçini tapırıq
+			if (userId == 0)
+				return Unauthorized("İstifadəçi login olmayıb.");
+
+			return Json(GetWishlistFromCookies(userId));
+		}
+
+		private List<WishlistCookieItemVM> GetWishlistFromCookies(int userId)
+		{
+			try
+			{
+				string? value = HttpContext.Request.Cookies[$"wishlist_{userId}"];
+				return value is null ? new List<WishlistCookieItemVM>() :
+					   JsonSerializer.Deserialize<List<WishlistCookieItemVM>>(value) ?? new List<WishlistCookieItemVM>();
+			}
+			catch (Exception)
+			{
+				return new List<WishlistCookieItemVM>();
+			}
+		}
+
+		// Hazırda login olan istifadəçinin ID-sini gətirən metod (Sənin auth sisteminə uyğun düzəliş etmək olar)
+		private int GetUserId()
+		{
+			return int.TryParse(User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int userId) ? userId : 0;
+		}
+
 	}
 }
