@@ -32,6 +32,7 @@
 								<th>PUBLISHED YEAR</th>
 								<th>LANGUAGE</th>
 								<th>ISDELETED</th>
+								<th>ISFEATURED</th>
 
 								<th>ACTIONS</th>
 							</tr>
@@ -73,7 +74,6 @@
 									<td>
 										<div class="catalog__text">@item.Language</div>
 									</td>
-
 									<td>
 										@if (item.IsDeleted == true)
 										{
@@ -88,7 +88,25 @@
 
 									</td>
 									<td>
+										@if (item.IsFeatured == false)
+										{
+											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
+												<i class="bi bi-pin-angle"></i>
+
+											</a>
+										}
+										else
+										{
+											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
+												<i class="bi bi-pin-fill"></i>
+											</a>
+										}
+									</td>
+
+									
+									<td>
 										<div class="catalog__btns">
+											
 											@if (item.IsDeleted == false)
 											{
 												<a asp-action="Hide" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--view">
@@ -102,6 +120,7 @@
 													<i class="ti ti-lock"></i>
 												</a>
 											}
+
 											<a asp-action="Info" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
 												<i class="ti ti-eye"></i>
 											</a>

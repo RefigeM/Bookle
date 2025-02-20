@@ -15,4 +15,6 @@ public interface IBookService
 	Task RestoreBookAsync(int id);
 	Task SoftDeleteBookAsync(int id);
 	Task UpdateBookAsync(int id, BookUpdateVM vm);
+	Task ToggleIsFeaturedAsync(int id);
+
 }

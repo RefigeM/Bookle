@@ -59,6 +59,16 @@ public class BookService(IBookRepository _repo, BookleDbContext _context) : IBoo
 		await _repo.SaveAsync();
 	}
 
+	public async Task ToggleIsFeaturedAsync(int id)
+	{
+		var book = await _repo.GetByIdAsync(id);
+		if (book == null) throw new NotFoundException("Book is null");
+
+		book.IsFeatured = !book.IsFeatured;
+		await _repo.SaveAsync();
+
+	}
+
 	public async Task UpdateBookAsync(int id, BookUpdateVM vm)
 	{
 		var book = await _repo.GetByIdAsync(id);

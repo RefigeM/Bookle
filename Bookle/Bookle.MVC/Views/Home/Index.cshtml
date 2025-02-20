@@ -67,64 +67,69 @@
         </div>
         <div class="swiper book-slider">
             <div class="swiper-wrapper">
+                
                 @foreach (var book in Model.Books)
                 {
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details"><img src="~/imgs/books/@book.CoverImageUrl" alt="img" width="150"></a>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        @if (book.IsInWishlist)
-                                        {
-                                            <a asp-controller="Wishlist" asp-action="RemoveFromWishlist" asp-route-bookId="@book.Id" asp-route-title="@book.Title">
-                                                <i class="fas fa-heart text-danger"></i> <!-- Qırmızı ürək (wishlist-dədir) -->
-                                            </a>
-                                        }
-                                        else
-                                        {
-                                            <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-bookId="@book.Id" asp-route-title="@book.Title">
-                                                <i class="far fa-heart"></i> <!-- Boş ürək (wishlist-də deyil) -->
-                                            </a>
-                                        }
-                                       
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
+                    if (book.IsFeatured == true)
+                    {
+                        <div class="swiper-slide">
+                            <div class="shop-box-items style-2">
+                                <div class="book-thumb center">
+                                    <a href="shop-details"><img src="~/imgs/books/@book.CoverImageUrl" alt="img" width="150"></a>
+                                    <ul class="shop-icon d-grid justify-content-center align-items-center">
+                                        <li>
+                                            @if (book.IsInWishlist)
+                                            {
+                                                <a asp-controller="Wishlist" asp-action="RemoveFromWishlist" asp-route-bookId="@book.Id" asp-route-title="@book.Title">
+                                                    <i class="fas fa-heart text-danger"></i> <!-- Qırmızı ürək (wishlist-dədir) -->
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-bookId="@book.Id" asp-route-title="@book.Title">
+                                                    <i class="far fa-heart"></i> <!-- Boş ürək (wishlist-də deyil) -->
+                                                </a>
+                                            }
 
-                                            <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
+                                        </li>
+                                        <li>
+                                            <a href="shop-cart.html">
+
+                                                <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="shop-details.html"><i class="far fa-eye"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="shop-content">
+                                    <h5> @book.Format</h5>
+                                    <h3><a asp-action="Details" asp-controller="Home" asp-route-id="@book.Id">@book.Title</a></h3>
+                                    <ul class="price-list">
+                                        <li>$ @book.Price</li>
+                                    </ul>
+                                    <ul class="author-post">
+                                        <li class="authot-list">
+                                            <span class="thumb">
+                                                <img src="assets/img/testimonial/client-5.png" alt="img">
+                                            </span>
+                                            <span class="content">Alexander</span>
+                                        </li>
+                                        <li class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
-                            <div class="shop-content">
-                                <h5> @book.Format</h5>
-                                <h3><a asp-action="Details" asp-controller="Home" asp-route-id="@book.Id">@book.Title</a></h3>
-                                <ul class="price-list">
-                                    <li>$ @book.Price</li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="assets/img/testimonial/client-5.png" alt="img">
-                                        </span>
-                                        <span class="content">Alexander</span>
-                                    </li>
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                          
                         </div>
-                    </div>
+
+                    }
 
                 }
             </div>

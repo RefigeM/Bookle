@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-	[Authorize(Roles =RoleConstants.Book)]
+	[Authorize(Roles = RoleConstants.Book)]
 
 
 	public class BookController(BookleDbContext _context, IWebHostEnvironment _env, IBookService _service) : Controller
@@ -185,6 +185,14 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			return RedirectToAction(nameof(Index));
 
 		}
+		public async Task<IActionResult> ToggleIsFeatured(int? id)
+		{
+			if (id == null) return BadRequest();
+			await _service.ToggleIsFeaturedAsync(id.Value);
+			return RedirectToAction(nameof(Index));
+
+		}
+
 
 
 	}
