@@ -37,10 +37,15 @@ namespace Bookle.MVC.Controllers
 		{
 			var user = await _userManager.GetUserAsync(User);
 
-			var wishlistBookIds = await _context.Wishlists
-				.Where(w => w.UserId == user.Id)
-				.Select(w => w.BookId)
-				.ToListAsync();
+			List<int> wishlistBookIds = new List<int>();
+
+			if (user != null)
+			{
+				wishlistBookIds = await _context.Wishlists
+					.Where(w => w.UserId == user.Id)
+					.Select(w => w.BookId)
+					.ToListAsync();
+			}
 
 			var books = await _service.GetAllBooksWithDetailsAsync();
 
@@ -49,7 +54,7 @@ namespace Bookle.MVC.Controllers
 				book.IsInWishlist = wishlistBookIds.Contains(book.Id);
 			}
 
-			var authors = await _authorService.GetAllAuthorProfilesAsync();
+			var authors = await _authorService.GetAllFeaturedAuthorProfilesAsync();
 
 			var model = new BooksAndAuthorsVM
 			{
@@ -124,61 +129,6 @@ namespace Bookle.MVC.Controllers
 			return RedirectToAction("Details", "Home", new { id = bookId });
 		}
 
-
-		[HttpPost("add-to-wishlist/{id}")]
-		public IActionResult AddToWishlist(int id)
-		{
-			int userId = GetUserId(); // Hazırda login olan istifadəçini tapırıq
-			if (userId == 0)
-				return Unauthorized("İstifadəçi login olmayıb.");
-
-			var wishlist = GetWishlistFromCookies(userId);
-			var item = wishlist.FirstOrDefault(x => x.Id == id);
-
-			if (item is null)
-			{
-				wishlist.Add(new WishlistCookieItemVM { Id = id });
-			}
-
-			string data = JsonSerializer.Serialize(wishlist);
-			HttpContext.Response.Cookies.Append($"wishlist_{userId}", data, new CookieOptions
-			{
-				Expires = DateTime.UtcNow.AddDays(30),
-				HttpOnly = true
-			});
-
-			return Ok(new { message = "Məhsul wishlist-ə əlavə edildi!" });
-		}
-
-		[HttpGet("get-wishlist")]
-		public IActionResult GetWishlist()
-		{
-			int userId = GetUserId(); // Hazırda login olan istifadəçini tapırıq
-			if (userId == 0)
-				return Unauthorized("İstifadəçi login olmayıb.");
-
-			return Json(GetWishlistFromCookies(userId));
-		}
-
-		private List<WishlistCookieItemVM> GetWishlistFromCookies(int userId)
-		{
-			try
-			{
-				string? value = HttpContext.Request.Cookies[$"wishlist_{userId}"];
-				return value is null ? new List<WishlistCookieItemVM>() :
-					   JsonSerializer.Deserialize<List<WishlistCookieItemVM>>(value) ?? new List<WishlistCookieItemVM>();
-			}
-			catch (Exception)
-			{
-				return new List<WishlistCookieItemVM>();
-			}
-		}
-
-		// Hazırda login olan istifadəçinin ID-sini gətirən metod (Sənin auth sisteminə uyğun düzəliş etmək olar)
-		private int GetUserId()
-		{
-			return int.TryParse(User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int userId) ? userId : 0;
-		}
 
 	}
 }

@@ -54,13 +54,14 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 	{
 		return await _context.Authors
 			.Include(a => a.Books)
-				.Select(a => new AuthorAllDataVM
-				{
-					AuthorId = a.Id,
-					AuthorName = a.AuthorName,
-					AuthorImg = a.AuthorImage,
-					BookCount = a.Books.Count()
-				}).ToListAsync();
+			.Select(a => new AuthorAllDataVM
+			{
+				AuthorId = a.Id,
+				AuthorName = a.AuthorName,
+				AuthorImg = a.AuthorImage,
+				BookCount = a.Books != null ? a.Books.Count() : 0 // Əgər NULL-dırsa, 0 qaytar
+			})
+			.ToListAsync();
 	}
 
 	public async Task<IEnumerable<Author>> GetAllAuthorsAsync()
@@ -75,6 +76,20 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		return authors;
 	}
 
+	public async Task<List<AuthorAllDataVM>> GetAllFeaturedAuthorProfilesAsync()
+	{
+		return await _context.Authors
+					.Where(a => a.IsFeatured == true)
+					.Include(a => a.Books)
+					.Select(a => new AuthorAllDataVM
+					{
+						AuthorId = a.Id,
+						AuthorName = a.AuthorName,
+						AuthorImg = a.AuthorImage,
+						BookCount = a.Books != null ? a.Books.Count() : 0 // Əgər NULL-dırsa, 0 qaytar
+					})
+					.ToListAsync();
+	}
 
 	public async Task<Author> GetAuthorById(int id)
 	{
@@ -113,6 +128,15 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 	public async Task SoftDeleteAuthorAsync(int id)
 	{
 		await _repo.SoftDeleteAsync(id);
+		await _repo.SaveAsync();
+	}
+
+	public async Task ToggleAuthorIsFeaturedAsync(int id)
+	{
+		var author = await _repo.GetByIdAsync(id);
+		if (author == null) throw new NotFoundException("Book is null");
+
+		author.IsFeatured = !author.IsFeatured;
 		await _repo.SaveAsync();
 	}
 

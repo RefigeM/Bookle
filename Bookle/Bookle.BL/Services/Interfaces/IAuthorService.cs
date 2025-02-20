@@ -16,6 +16,9 @@ public interface IAuthorService
 	Task<List<Author>> GetAllAuthorsWithBooksAsync();
 	Task<AuthorAllDataVM?> GetAuthorDetailsWithIdAsync(int id);
 	Task<List<AuthorAllDataVM>> GetAllAuthorProfilesAsync();
+	Task<List<AuthorAllDataVM>> GetAllFeaturedAuthorProfilesAsync();
+	Task ToggleAuthorIsFeaturedAsync(int id);
+
 
 
 

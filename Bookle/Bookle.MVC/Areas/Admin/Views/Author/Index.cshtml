@@ -27,6 +27,8 @@
 								<th>Profil Image</th>
 								<th>Fullname</th>
 								<th>IsDeleted</th>
+								<th>ISFEATURED</th>
+
 
 
 								<th>ACTIONS</th>
@@ -55,6 +57,21 @@
 											<div class="catalog__text catalog__text--green">@item.IsDeleted</div>
 
 										}
+									<td>
+											@if (item.IsFeatured == false)
+											{
+											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
+												<i class="bi bi-pin-angle"></i>
+
+											</a>
+											}
+											else
+											{
+											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
+												<i class="bi bi-pin-fill"></i>
+											</a>
+											}
+									</td>
 
 									</td>
 									<td>
@@ -89,6 +106,7 @@
 
 										</div>
 									</td>
+									
 								</tr>
 
 							}

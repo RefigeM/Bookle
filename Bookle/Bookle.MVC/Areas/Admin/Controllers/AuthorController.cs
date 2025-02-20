@@ -117,6 +117,13 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			return RedirectToAction(nameof(Index));
 
 		}
+		public async Task<IActionResult> ToggleIsFeatured(int? id)
+		{
+			if (id == null) return BadRequest();
+			await _service.ToggleAuthorIsFeaturedAsync(id.Value);
+			return RedirectToAction(nameof(Index));
+
+		}
 
 	}
 }

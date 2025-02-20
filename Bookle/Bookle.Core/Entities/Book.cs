@@ -8,7 +8,7 @@ public class Book : BaseEntity
 	public string Title { get; set; }
 	public int AuthorId { get; set; }
 	public Author Author { get; set; }
-	public bool IsFeatured { get; set; }
+	public bool IsFeatured { get; set; } = false;
 	public string? ShortDescription { get; set; }
 	public string? Description { get; set; }
 	public string? RoleOfBook { get; set; }
