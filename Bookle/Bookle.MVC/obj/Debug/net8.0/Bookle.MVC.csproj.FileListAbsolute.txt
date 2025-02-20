@@ -277,7 +277,6 @@ C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8.0\appsettings.json
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8.0\Bookle.MVC.staticwebassets.runtime.json
-C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8.0\Bookle.MVC.staticwebassets.endpoints.json
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8.0\Bookle.MVC.exe
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8.0\Bookle.MVC.deps.json
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8.0\Bookle.MVC.runtimeconfig.json
@@ -531,9 +530,7 @@ C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\bin\Debug\net8
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\scopedcss\bundle\Bookle.MVC.styles.css
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets\msbuild.Bookle.MVC.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets\msbuild.Bookle.MVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets\msbuild.build.Bookle.MVC.props
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Bookle.MVC.props
 C:\Users\ACER\OneDrive\Masaüstü\Final_Project\Bookle\Bookle.MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Bookle.MVC.props

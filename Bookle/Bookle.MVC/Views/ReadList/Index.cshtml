@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Book>
+
+
+    <div id="table">
+
+
+    <h2>Books I've Read</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Books</th>
+                    <th>Authors</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>
+
+                            <span class="d-flex gap-5 align-items-center">
+                                <a asp-controller="ReadList" asp-action="RemoveFromReadList" asp-route-bookId="@book.Id" >
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+
+
+                                <span class="cart">
+                                    <img src="~/imgs/books/@book.CoverImageUrl" width="70" />
+                                </span>
+                                <a asp-action="Details" asp-controller="Home" asp-route-id="@book.Id">@book.Title</a>
+                        </td>
+
+
+                        <td>
+                            <span class="d-flex gap-5 align-items-center">
+                                <a asp-action="Profile" asp-controller="Author" asp-route-id="@book.AuthorId">@book.Author.AuthorName</a>
+                              
+                            </span>
+                        </td>
+
+
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>You haven't read any books yet.</p>
+    }
+    </div>
+<style>
+
+    #table{
+    padding-top: 80px;
+    padding-bottom: 120px;
+    }
+</style>

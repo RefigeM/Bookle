@@ -14,6 +14,7 @@ public class BookleDbContext : IdentityDbContext<User>
 	public DbSet<BookRating> BookRatings { get; set; }
 	public DbSet<Comment> Comments { get; set; }
 	public DbSet<Wishlist> Wishlists { get; set; }
+	public DbSet<ReadList> ReadLists { get; set; }
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		modelBuilder.ApplyConfigurationsFromAssembly(typeof(BookleDbContext).Assembly);
