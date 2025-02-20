@@ -1,13 +1,11 @@
-﻿using Bookle.BL.Services.Implements;
-using Bookle.BL.Services.Interfaces;
+﻿using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.HomeVM;
 using Bookle.BL.ViewModels.WishlistVMs;
+using Bookle.Core.Entities;
 using Bookle.DAL.Contexts;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text.Json;
 
@@ -20,29 +18,48 @@ namespace Bookle.MVC.Controllers
 		private readonly IRatingService _ratingService;
 		private readonly ICommentService _commentService;
 		private readonly IAuthorService _authorService;
-		
+		private readonly UserManager<User> _userManager;
 
-		public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService, ICommentService commentService,IAuthorService authorService)
+
+
+		public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService, ICommentService commentService, IAuthorService authorService, UserManager<User> userManager)
 		{
-			_context = context;	
-			_service= service;	
-			_ratingService= ratingService;	
-			_commentService= commentService;	
-			_authorService= authorService;	
+			_context = context;
+			_service = service;
+			_ratingService = ratingService;
+			_commentService = commentService;
+			_authorService = authorService;
+			_userManager = userManager;
+
 		}
 
 		public async Task<IActionResult> Index()
 		{
+			var user = await _userManager.GetUserAsync(User);
+
+			var wishlistBookIds = await _context.Wishlists
+				.Where(w => w.UserId == user.Id)
+				.Select(w => w.BookId)
+				.ToListAsync();
+
 			var books = await _service.GetAllBooksWithDetailsAsync();
+
+			foreach (var book in books)
+			{
+				book.IsInWishlist = wishlistBookIds.Contains(book.Id);
+			}
+
 			var authors = await _authorService.GetAllAuthorProfilesAsync();
+
 			var model = new BooksAndAuthorsVM
 			{
 				Books = books.ToList(),
 				Authors = authors.ToList()
-
 			};
+
 			return View(model);
 		}
+
 		public async Task<IActionResult> Details(int? id)
 		{
 			if (id == null) return BadRequest();
@@ -70,18 +87,18 @@ namespace Bookle.MVC.Controllers
 			}
 			else
 			{
-				ViewBag.Rating = 0; 
+				ViewBag.Rating = 0;
 			}
 
 			return View(book);
 		}
 
 
-		public async Task<IActionResult> AccessDenied() 
-		{			
+		public async Task<IActionResult> AccessDenied()
+		{
 			return View();
 		}
-	
+
 		[HttpPost]
 		public IActionResult SubmitRating(int bookId, int star)
 		{

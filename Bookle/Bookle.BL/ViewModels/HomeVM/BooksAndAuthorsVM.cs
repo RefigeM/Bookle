@@ -7,6 +7,7 @@ namespace Bookle.BL.ViewModels.HomeVM
 	{
 		public List<Book> Books { get; set; } = new List<Book>(); 
 		public List<AuthorAllDataVM> Authors { get; set; } = new List<AuthorAllDataVM>();
+		public bool IsInWishlist { get; set; }
 
 	}
 }

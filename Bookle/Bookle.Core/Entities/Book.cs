@@ -23,7 +23,8 @@ public class Book : BaseEntity
 	public string? CoverImageUrl { get; set; }
 	public ICollection<BookRating>? BookRatings { get; set; }
 	public ICollection<Comment>? Comments { get; set; }
-	public ICollection<Wishlist> Wishlist { get; set; } // Many-to-Many əlaqə
+	public ICollection<Wishlist> Wishlist { get; set; }
+	public bool IsInWishlist { get; set; }
 
 
 }

@@ -54,21 +54,39 @@ public class WishlistController : Controller
 		_context.Wishlists.Add(wishlist);
 		await _context.SaveChangesAsync();
 
-		return RedirectToAction("Index");
+		return RedirectToAction("Index", "Home");
 	}
 
 
 	public async Task<IActionResult> RemoveFromWishlist(int bookId)
 	{
-		var user = await _userManager.GetUserAsync(User);
-		var wishlistItem = _context.Wishlists.FirstOrDefault(w => w.UserId == user.Id && w.BookId == bookId);
+		_context.ChangeTracker.Clear(); // Yeni məlumatlarla işləmək üçün
 
-		if (wishlistItem != null)
+		var user = await _userManager.GetUserAsync(User);
+		if (user == null) return RedirectToAction("Login", "Account");
+
+		var wishlistItem = await _context.Wishlists
+			.FirstOrDefaultAsync(w => w.UserId == user.Id && w.BookId == bookId);
+
+		if (wishlistItem == null)
 		{
-			_context.Wishlists.Remove(wishlistItem);
-			await _context.SaveChangesAsync();
+			TempData["Message"] = "Bu kitab artıq wishlist-də yoxdur!";
+			return RedirectToAction("Index", "Wishlist");
 		}
 
-		return RedirectToAction("Index");
+		_context.Wishlists.Remove(wishlistItem);
+		await _context.SaveChangesAsync();
+
+		return RedirectToAction("Index", "Home");
 	}
+
+	public async Task<IActionResult> WishlistCount()
+	{
+		var user = await _userManager.GetUserAsync(User);
+		if (user == null) return Json(0);
+
+		var count = await _context.Wishlists.CountAsync(w => w.UserId == user.Id);
+		return Json(count); // JSON formatında qaytarır
+	}
+
 }

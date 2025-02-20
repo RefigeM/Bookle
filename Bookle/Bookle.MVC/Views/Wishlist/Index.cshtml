@@ -43,7 +43,8 @@
                             <thead>
                                 <tr>
                                     <th>Books</th>
-                                   
+                                    <th>Authors</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,11 +54,13 @@
                                         <td>
 
                                             <span class="d-flex gap-5 align-items-center">
-                                                <a asp-controller="Wishlist" asp-action="Index" class="remove-icon">
+                                                <a asp-controller="Wishlist" asp-action="RemoveFromWishlist" asp-route-bookId="@item.Book.Id" asp-route-title="@item.Book.Title" class="remove-icon">
+                                                  
                                                     <img src="assets/img/icon/icon-9.svg" alt="img">
                                                 </a>
+
                                                 <span class="cart">
-                                                    <img src="assets/img/shop-cart/01.png" alt="img">
+                                                    <img src="~/imgs/books/@item.Book.CoverImageUrl" width="70" />
                                                 </span>
                                                 <span class="cart-title">
                                                     @item.Book.Title

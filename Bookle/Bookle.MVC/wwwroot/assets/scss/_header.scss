@@ -724,7 +724,6 @@
                 i {
                     margin-right: 10px;
                 }
-
             }
 
             &.style-2 {
@@ -783,7 +782,6 @@
                 }
             }
         }
-
     }
 
     .header-main {
@@ -881,7 +879,6 @@
                         &:hover {
                             color: $theme-color-2 !important;
                         }
-
                     }
 
                     .submenu {
@@ -934,7 +931,7 @@
                             }
 
                             &:hover {
-                                >a {
+                                > a {
                                     background: $theme-color-2;
                                     color: $white !important;
 
@@ -943,7 +940,7 @@
                                     }
                                 }
 
-                                >.submenu {
+                                > .submenu {
                                     -webkit-transform: translateY(1%);
                                     -moz-transform: translateY(1%);
                                     -ms-transform: translateY(1%);
@@ -956,7 +953,7 @@
                         }
 
                         li.has-dropdown {
-                            >a {
+                            > a {
                                 &::after {
                                     position: absolute;
                                     top: 50%;
@@ -974,7 +971,7 @@
 
 
                     &:hover {
-                        >a {
+                        > a {
                             color: $theme-color-2;
 
                             &::after {
@@ -982,7 +979,7 @@
                             }
                         }
 
-                        >.submenu {
+                        > .submenu {
                             visibility: visible;
                             opacity: 1;
                             transform: translateY(0px);
@@ -1098,11 +1095,9 @@
                 }
             }
         }
-
         // .author-icon {
         // 	@include flex;
         // 	gap: 20px;
-
         // 	.icon {
         // 		width: 44px;
         // 		height: 44px;
@@ -1113,7 +1108,6 @@
         // 		color: $white;
         // 		border-radius: 50%;
         // 		position: relative;
-
         // 		&::before {
         // 			position: absolute;
         // 			top: 50%;
@@ -1127,19 +1121,15 @@
         // 			content: "";
         // 			transform: translate(-50%,-50%);
         // 		}
-
         // 	}
-
         // 	.content {
         // 		h5 {
         // 			font-weight: 600;
         // 			font-size: 18px;
-
         // 			a {
         // 				color: $header-color;
         // 			}
         // 		}
-
         // 		span {
         // 			font-size: 14px;
         // 			font-weight: 600;
@@ -1179,16 +1169,16 @@
                     position: absolute;
                     top: -7px;
                     left: 0;
-                    content: "0";
+                    content: "." !important;
                     width: 18px;
                     line-height: 18px;
                     height: 18px;
                     border-radius: 18px;
-                    background-color: $theme-color;
+                    background-color: $white;
                     color: $white;
-                    font-size: 12px;
+                    font-size: 1px;
                     text-align: center;
-                    font-weight: 500;
+                    font-weight: 100;
                 }
 
                 i {
@@ -1206,7 +1196,6 @@
                     display: inline-block;
                     border-radius: 50%;
                     border: 1px solid rgba(79, 83, 107, 0.3);
-
                 }
             }
         }
