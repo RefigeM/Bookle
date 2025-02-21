@@ -1,5 +1,6 @@
 ﻿using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.BL.ViewModels.BookVMs;
+using Bookle.BL.ViewModels.HomeVM;
 using Bookle.Core.Entities;
 using Bookle.Core.Repositories;
 
@@ -16,5 +17,6 @@ public interface IBookService
 	Task SoftDeleteBookAsync(int id);
 	Task UpdateBookAsync(int id, BookUpdateVM vm);
 	Task ToggleIsFeaturedAsync(int id);
+	Task<List<Book>> GetTopRatedBooksAsync(int count);
 
 }

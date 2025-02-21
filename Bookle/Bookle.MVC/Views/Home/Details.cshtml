@@ -192,17 +192,27 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <td>
-                                
-                                <form asp-action="Add" asp-controller="ReadList" method="post">
-                                    <input type="hidden" name="bookId" value="@Model.Id" />
-                                    <button type="submit" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
-                                      Add To Readed
-                                    </button>
-                                       
-                                
-                                </form>
+                               
+                                @if (ViewBag.IsReaded)
+                                {
+                                   
+                                    <a asp-controller="ReadList" asp-action="RemoveFromReadList" asp-route-bookId="@Model.Id" class="theme-btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i> Unmark as Read
+                                    </a>
+                                }
+                                else
+                                {
+                                    <form asp-action="Add" asp-controller="ReadList" method="post">
+                                        <input type="hidden" name="bookId" value="@Model.Id" />
+                                        <button type="submit" class="theme-btn btn-warning">
+                                            <i class="fa-solid fa-book-open"></i> Mark as Read
+                                        </button>
+                                    </form>
+                                }
                             </td>
+
                             
                             <div class="icon-box">
                                 <a href="shop-details.html" class="icon">

@@ -56,15 +56,26 @@ namespace Bookle.MVC.Controllers
                 var readListEntry = new ReadList
                 {
                     UserId = userId,
-                    BookId = bookId
+                    BookId = bookId,
+                    IsReaded = true // 🔥 Burada true edirik
                 };
 
                 _context.ReadLists.Add(readListEntry);
                 await _context.SaveChangesAsync();
             }
+            else
+            {
+                // Əgər artıq oxunmuşdursa, IsReaded = true edirik (əgər əvvəl false idisə)
+                if (!existingRecord.IsReaded)
+                {
+                    existingRecord.IsReaded = true;
+                    await _context.SaveChangesAsync();
+                }
+            }
 
-            return RedirectToAction("Index", "Home"); // Kitablar səhifəsinə yönləndirir
+            return RedirectToAction("Index", "Home"); // Ana səhifəyə yönləndir
         }
+
 
         [HttpGet]
         public IActionResult RemoveFromReadList(int bookId)
@@ -77,12 +88,13 @@ namespace Bookle.MVC.Controllers
 
             if (readListEntry != null)
             {
-                _context.ReadLists.Remove(readListEntry);
+                readListEntry.IsReaded = false; // 🔥 Kitab oxunmuşdan çıxarılır
                 _context.SaveChanges();
             }
 
-            return RedirectToAction("Index", "ReadList");
+            return RedirectToAction("Index", "Home");
         }
+
 
     }
 }

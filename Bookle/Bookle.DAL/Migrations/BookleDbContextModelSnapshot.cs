@@ -79,6 +79,7 @@ namespace Bookle.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .HasMaxLength(1500)
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Format")
@@ -119,8 +120,8 @@ namespace Bookle.DAL.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("RoleOfBook")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<string>("ShortDescription")
                         .HasMaxLength(500)
@@ -240,6 +241,9 @@ namespace Bookle.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsReaded")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("UpdatedDate")

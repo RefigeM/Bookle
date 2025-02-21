@@ -19,6 +19,7 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 	{
 		return await _context.Books
 			.Include(b => b.Author)
+			//.Include(b => b.Read)
 			.Include(b => b.BookRatings)
 				.ToListAsync();
 	}
@@ -30,4 +31,13 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 	   .FirstOrDefaultAsync(b => b.Id == id);
 
 	}
+
+    public async Task<List<Book>> GetTopRatedBooksAsync(int count)
+    {
+        return await _context.Books
+            .OrderByDescending(b => b.BookRatings.Any() ? b.BookRatings.Average(r => r.RatingRate) : 0) 
+            .Take(count)
+            .ToListAsync();
+    }
+
 }

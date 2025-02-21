@@ -18,9 +18,11 @@ public class BookCreateVM
 	public string? ShortDescription { get; set; }
 	[MaxLength(700)]
 	public string? Description { get; set; }
-	public string? RoleOfBook { get; set; }
 
-	[Required]
+    [MaxLength(1000, ErrorMessage = "Role of Book can have a maximum of 1000 characters.")]
+    public string? RoleOfBook { get; set; }
+
+    [Required]
 	public Genre Genre { get; set; }
 
 

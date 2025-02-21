@@ -6,6 +6,8 @@ namespace Bookle.Core.Repositories
 	{
 		Task<Book> GetByIdWithDetailsAsync(int id);
 		Task<IEnumerable<Book>> GetAllWithDetailsAsync();
-		
-	}
+		Task<List<Book>> GetTopRatedBooksAsync(int count);
+
+
+    }
 }

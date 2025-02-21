@@ -49,6 +49,15 @@ namespace Bookle.DAL.Configurations
 		.HasForeignKey(br => br.BookId)
 		.OnDelete(DeleteBehavior.Cascade);
 
-		}
+            builder.Property(b => b.RoleOfBook)
+        .HasMaxLength(2000);
+
+            builder.Property(b => b.Description)
+       .HasMaxLength(1500);
+			
+			builder.Property(b => b.ShortDescription)
+        .HasMaxLength(500);
+
+        }
 	}
 }

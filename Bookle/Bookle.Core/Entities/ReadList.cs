@@ -9,5 +9,6 @@ namespace Bookle.Core.Entities
 
 		public int BookId { get; set; }
 		public Book Book { get; set; }
-	}
+		public bool IsReaded { get; set; } = false;
+    }
 }
