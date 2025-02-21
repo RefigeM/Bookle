@@ -36,9 +36,22 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
     {
         return await _context.Books
           .OrderByDescending(b => b.BookRatings.Any() ? b.BookRatings.Average(r => r.RatingRate) : 0)
-          .Take(count)  // Burada take əməliyyatını sıralamadan sonra çağırmalısınız
+          .Take(count)  
           .ToListAsync();
     }
+
+    public IEnumerable<Book> Search(string query)
+    {
+        var books = _context.Books
+        .Include(b => b.Author)
+        .Include(b => b.BookRatings)
+        .Include(b => b.Comments) 
+        .Where(b => b.Title.Contains(query) || (b.Author != null && b.Author.AuthorName.Contains(query)))
+        .ToList();
+
+        return books;
+    }
+
 
 
 }

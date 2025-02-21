@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Book>
+
+<h2>Search Results</h2>
+
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th><h3>Books</h3></th>
+                <th><h3>Authors</h3></th>
+
+               
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>
+
+                        <span class="d-flex gap-5 align-items-center">
+                           
+
+
+                            <span class="cart">
+                                <img src="~/imgs/books/@book.CoverImageUrl" width="100" />
+                            </span>
+                            <h5>
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@book.Id">@book.Title</a>
+                            </h5>
+                    </td>
+
+
+                    <td>
+                        <span class="d-flex gap-5 align-items-center">
+                            <a asp-action="Profile" asp-controller="Author" asp-route-id="@book.AuthorId">@book.Author.AuthorName</a>
+
+                        </span>
+                    </td>
+                    <td>
+                        <span class="d-flex gap-5 align-items-center">
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@book.Id" class="theme-btn style-2">
+                                Read More
+                            </a>
+                        </span>
+                    </td>
+
+
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p id="notFound">You haven't read any books yet.</p>
+}
+    </div>
+<style>
+
+
+    .table {
+        padding-top: 80px;
+        padding-bottom: 120px;
+    }
+
+    .table {
+    margin-top:80px;
+    margin-bottom:120px;
+    }
+    #notFound
+    {
+        margin-top: 80px;
+        margin-bottom: 120px;
+    }
+    
+</style>

@@ -18,5 +18,6 @@ public interface IBookService
 	Task UpdateBookAsync(int id, BookUpdateVM vm);
 	Task ToggleIsFeaturedAsync(int id);
 	Task<List<Book>> GetTopRatedBooksAsync(int count);
+    IEnumerable<Book> Search(string query);
 
 }

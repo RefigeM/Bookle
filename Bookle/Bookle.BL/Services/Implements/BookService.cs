@@ -61,6 +61,11 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
         await _repo.SaveAsync();
     }
 
+    public IEnumerable<Book> Search(string query)
+    {
+        return _repo.Search(query);
+    }
+
     public async Task SoftDeleteBookAsync(int id)
     {
         await _repo.SoftDeleteAsync(id);

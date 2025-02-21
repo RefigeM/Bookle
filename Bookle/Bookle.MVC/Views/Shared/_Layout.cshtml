@@ -299,6 +299,8 @@
                                         </div>
                                     </form>
                                 </div>
+                              
+
                                 <div class="menu-cart">
                                     <a asp-controller="Wishlist" asp-action="Index" class="cart-icon">
                                         <i class="fa-regular fa-heart"></i>
@@ -382,7 +384,21 @@
                                                 <li>
                                                     <a href="contact.html">Contact</a>
                                                 </li>
+                                                <li>
+                                                    <div class="single-sidebar-widget">
+                                                        <form asp-action="Search" asp-controller="Filter" method="get" class="search-toggle-box">
+                                                            <div class="search-container">
+                                                                <input type="text" name="query" placeholder="Search book or author..." />
+                                                                <button type="submit">
+                                                                    <i class="fas fa-search"></i>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                </li>
                                             </ul>
+                                          
                                         </nav>
                                     </div>
                                 </div>
@@ -420,11 +436,14 @@
                                         </div>
                                     </form>
                                 </div>
+                               
+
                                 <div class="menu-cart">
                                     <a asp-controller="Wishlist" asp-action="Index" class="cart-icon">
                                         <i class="fa-regular fa-heart"></i>
                                     </a>
 
+                                   
 
 
                                     <div class="header-humbager ml-30">
@@ -807,3 +826,44 @@
 </body>
 
 </html>
+<style>
+
+    .search-container {
+        position: relative;
+        width: 100%;
+        max-width: 350px; /* İstəyə görə eni dəyişdirilə bilər */
+        margin: 0 auto;
+    }
+
+        .search-container input {
+            width: 100%;
+            padding: 12px 45px 12px 15px; /* Sağda ikon üçün yer ayırırıq */
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            outline: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+            .search-container input:focus {
+                border-color: #007bff; /* Fokus olduqda border rəngi dəyişir */
+                box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+            }
+
+        .search-container button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #555;
+        }
+
+            .search-container button:hover {
+                color: #007bff;
+            }
+
+</style>
