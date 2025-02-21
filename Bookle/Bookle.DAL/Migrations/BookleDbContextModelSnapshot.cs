@@ -101,6 +101,9 @@ namespace Bookle.DAL.Migrations
                     b.Property<bool>("IsInWishlist")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsReaded")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Language")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -241,9 +244,6 @@ namespace Bookle.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsReaded")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("UpdatedDate")

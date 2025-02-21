@@ -54,7 +54,7 @@ namespace Bookle.MVC.Controllers
 
             var authors = await _authorService.GetAllFeaturedAuthorProfilesAsync();
 
-            var topRatedBooks = await _service.GetTopRatedBooksAsync(10);
+            var topRatedBooks = await _service.GetTopRatedBooksAsync(6);
 
             var model = new BooksAndAuthorsVM
             {
@@ -92,15 +92,15 @@ namespace Bookle.MVC.Controllers
                 ViewBag.UserRating = rating;
 
                 // **Kitab oxunmuş siyahısındadırmı?**
-                bool isReaded = await _context.ReadLists
-                    .AnyAsync(r => r.UserId == userId && r.BookId == id && r.IsReaded);
+                //bool isReaded = await _context.ReadLists
+                //    .AnyAsync(r => r.UserId == userId && r.BookId == id && r.IsReaded);
 
-                ViewBag.IsReaded = isReaded;
+                //ViewBag.IsReaded = isReaded;
             }
             else
             {
                 ViewBag.Rating = 0;
-                ViewBag.IsReaded = false;
+                //ViewBag.IsReaded = false;
             }
 
             return View(book);

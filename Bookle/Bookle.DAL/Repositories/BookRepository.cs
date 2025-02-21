@@ -35,9 +35,10 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
     public async Task<List<Book>> GetTopRatedBooksAsync(int count)
     {
         return await _context.Books
-            .OrderByDescending(b => b.BookRatings.Any() ? b.BookRatings.Average(r => r.RatingRate) : 0) 
-            .Take(count)
-            .ToListAsync();
+          .OrderByDescending(b => b.BookRatings.Any() ? b.BookRatings.Average(r => r.RatingRate) : 0)
+          .Take(count)  // Burada take əməliyyatını sıralamadan sonra çağırmalısınız
+          .ToListAsync();
     }
+
 
 }

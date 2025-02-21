@@ -195,7 +195,7 @@
                             
                             <td>
                                
-                                @if (ViewBag.IsReaded)
+                                @if (Model.IsReaded)
                                 {
                                    
                                     <a asp-controller="ReadList" asp-action="RemoveFromReadList" asp-route-bookId="@Model.Id" class="theme-btn btn-danger">

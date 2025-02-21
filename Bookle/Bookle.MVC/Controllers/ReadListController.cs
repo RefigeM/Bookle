@@ -6,16 +6,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Bookle.MVC.Controllers
 {
-	public class ReadListController : Controller
-	{
-		private readonly BookleDbContext _context;
-		private readonly UserManager<User> _userManager;
+    public class ReadListController : Controller
+    {
+        private readonly BookleDbContext _context;
+        private readonly UserManager<User> _userManager;
 
-		public ReadListController(BookleDbContext context, UserManager<User> userManager)
-		{
-			_context = context;	
-			_userManager = userManager;	
-		}
+        public ReadListController(BookleDbContext context, UserManager<User> userManager)
+        {
+            _context = context;
+            _userManager = userManager;
+        }
 
         public async Task<IActionResult> Index()
         {
@@ -23,8 +23,8 @@ namespace Bookle.MVC.Controllers
             if (userId == null) return Unauthorized();
 
             var books = await _context.ReadLists
-                .Where(r => r.UserId == userId)
-                .Include(r => r.Book)
+            .Where(r => r.UserId == userId && r.Book.IsReaded)
+              .Include(r => r.Book)
                 .ThenInclude(b => b.Author)
                 .Select(r => r.Book)
                 .ToListAsync();
@@ -40,8 +40,8 @@ namespace Bookle.MVC.Controllers
             if (userId == null) return Unauthorized();
 
             // Kitabın varlığını yoxlayın
-            var bookExists = await _context.Books.AnyAsync(b => b.Id == bookId);
-            if (!bookExists)
+            var book = await _context.Books.FirstOrDefaultAsync(b => b.Id == bookId);
+            if (book == null)
             {
                 // Kitab mövcud deyil
                 ModelState.AddModelError("", "Seçdiyiniz kitab mövcud deyil.");
@@ -57,24 +57,23 @@ namespace Bookle.MVC.Controllers
                 {
                     UserId = userId,
                     BookId = bookId,
-                    IsReaded = true // 🔥 Burada true edirik
+                    // IsReaded kitabın özündə dəyişir, ReadList modelində deyil
                 };
 
                 _context.ReadLists.Add(readListEntry);
                 await _context.SaveChangesAsync();
             }
-            else
+
+            // Kitabın IsReaded xüsusiyyətini true etmək
+            if (!book.IsReaded)
             {
-                // Əgər artıq oxunmuşdursa, IsReaded = true edirik (əgər əvvəl false idisə)
-                if (!existingRecord.IsReaded)
-                {
-                    existingRecord.IsReaded = true;
-                    await _context.SaveChangesAsync();
-                }
+                book.IsReaded = true; // Oxunmuş olaraq qeyd edirik
+                await _context.SaveChangesAsync(); // Dəyişiklikləri saxlayırıq
             }
 
             return RedirectToAction("Index", "Home"); // Ana səhifəyə yönləndir
         }
+
 
 
         [HttpGet]
@@ -88,12 +87,21 @@ namespace Bookle.MVC.Controllers
 
             if (readListEntry != null)
             {
-                readListEntry.IsReaded = false; // 🔥 Kitab oxunmuşdan çıxarılır
-                _context.SaveChanges();
+                // Kitab oxunmuşdan çıxarılırsa, IsReaded'i false edirik
+                var book = _context.Books.FirstOrDefault(b => b.Id == bookId);
+                if (book != null)
+                {
+                    book.IsReaded = false; // IsReaded'i false edirik
+                    _context.SaveChanges(); // Dəyişiklikləri saxlayırıq
+                }
+
+                _context.ReadLists.Remove(readListEntry); // ReadList-dən çıxarılır
+                _context.SaveChanges(); // Dəyişiklikləri saxlayırıq
             }
 
             return RedirectToAction("Index", "Home");
         }
+
 
 
     }

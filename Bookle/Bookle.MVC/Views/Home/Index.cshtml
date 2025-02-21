@@ -574,12 +574,22 @@
                                         </ul>
                                         <span class="rat__qun">(Based on @topBook.BookRatings.Count Ratings  Reviews)</span>
                                     </div>
-                                    <form asp-action="Add" asp-controller="ReadList" method="post">
-                                        <input type="hidden" name="bookId" value="@topBook.Id" />
-                                        <button type="submit" class="theme-btn btn-warning">
-                                            <i class="fa-solid fa-book-open"></i> Mark as Read
-                                        </button>
-                                    </form>
+                                    @if (topBook.IsReaded)
+                                    {
+
+                                        <a asp-controller="ReadList" asp-action="RemoveFromReadList" asp-route-bookId="@topBook.Id" class="theme-btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i> Unmark as Read
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <form asp-action="Add" asp-controller="ReadList" method="post">
+                                            <input type="hidden" name="bookId" value="@topBook.Id" />
+                                            <button type="submit" class="theme-btn btn-warning">
+                                                <i class="fa-solid fa-book-open"></i> Mark as Read
+                                            </button>
+                                        </form>
+                                    }
                                 </div>
                             </div>
                         </div>

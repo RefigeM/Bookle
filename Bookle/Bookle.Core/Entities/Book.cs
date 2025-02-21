@@ -34,6 +34,8 @@ public class Book : BaseEntity
 	public ICollection<Comment>? Comments { get; set; }
 	public ICollection<Wishlist> Wishlist { get; set; }
 	public bool IsInWishlist { get; set; }
+    public bool IsReaded { get; set; } = false;
+
 
 
 }

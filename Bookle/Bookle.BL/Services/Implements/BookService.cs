@@ -52,7 +52,7 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
 
     public async Task<List<Book>> GetTopRatedBooksAsync(int count)
     {
-        return await _repo.GetTopRatedBooksAsync(count);
+        return await _repo.GetTopRatedBooksAsync(6);
     }
 
     public async Task RestoreBookAsync(int id)
