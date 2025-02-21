@@ -3,8 +3,10 @@ using Bookle.BL.Extentions;
 using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.BL.ViewModels.BookVMs;
+using Bookle.BL.ViewModels.FilterVMs;
 using Bookle.BL.ViewModels.HomeVM;
 using Bookle.Core.Entities;
+using Bookle.Core.Enums;
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
 using Bookle.DAL.Repositories;
@@ -42,6 +44,11 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
         return data;
     }
 
+    public IEnumerable<Genre> GetAllGenres()
+    {
+        return _repo.GetAllGenres();
+    }
+
     public async Task<Book> GetBookByIdAsync(int id)
     {
         var book = await _repo.GetByIdWithDetailsAsync(id);
@@ -49,6 +56,18 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
         return book;
 
     }
+
+    public GenreBooksVM GetBooksByGenre(Genre? genre)
+    {
+        var model = new GenreBooksVM()
+        {
+            Genres = Enum.GetValues(typeof(Genre)).Cast<Genre>().ToList(),
+            Books = _repo.GetBooksByGenre(genre).ToList() // Düzgün yerə yerləşdirildi
+        };
+
+        return model;
+    }
+
 
     public async Task<List<Book>> GetTopRatedBooksAsync(int count)
     {

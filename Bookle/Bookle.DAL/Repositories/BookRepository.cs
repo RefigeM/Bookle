@@ -1,4 +1,5 @@
 ﻿using Bookle.Core.Entities;
+using Bookle.Core.Enums;
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,12 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 		_context = context;
 	}
 
-	public async Task<IEnumerable<Book>> GetAllWithDetailsAsync()
+    public IEnumerable<Genre> GetAllGenres()
+    {
+        return Enum.GetValues(typeof(Genre)).Cast<Genre>().ToList();
+    }
+
+    public async Task<IEnumerable<Book>> GetAllWithDetailsAsync()
 	{
 		return await _context.Books
 			.Include(b => b.Author)
@@ -24,7 +30,20 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 				.ToListAsync();
 	}
 
-	public async Task<Book> GetByIdWithDetailsAsync(int id)
+   public  IEnumerable<Book> GetBooksByGenre(Genre? genre)
+    {
+        var books = _context.Books.AsQueryable();
+
+        if (genre.HasValue)
+        {
+            books = books.Where(b => b.Genre == genre.Value);
+        }
+
+        return books.ToList(); // Bura diqqət et
+    }
+
+
+    public async Task<Book> GetByIdWithDetailsAsync(int id)
 	{
 		return await _context.Books
 	   .Include(b => b.Author)
@@ -52,6 +71,5 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
         return books;
     }
 
-
-
+  
 }

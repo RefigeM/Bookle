@@ -1,7 +1,9 @@
 ﻿using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.BL.ViewModels.BookVMs;
+using Bookle.BL.ViewModels.FilterVMs;
 using Bookle.BL.ViewModels.HomeVM;
 using Bookle.Core.Entities;
+using Bookle.Core.Enums;
 using Bookle.Core.Repositories;
 
 namespace Bookle.BL.Services.Interfaces;
@@ -19,5 +21,8 @@ public interface IBookService
 	Task ToggleIsFeaturedAsync(int id);
 	Task<List<Book>> GetTopRatedBooksAsync(int count);
     IEnumerable<Book> Search(string query);
+    GenreBooksVM GetBooksByGenre(Genre? genre);
+    IEnumerable<Genre> GetAllGenres();
+
 
 }

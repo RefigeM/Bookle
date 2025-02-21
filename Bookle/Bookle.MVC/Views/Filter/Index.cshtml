@@ -1,0 +1,23 @@
+﻿@model GenreBooksVM
+
+<h2>Kitab Siyahısı</h2>
+
+<!-- Janrlar siyahısı -->
+<ul>
+    @foreach (var genre in Model.Genres)
+    {
+        <li>
+            <a asp-action="FilterByGenre" asp-controller="Filter" asp-route-genre="@genre">
+                @genre
+            </a>
+        </li>
+    }
+</ul>
+
+<h3>Kitablar</h3>
+<ul>
+    @foreach (var book in Model.Books)
+    {
+        <li>@book.Title - @book.Author</li>
+    }
+</ul>

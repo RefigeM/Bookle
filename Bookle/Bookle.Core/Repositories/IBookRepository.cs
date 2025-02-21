@@ -1,4 +1,5 @@
 ﻿using Bookle.Core.Entities;
+using Bookle.Core.Enums;
 
 namespace Bookle.Core.Repositories
 {
@@ -8,6 +9,8 @@ namespace Bookle.Core.Repositories
 		Task<IEnumerable<Book>> GetAllWithDetailsAsync();
 		Task<List<Book>> GetTopRatedBooksAsync(int count);
         IEnumerable<Book> Search(string query);
+        IEnumerable<Book> GetBooksByGenre(Genre? genre);
+        IEnumerable<Genre> GetAllGenres();
 
 
     }
