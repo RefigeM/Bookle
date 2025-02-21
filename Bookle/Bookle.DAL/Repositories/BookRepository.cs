@@ -30,7 +30,16 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 				.ToListAsync();
 	}
 
-   public  IEnumerable<Book> GetBooksByGenre(Genre? genre)
+    public IEnumerable<Book> GetBooksByAuthor(string authorName)
+    {
+        return _context.Books
+            .Include(b => b.Author)
+            .Where(b => b.Author.AuthorName == authorName)
+            .ToList();
+    }
+
+
+    public IEnumerable<Book> GetBooksByGenre(Genre? genre)
     {
         var books = _context.Books.AsQueryable();
 
@@ -39,7 +48,7 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
             books = books.Where(b => b.Genre == genre.Value);
         }
 
-        return books.ToList(); // Bura diqqət et
+        return books.ToList(); 
     }
 
 

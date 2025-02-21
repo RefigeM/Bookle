@@ -1,0 +1,145 @@
+﻿@model AuthorBooksVM
+
+<div class="breadcrumb-wrapper">
+    <div class="book1">
+        <img src="~/assets/img/hero/book1.png" alt="book">
+    </div>
+    <div class="book2">
+        <img src="~/assets/img/hero/book2.png" alt="book">
+    </div>
+    <div class="container">
+        <div class="page-heading">
+            <h1>Shop Default</h1>
+            <div class="page-header">
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </li>
+                    <li>
+                        Shop Default
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@if (Model != null){
+<section class="shop-section fix section-padding">
+    <div class="container">
+        <div class="shop-default-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    
+                </div>
+                <!-- 1111111111111111111 -->
+                <div class="col-xl-3 col-lg-4 order-2 order-md-1 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="main-sidebar">
+
+                            <div class="single-sidebar-widget">
+                                <div class="wid-title">
+                                    <h5>Authors</h5>
+                                </div>
+                                <div class="categories-list">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        @foreach (var author in Model.Authors)
+                                        {
+                                            <li class="nav-item" role="presentation">
+                                                <a asp-action="FilterByAuthor" asp-controller="Filter" asp-route-authorName="@author.AuthorName">
+                                                    @author.AuthorName
+                                                </a>
+
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                    </div>
+                </div>
+                <!-- 1111111111111111111 -->
+
+                <div class="col-xl-9 col-lg-8 order-1 order-md-2">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-arts" role="tabpanel"
+                             aria-labelledby="pills-arts-tab" tabindex="0">
+                                <div class="row">
+                                    @foreach (var book in Model.Books )
+                                    {
+                                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                            <div class="shop-box-items">
+                                                <div class="book-thumb center">
+                                                    <a href="shop-details.html"><img src="~/imgs/books/@book.CoverImageUrl" alt="img" width="150"></a>
+                                                    <ul class="shop-icon d-grid justify-content-center align-items-center">
+                                                        <li>
+                                                            @if (book.IsInWishlist)
+                                                            {
+                                                                <a asp-controller="Wishlist" asp-action="RemoveFromWishlist" asp-route-bookId="@book.Id">
+                                                                    <i class="fas fa-heart text-danger"></i> <!-- Qırmızı ürək -->
+                                                                </a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-bookId="@book.Id">
+                                                                    <i class="far fa-heart"></i> <!-- Boş ürək -->
+                                                                </a>
+                                                            }
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-cart.html">
+                                                                <img class="icon" src="~/assets/img/icon/shuffle.svg" alt="svg-icon">
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-action="Details" asp-controller="Home" asp-route-id="@book.Id"><i class="far fa-eye"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shop-content">
+                                                    <h3><a href="shop-details.html">@book.Title</a></h3>
+                                                    <p><strong>Author:</strong> @book.Author.AuthorName</p>
+                                                    <ul class="price-list">
+                                                        <li>$@book.Price</li>
+                                                        <li>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            3.4 (25)
+                                                        </li>
+                                                    </ul>
+                                                    @if (book.IsReaded)
+                                                    {
+                                                        <a asp-controller="ReadList" asp-action="RemoveFromReadList" asp-route-bookId="@book.Id" class="theme-btn btn-danger">
+                                                            <i class="fas fa-trash-alt"></i> Unmark as Read
+                                                        </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <form asp-action="Add" asp-controller="ReadList" method="post">
+                                                            <input type="hidden" name="bookId" value="@book.Id" />
+                                                            <button type="submit" class="theme-btn btn-warning">
+                                                                <i class="fa-solid fa-book-open"></i> Mark as Read
+                                                            </button>
+                                                        </form>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section> }

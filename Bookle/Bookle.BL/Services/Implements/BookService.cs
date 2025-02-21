@@ -57,6 +57,11 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
 
     }
 
+    public IEnumerable<Book> GetBooksByAuthor(string authorName)
+    {
+        return _repo.GetBooksByAuthor(authorName);
+    }
+
     public GenreBooksVM GetBooksByGenre(Genre? genre)
     {
         var model = new GenreBooksVM()

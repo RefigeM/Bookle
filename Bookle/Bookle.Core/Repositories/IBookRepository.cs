@@ -11,6 +11,9 @@ namespace Bookle.Core.Repositories
         IEnumerable<Book> Search(string query);
         IEnumerable<Book> GetBooksByGenre(Genre? genre);
         IEnumerable<Genre> GetAllGenres();
+        IEnumerable<Book> GetBooksByAuthor(string authorName);
+
+
 
 
     }

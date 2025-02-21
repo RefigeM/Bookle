@@ -23,6 +23,8 @@ public interface IBookService
     IEnumerable<Book> Search(string query);
     GenreBooksVM GetBooksByGenre(Genre? genre);
     IEnumerable<Genre> GetAllGenres();
+    IEnumerable<Book> GetBooksByAuthor(string authorName);
+
 
 
 }
