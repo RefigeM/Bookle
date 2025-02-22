@@ -17,13 +17,22 @@
                             </div>
                             <div class="categories-list">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-
+                                    <li>
                                     <form asp-action="FilterByGenre" asp-controller="Filter" method="get">
                                         <input type="hidden" name="genre" value="Fiction" />
                                         <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
                                             Genres
                                         </button>
                                     </form>
+                                    </li>
+                                    <li>
+                                        <form asp-action="FilterByFormat" asp-controller="Filter" method="get">
+                                            <input type="hidden" name="format" value="PDF" />
+                                            <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+                                                Formats
+                                            </button>
+                                        </form>
+                                    </li>
 
                                        <li></li>
                                     <form asp-action="FilterByAuthor" asp-controller="Filter" method="get">

@@ -1,0 +1,158 @@
+﻿@model FormatBookVM
+@{
+    ViewData["Title"] = "Books by Genre";
+}
+<div class="breadcrumb-wrapper">
+    <div class="book1">
+        <img src="~/assets/img/hero/book1.png" alt="book">
+    </div>
+    <div class="book2">
+        <img src="~/assets/img/hero/book2.png" alt="book">
+    </div>
+    <div class="container">
+        <div class="page-heading">
+            <h1>Shop Default</h1>
+            <div class="page-header">
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+                    <li>
+                        Shop Default
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="shop-section fix section-padding">
+    <div class="container">
+        <div class="shop-default-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    
+                </div>
+                <!-- 1111111111111111111 -->
+                <div class="col-xl-3 col-lg-4 order-2 order-md-1 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="main-sidebar">
+                       
+                        <div class="single-sidebar-widget">
+                            <div class="wid-title">
+                                <h5>Genres</h5>
+                            </div>
+                            <div class="categories-list">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    @foreach (var format in Model.Formats)
+                                    {
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link @(format == Model.SelectedFormat ? "active" : "")"
+                                                    id="pills-@format-tab"
+                                                    data-bs-toggle="pill"
+                                                    data-bs-target="#pills-@format"
+                                                    type="button"
+                                                    role="tab"
+                                                    aria-controls="pills-@format"
+                                                    aria-selected="@(format == Model.SelectedFormat ? "true" : "false")">
+                                                <a asp-action="FilterByFormat" asp-controller="Filter" asp-route-format="@format">
+                                                    @format
+                                                </a>
+                                            </button>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                       
+                     
+                    </div>
+                </div>
+                <!-- 1111111111111111111 -->
+
+                <div class="col-xl-9 col-lg-8 order-1 order-md-2">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-arts" role="tabpanel"
+                             aria-labelledby="pills-arts-tab" tabindex="0">
+                            <div class="row">
+                                @foreach (var book in Model.Books)
+                                {
+                                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                        <div class="shop-box-items">
+                                            <div class="book-thumb center">
+                                                <a href="shop-details.html"><img src="~/imgs/books/@book.CoverImageUrl" alt="img" width="150"></a>
+
+                                                <ul class="shop-icon d-grid justify-content-center align-items-center">
+                                                    <li>
+                                                        @if (book.IsInWishlist)
+                                                        {
+                                                            <a asp-controller="Wishlist" asp-action="RemoveFromWishlist" asp-route-bookId="@book.Id" asp-route-title="@book.Title">
+                                                                <i class="fas fa-heart text-danger"></i> <!-- Qırmızı ürək (wishlist-dədir) -->
+                                                            </a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-bookId="@book.Id" asp-route-title="@book.Title">
+                                                                <i class="far fa-heart"></i> <!-- Boş ürək (wishlist-də deyil) -->
+                                                            </a>
+                                                        }
+
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="shop-cart.html">
+                                                            <img class="icon" src="~/assets/img/icon/shuffle.svg"
+                                                                 alt="svg-icon">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a asp-action="Details" asp-controller="Home" asp-route-id="@book.Id"><i class="far fa-eye"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="shop-content">
+                                                <h3><a href="shop-details.html">@book.Title</a></h3>
+                                                <ul class="price-list">
+                                                    <li>$@book.Price</li>
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        @(book.BookRatings?.Any() == true ? Math.Round(book.BookRatings.Average(x => x.RatingRate), 1) : 0)
+                                                    </li>
+                                                </ul>
+                                                @if (book.IsReaded)
+                                                {
+
+                                                    <a asp-controller="ReadList" asp-action="RemoveFromReadList" asp-route-bookId="@book.Id" class="theme-btn btn-danger">
+                                                        <i class="fas fa-trash-alt"></i> Unmark as Read
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <form asp-action="Add" asp-controller="ReadList" method="post">
+                                                        <input type="hidden" name="bookId" value="@book.Id" />
+                                                        <button type="submit" class="theme-btn btn-warning">
+                                                            <i class="fa-solid fa-book-open"></i> Mark as Read
+                                                        </button>
+                                                    </form>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

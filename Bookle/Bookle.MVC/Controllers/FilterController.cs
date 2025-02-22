@@ -41,6 +41,18 @@ namespace Bookle.MVC.Controllers
             model.SelectedGenre = selectedGenre; // View üçün seçilmiş janrı əlavə et
             return View(model);
         }
+
+        public IActionResult FilterByFormat(string format)
+        {
+            if (!Enum.TryParse(format, out Format selectedFormat))
+            {
+                return NotFound(); // Səhv dəyər gəlsə, səhifə tapılmasın.
+            }
+
+            var model = _service.GetBooksByFormat(selectedFormat);
+            model.SelectedFormat = selectedFormat; // View üçün seçilmiş janrı əlavə et
+            return View(model);
+        }
         public async Task<IActionResult> FilterByAuthor(string authorName)
         {
             if (string.IsNullOrWhiteSpace(authorName))

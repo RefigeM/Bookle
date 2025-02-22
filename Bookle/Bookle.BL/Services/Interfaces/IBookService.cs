@@ -24,7 +24,9 @@ public interface IBookService
     GenreBooksVM GetBooksByGenre(Genre? genre);
     IEnumerable<Genre> GetAllGenres();
     IEnumerable<Book> GetBooksByAuthor(string authorName);
+    FormatBookVM GetBooksByFormat(Format? format);
 
+    IEnumerable<Format> GetAllFormats();
 
 
 }

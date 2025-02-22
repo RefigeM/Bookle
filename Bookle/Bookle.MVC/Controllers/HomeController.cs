@@ -12,6 +12,7 @@ namespace Bookle.MVC.Controllers
 {
     public class HomeController : Controller
     {
+
         private readonly BookleDbContext _context;
         private readonly IBookService _service;
         private readonly IRatingService _ratingService;

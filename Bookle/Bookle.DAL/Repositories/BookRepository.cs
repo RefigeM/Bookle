@@ -16,6 +16,11 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 		_context = context;
 	}
 
+    public IEnumerable<Format> GetAllFormat()
+    {
+        return Enum.GetValues(typeof(Format)).Cast<Format>().ToList();
+    }
+
     public IEnumerable<Genre> GetAllGenres()
     {
         return Enum.GetValues(typeof(Genre)).Cast<Genre>().ToList();
@@ -38,6 +43,17 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
             .ToList();
     }
 
+    public IEnumerable<Book> GetBooksByFormat(Format? format)
+    {
+        var books = _context.Books.AsQueryable();
+
+        if (format.HasValue)
+        {
+            books = books.Include(b => b.BookRatings).Where(b => b.Format == format.Value);
+        }
+
+        return books.ToList();
+    }
 
     public IEnumerable<Book> GetBooksByGenre(Genre? genre)
     {
@@ -45,7 +61,7 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 
         if (genre.HasValue)
         {
-            books = books.Where(b => b.Genre == genre.Value);
+            books = books.Include(b => b.BookRatings).Where(b => b.Genre == genre.Value);
         }
 
         return books.ToList(); 

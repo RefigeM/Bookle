@@ -44,6 +44,11 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
         return data;
     }
 
+    public IEnumerable<Format> GetAllFormats()
+    {
+        return _repo.GetAllFormat();
+    }
+
     public IEnumerable<Genre> GetAllGenres()
     {
         return _repo.GetAllGenres();
@@ -73,6 +78,16 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
         return model;
     }
 
+    public FormatBookVM GetBooksByFormat(Format? format)
+    {
+        var model = new FormatBookVM()
+        {
+            Formats = Enum.GetValues(typeof(Format)).Cast<Format>().ToList(),
+            Books = _repo.GetBooksByFormat(format).ToList() 
+        };
+
+        return model;
+    }
 
     public async Task<List<Book>> GetTopRatedBooksAsync(int count)
     {
