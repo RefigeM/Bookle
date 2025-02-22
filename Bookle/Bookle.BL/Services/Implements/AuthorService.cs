@@ -107,7 +107,13 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 				{
 					AuthorId = a.Id,
 					AuthorName = a.AuthorName,
-					AuthorImg = a.AuthorImage
+					AuthorImg = a.AuthorImage,
+					Country=a.Country,
+					BirthYear=a.BirthYear,
+					DeathYear=a.DeathYear,
+					Biography=a.Biography	
+
+					
 				}).FirstOrDefaultAsync(a => a.AuthorId == id);
 		if (author is null) throw new NotFoundException();
 
@@ -118,6 +124,8 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
     public async Task<List<BookCountOfAuthor>> GetAuthorsWithBookCounts()
     {
         return await _context.Authors
+			.Include (a => a.Books)	
+			.ThenInclude(b => b.BookRatings)
             .Select(a => new BookCountOfAuthor
             {
                 AuthorId = a.Id,
@@ -127,12 +135,16 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
             .ToListAsync();
     }
 
- //   public Task<List<BookCountOfAuthor>> GetBookCountOfAuthor(int? id)
-	//{
-	//	throw new NotImplementedException();
-	//}
+   
 
-	public async Task RestoreAuthorAsync(int id)
+
+
+    //   public Task<List<BookCountOfAuthor>> GetBookCountOfAuthor(int? id)
+    //{
+    //	throw new NotImplementedException();
+    //}
+
+    public async Task RestoreAuthorAsync(int id)
 	{
 		await _repo.RestoreAsync(id);
 		await _repo.SaveAsync();
@@ -177,5 +189,29 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		await _repo.SaveAsync();
 	}
 
-   
+    public async Task<AuthorAllDataVM?> GetAuthorWithBooksAsync(int authorId)
+    {
+        var author = await _context.Authors
+            .Include(a => a.Books) // Müəllifin kitablarını da gətir
+            .FirstOrDefaultAsync(a => a.Id == authorId);
+
+        if (author == null) return null;
+
+        return new AuthorAllDataVM
+        {
+            AuthorId = author.Id,
+            AuthorName = author.AuthorName,
+            AuthorImg = author.AuthorImage,
+            Biography = author.Biography,
+            BookCount = author.Books.Count,
+            Country = author.Country,
+            FacebookUrl = author.FacebookUrl,
+            TwitterUrl = author.TwitterUrl,
+            InstagramUrl = author.InstagramUrl,
+            LinkedInUrl = author.LinkedInUrl,
+            BirthYear = author.BirthYear,
+            DeathYear = author.DeathYear,
+            Books = author.Books.ToList()
+        };
+    }
 }

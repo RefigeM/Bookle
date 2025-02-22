@@ -27,4 +27,6 @@ public class AuthorRepository : GenericRepository<Author>, IAuthorRepository
 		return author;
 
 	}
+
+   
 }

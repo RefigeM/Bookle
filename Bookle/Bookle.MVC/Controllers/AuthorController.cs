@@ -74,7 +74,10 @@ namespace Bookle.MVC.Controllers
         public async Task<IActionResult> Profile(int? id) 
 		{
 			if (!id.HasValue) return BadRequest();
-			return View(await _authorService.GetAuthorDetailsWithIdAsync(id.Value));
+            var author = await _authorService.GetAuthorWithBooksAsync(id.Value);
+            if (author == null) return NotFound();
+
+            return View(author);
 		}
 
 	}
