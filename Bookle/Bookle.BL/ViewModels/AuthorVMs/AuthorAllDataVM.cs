@@ -1,4 +1,6 @@
-﻿namespace Bookle.BL.ViewModels.AuthorVMs
+﻿using Bookle.Core.Entities;
+
+namespace Bookle.BL.ViewModels.AuthorVMs
 {
 	public class AuthorAllDataVM
 	{
@@ -6,7 +8,9 @@
 		public string AuthorName { get; set; }
 		public string AuthorImg { get; set; }
 		public int BookCount { get; set; }
+        public List<Book> Books { get; set; } = new List<Book>();
 
-	}
+
+    }
 
 }
