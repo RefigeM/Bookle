@@ -1,0 +1,87 @@
+﻿@model Blog
+@{
+	ViewData["Title"] = "Info";
+}
+
+<h1>Info</h1>
+
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- main title -->
+			<div class="col-12">
+				<h2 class="text-white">Author Info</h2>
+
+				<div class="main__title">
+					<li class="sidebar__nav-item">
+						<a asp-action="Index" asp-controller="Blog" class="sidebar__nav-link "><i class="ti ti-arrow-left"></i> <span>Go Back</span></a>
+					</li>
+
+				</div>
+			</div>
+			<!-- end main title -->
+			<!-- items -->
+			<div class="col-12">
+				<div class="catalog catalog--1">
+					<table class="catalog__table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Profil Image</th>
+								<th>Title</th>
+								<th>Content</th>								
+								<th>IsDeleted</th>
+								<th>IsVisible</th>
+								<th>Delete</th>
+
+
+
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>
+									<div class="catalog__text">@Model.Id</div>
+								</td>
+								<td><img src="@Url.Content(Model.Title)" width="70" /></td>
+								<td>
+									<div class="catalog__text"><a href="#">@Model.Title</a></div>
+								</td>
+								<td>
+									<div class="catalog__text"><a href="#">@Model.Content</a></div>
+								</td>
+								
+								
+
+
+								<td>
+									<div class="catalog__text catalog__text--red">@Model.IsDeleted</div>
+
+								</td>
+								<td>
+									<div class="catalog__text catalog__text--red">@Model.IsVisibleOnHomepage</div>
+
+								</td>
+								<td>
+									<div class="catalog__btns">
+
+
+
+
+										<a asp-action="Delete" asp-asp-controller="Author" asp-route-id="@Model.Id" class="catalog__btn catalog__btn--delete">
+											<i class="ti ti-trash"></i>
+										</a>
+
+
+									</div>
+								</td>
+
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end items -->
+

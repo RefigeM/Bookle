@@ -1,0 +1,46 @@
+﻿@model BlogCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<main class="main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-white">Create Blog Post</h2>
+
+                <div class="main__title">
+                    <li class="sidebar__nav-item">
+                        <a asp-action="Index" asp-controller="Blog" class="sidebar__nav-link "><i class="ti ti-arrow-left"></i> <span>Go Back</span></a>
+                    </li>
+                </div>
+            </div>
+
+            <form enctype="multipart/form-data" method="post">
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="Title" type="text" class="sign__input" placeholder="Title">
+                    <span asp-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="Content" type="text" class="sign__input" placeholder="Content">
+                    <span asp-for="Content" class="text-danger"></span>
+                </div>
+
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <label class="text-white" asp-for="File">File</label>
+                    <input class="form-control" asp-for="File" style="color: white; background-color: #1a191f;">
+                    <span class="text-danger" asp-validation-for="File"></span>
+                    @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Ümumi səhv mesajlarını burada göstəririk -->
+@Html.ValidationSummary(true)

@@ -90,14 +90,14 @@
 									<td>
 										@if (item.IsFeatured == false)
 										{
-											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
+											<a asp-action="ToggleIsFeatured" asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
 												<i class="bi bi-pin-angle"></i>
 
 											</a>
 										}
 										else
 										{
-											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
+											<a asp-action="ToggleIsFeatured" asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
 												<i class="bi bi-pin-fill"></i>
 											</a>
 										}

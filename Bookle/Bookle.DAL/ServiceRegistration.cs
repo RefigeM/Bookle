@@ -11,8 +11,9 @@ namespace Bookle.DAL
 			services.AddScoped<IBookRepository, BookRepository>();
 			services.AddScoped<IAuthorRepository, AuthorRepository>();
 			services.AddScoped<IUserRepository, UserRepository>();
-			services.AddScoped<ICommentRepository, CommentRepository>();
-			return services;		
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
+            return services;		
 		}
 	}
 }
