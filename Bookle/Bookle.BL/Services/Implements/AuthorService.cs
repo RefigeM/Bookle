@@ -65,12 +65,21 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 			.ToListAsync();
 	}
 
-	public async Task<IEnumerable<Author>> GetAllAuthorsAsync()
-	{
-		return await _repo.GetAllAsync();
-	}
+    public async Task<IEnumerable<Author>> GetAllAuthorsAsync()
+    {
+        var authors = await _repo.GetAllAuthorsWithDetailsAsync();
 
-	public async Task<List<Author>> GetAllAuthorsWithBooksAsync()
+        if (authors == null || !authors.Any())
+        {
+            return new List<Author>(); 
+        }
+
+        return authors; 
+    }
+
+
+
+    public async Task<List<Author>> GetAllAuthorsWithBooksAsync()
 	{
 		var authors = await _repo.GetAllAuthorsWithDetailsAsync();
 		if (authors.Count == 0) throw new NotFoundException();

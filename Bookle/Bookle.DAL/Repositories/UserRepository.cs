@@ -31,12 +31,20 @@ public class UserRepository : IUserRepository
 		return await _context.Users.ToListAsync();
 	}
 
-	public async Task<User?> GetByIdAsync(string userId)
-	{
-	return await	_context.Users.FindAsync(userId);
-	}
+    public async Task<User?> GetByIdAsync(string userId)
+    {
+        var user = await _context.Users
+    .Where(u => u.Id.ToLower() == userId.ToLower())
+    .FirstOrDefaultAsync();
+		if (user == null) { throw new Exception("Not found"); }
+		return user;	
 
-	public async Task<int> SaveAsync()
+    }
+
+
+
+
+    public async Task<int> SaveAsync()
 	{
 		return await _context.SaveChangesAsync();
 	}

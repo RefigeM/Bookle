@@ -103,5 +103,26 @@ public class UserService : IUserService
 
 	}
 
+    public async Task<UserProfileVM> GetUserProfileAsync(string userId)
+    {
+        var user = await _userRepository.GetByIdAsync(userId);
 
+        if (user == null)
+        {
+            return null; // İstifadəçi tapılmadıqda null qaytarılır
+        }
+
+        // User modelini ViewModel formatına çeviririk
+        var userProfile = new UserProfileVM
+        {
+            UserId = user.Id,
+            FullName = user.Fullname,
+            Email = user.Email,
+            Address = user.Address,
+            ProfileImageUrl = user.ProfilImage
+        };
+
+        return userProfile;
+    }
 }
+

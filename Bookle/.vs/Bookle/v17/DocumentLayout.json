@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.dal\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|solutionrelative:bookle.dal\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.core\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|solutionrelative:bookle.core\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 234,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -47,8 +47,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T09:35:09.895Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -65,13 +64,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BookService.cs",
               "RelativeDocumentMoniker": "Bookle.BL\\Services\\Implements\\BookService.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BookService.cs",
               "RelativeToolTip": "Bookle.BL\\Services\\Implements\\BookService.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAAFAAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T09:33:29.029Z",
               "IsPinned": true,
@@ -79,21 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\BookRepository.cs",
               "RelativeDocumentMoniker": "Bookle.DAL\\Repositories\\BookRepository.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\BookRepository.cs",
               "RelativeToolTip": "Bookle.DAL\\Repositories\\BookRepository.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAADkAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwCMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T09:30:43.679Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IBookRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBookRepository.cs",
               "RelativeDocumentMoniker": "Bookle.Core\\Repositories\\IBookRepository.cs",
@@ -102,8 +100,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T18:35:43.979Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -113,11 +110,10 @@
               "RelativeDocumentMoniker": "Bookle.BL\\Services\\Interfaces\\IBookService.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBookService.cs",
               "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\IBookService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA9wBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAA7wBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T18:38:39.104Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             }
           ]
         }

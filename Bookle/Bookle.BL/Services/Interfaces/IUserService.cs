@@ -14,4 +14,5 @@ public interface IUserService
 	Task SoftDeleteUserAsync(string userId);
 	Task UpdateUserAsync(string userId, UserUpdateVM vm);
 	Task<bool> AuthenticateUserAsync(string email, string password);
+	Task<UserProfileVM> GetUserProfileAsync(string userId);
 }

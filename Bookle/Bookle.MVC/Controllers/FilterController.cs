@@ -55,14 +55,14 @@ namespace Bookle.MVC.Controllers
         }
         public async Task<IActionResult> FilterByAuthor(string authorName)
         {
-            if (string.IsNullOrWhiteSpace(authorName))
-            {
-                return RedirectToAction("Index"); // Əgər authorName boşdursa, əsas səhifəyə qaytar
-            }
+            //if (string.IsNullOrWhiteSpace(authorName))
+            //{
+            //    return RedirectToAction("Index"); // Əgər authorName boşdursa, əsas səhifəyə qaytar
+            //}
 
             var books = await _service.GetAllBooksWithDetailsAsync();
             var authors = await _authorService.GetAllAuthorsAsync();
-
+          
             var filteredBooks = books.Where(b => b.Author.AuthorName == authorName).ToList();
 
             if (!filteredBooks.Any())
