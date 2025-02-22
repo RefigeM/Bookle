@@ -1,6 +1,7 @@
 ﻿using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.HomeVM;
 using Bookle.Core.Entities;
+using Bookle.Core.Enums;
 using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,9 @@ namespace Bookle.MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
+            
+            ViewBag.Genres = Enum.GetValues(typeof(Genre)).Cast<Genre>().ToList();
+
             var user = await _userManager.GetUserAsync(User);
 
             List<int> wishlistBookIds = new List<int>();
@@ -139,7 +143,7 @@ namespace Bookle.MVC.Controllers
 
         public async Task<IActionResult> TopBooks()
         {
-            var topBooks=  await _service.GetTopRatedBooksAsync(6);
+            var topBooks=  await _service.GetTopRatedBooksAsync(4);
             return View(topBooks);  
         }
 

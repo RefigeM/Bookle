@@ -157,66 +157,25 @@
             </div>
             <div class="swiper book-catagories-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="book-catagories-items">
-                            <div class="book-thumb">
-                                <img src="assets/img/book-categori/01.png" alt="img">
+                   
+                    @foreach (var genre in ViewBag.Genres)
+                {
+                        <div class="swiper-slide">
+                            <div class="book-catagories-items">
+                                <div class="book-thumb">
+                                   
+                                        <img src="~/imgs/books/1dwornuo.l5m.png" alt="Genre Image" width="150" />
+
+                                    
+
                                 <div class="circle-shape">
                                     <img src="assets/img/book-categori/circle-shape.png" alt="shape-img">
                                 </div>
                             </div>
-                            <div class="number"> 01 </div>
-                            <h3><a href="shop-details.html">Romance Books (80)</a></h3>
+                                <h3><a asp-action="FilterByGenre" asp-controller="Filter" asp-route-genre="@genre">@genre (80)</a></h3>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="book-catagories-items">
-                            <div class="book-thumb">
-                                <img src="assets/img/book-categori/02.png" alt="img">
-                                <div class="circle-shape">
-                                    <img src="assets/img/book-categori/circle-shape.png" alt="shape-img">
-                                </div>
-                            </div>
-                            <div class="number"> 02 </div>
-                            <h3><a href="shop-details.html">Design Low Book (6)</a></h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="book-catagories-items">
-                            <div class="book-thumb">
-                                <img src="assets/img/book-categori/03.png" alt="img">
-                                <div class="circle-shape">
-                                    <img src="assets/img/book-categori/circle-shape.png" alt="shape-img">
-                                </div>
-                            </div>
-                            <div class="number"> 03 </div>
-                            <h3><a href="shop-details.html">safe Home (5)</a></h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="book-catagories-items">
-                            <div class="book-thumb">
-                                <img src="assets/img/book-categori/04.png" alt="img">
-                                <div class="circle-shape">
-                                    <img src="assets/img/book-categori/circle-shape.png" alt="shape-img">
-                                </div>
-                            </div>
-                            <div class="number"> 04 </div>
-                            <h3><a href="shop-details.html">Grow flower (7)</a></h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="book-catagories-items">
-                            <div class="book-thumb">
-                                <img src="assets/img/book-categori/05.png" alt="img">
-                                <div class="circle-shape">
-                                    <img src="assets/img/book-categori/circle-shape.png" alt="shape-img">
-                                </div>
-                            </div>
-                            <div class="number"> 05 </div>
-                            <h3><a href="shop-details.html">Adventure book (4)</a></h3>
-                        </div>
-                    </div>
+                 }
                 </div>
             </div>
         </div>

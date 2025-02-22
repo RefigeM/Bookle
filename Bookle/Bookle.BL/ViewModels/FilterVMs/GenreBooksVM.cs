@@ -7,7 +7,8 @@ namespace Bookle.BL.ViewModels.FilterVMs
     {
         public List<Genre> Genres { get; set; } = new List<Genre>();
         public List<Book> Books { get; set; } = new List<Book>();
-        public Genre? SelectedGenre { get; set; } // Seçilən janr
+        public Genre? SelectedGenre { get; set; } 
+        public Book LatestBook { get; set; }
 
     }
 }
