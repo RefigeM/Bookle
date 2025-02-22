@@ -34,7 +34,7 @@ namespace Bookle.MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
-            
+
             ViewBag.Genres = Enum.GetValues(typeof(Genre)).Cast<Genre>().ToList();
 
             var user = await _userManager.GetUserAsync(User);
@@ -50,7 +50,11 @@ namespace Bookle.MVC.Controllers
             }
 
             var books = await _service.GetAllBooksWithDetailsAsync();
-
+            var authorsWithBookCounts = await _authorService.GetAuthorsWithBookCounts();
+            var comments = _context.Comments
+        .Include(c => c.User) // User məlumatını çəkmək üçün
+        .Include(c => c.Book) // Kitab adını göstərə bilmək üçün
+        .ToList();
             foreach (var book in books)
             {
                 book.IsInWishlist = wishlistBookIds.Contains(book.Id);
@@ -60,11 +64,14 @@ namespace Bookle.MVC.Controllers
 
             var topRatedBooks = await _service.GetTopRatedBooksAsync(6);
 
+
             var model = new BooksAndAuthorsVM
             {
                 Books = books.ToList(),
                 Authors = authors.ToList(),
-                TopRatedBooks=topRatedBooks.ToList()
+                TopRatedBooks = topRatedBooks.ToList(),
+                Comments = comments.ToList(),
+                AuthorsWithBookCounts = authorsWithBookCounts
             };
 
             return View(model);
@@ -143,10 +150,10 @@ namespace Bookle.MVC.Controllers
 
         public async Task<IActionResult> TopBooks()
         {
-            var topBooks=  await _service.GetTopRatedBooksAsync(4);
-            return View(topBooks);  
+            var topBooks = await _service.GetTopRatedBooksAsync(4);
+            return View(topBooks);
         }
 
-       
+
     }
 }

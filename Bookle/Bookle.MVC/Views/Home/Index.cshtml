@@ -164,7 +164,7 @@
                             <div class="book-catagories-items">
                                 <div class="book-thumb">
                                    
-                                        <img src="~/imgs/books/1dwornuo.l5m.png" alt="Genre Image" width="150" />
+                                        <img src="~/account/bookcat.jpg" alt="Genre Image" width="150" />
 
                                     
 
@@ -725,147 +725,51 @@
             <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">What our client say</h2>
         </div>
         <div class="swiper testimonial-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="testimonial-card-items">
-                        <p>
-                            One of the most powerful takeaways from this book is the emphasis on adopting a mindset
-                            of abundance and possibility. The idea that we can choose to see opportunities rather
-                            than limitations is a game-changer.
-                        </p>
-                        <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                            <div class="client-info">
-                                <div class="client-img bg-cover"
-                                     style="background-image: url('assets/img/testimonial/01.jpg');">
-                                    <div class="icon">
-                                        <img class="shape" src="assets/img/testimonial/shape.svg" alt="img">
+            <div class="swiper-wrapper" style="max-height:400px !important; min-height:300px;">
+                @foreach (var comment in Model.Comments)
+                {
+                    <div class="swiper-slide">
+                        <div class="testimonial-card-items">
+                            <p>
+                             @comment.Content
+                            </p>
+                            <div class="client-info-wrapper d-flex align-items-center justify-content-between">
+                                <div class="client-info">
+                                    <div class="client-img bg-cover">
+                                                <img src="~/account/anonimUser.png" width="60px" style="border-radius:60%" alt="img">
+                                            <div class="icon">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h3>@comment.User.UserName</h3>
+                                        <span style="display: block">@comment.Book.Title</span>
+                                        @if (comment.Book.BookRatings.Any())
+                                        {
+                                            var averageRating = comment.Book.BookRatings.Average(x => x.RatingRate);
+                                            for (int i = 0; i < Math.Ceiling(averageRating); i++)
+                                            {
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                            }
+                                            for (int i = 0; i < 5 - Math.Ceiling(averageRating); i++)
+                                            {
+                                                <i class="fa-light fa-star"></i>
+
+                                            }
+                                        }
+
                                     </div>
                                 </div>
-                                <div class="content">
-                                    <h3>Ronald Richards</h3>
-                                    <span>Marketing Coordinator</span>
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </div>
+
+
+                                <div class="logo">
+                                    <img src="~/imgs/books/@comment.Book.CoverImageUrl" width="50" />
                                 </div>
-                            </div>
-
-
-                            <div class="logo">
-                                <img src="assets/img/testimonial/logo1.png" alt="">
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial-card-items">
-                        <p>
-                            The idea that we can choose to see opportunities rather than limitations is a
-                            game-changer. The book encourages readers to step out of their comfort zones and embrace
-                            a more positive outlook on life.
-                        </p>
-                        <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                            <div class="client-info">
-                                <div class="client-img bg-cover"
-                                     style="background-image: url('assets/img/testimonial/02.jpg');">
-                                    <div class="icon">
-                                        <img class="shape" src="assets/img/testimonial/shape.svg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h3>Dianne Russell</h3>
-                                    <span>Project Manager</span>
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
 
-
-                            <div class="logo">
-                                <img src="assets/img/testimonial/logo2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial-card-items">
-                        <p>
-                            "The Art of Possibility" by Rosamund Stone Zander and Benjamin Zander is a
-                            transformative read that challenges conventional thinking and opens up new
-                            possibilities. As a reader, I found myself profoundly .
-                        </p>
-                        <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                            <div class="client-info">
-                                <div class="client-img bg-cover"
-                                     style="background-image: url('assets/img/testimonial/03.jpg');">
-                                    <div class="icon">
-                                        <img class="shape" src="assets/img/testimonial/shape.svg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h3>Ronald Richards</h3>
-                                    <span>Marketing Coordinator</span>
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="logo">
-                                <img src="assets/img/testimonial/logo1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial-card-items">
-                        <p>
-                            From the very first chapter, the authors engage readers with inspiring stories and
-                            practical insights. Benjamin Zander's experiences as a conductor bring a unique
-                            perspective to leadership .
-                        </p>
-                        <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                            <div class="client-info">
-                                <div class="client-img bg-cover"
-                                     style="background-image: url('assets/img/testimonial/04.jpg');">
-                                    <div class="icon">
-                                        <img class="shape" src="assets/img/testimonial/shape.svg" alt="img">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h3>Ronald Richards</h3>
-                                    <span>Marketing Coordinator</span>
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="logo">
-                                <img src="assets/img/testimonial/logo2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }        
+                
             </div>
         </div>
     </div>
@@ -893,15 +797,15 @@
                     <div class="team-box-items">
                         <div class="team-image">
                                 <div class="thumb">
-                                    <img src="@Url.Content(item.AuthorImg)" style="width:120px; height:100px; border-radius:50%" ; />
+                                    <img src="@Url.Content(item.AuthorImg)" style="width:110px; height:110px; border-radius:50%" ; />
                                 </div>
                             <div class="shape-img">
                                 <img src="~/assets/img/team/shape-img.png" alt="img">
                             </div>
                         </div>
                         <div class="team-content text-center">
-                            <h6><a href="team-details.html">@item.AuthorName</a></h6>
-                            <p>12 Published Books</p>
+                                <h6><a asp-action="Profile" asp-controller="Author" asp-route-id="@item.AuthorId">@item.AuthorName</a></h6>
+                                <p> @item.BookCount Published Books</p>
                         </div>
                     </div>
                 </div>
@@ -1067,4 +971,7 @@
         .star-rating input:checked ~ label {
             color: gold;
         }
+
+  
+
 </style>

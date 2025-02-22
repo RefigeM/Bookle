@@ -21893,6 +21893,10 @@
       "PackagePath": "staticwebassets\\account\\assets\\video\\presentation.mp4"
     },
     {
+      "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\account\\bookcat.jpg",
+      "PackagePath": "staticwebassets\\account\\bookcat.jpg"
+    },
+    {
       "Id": "C:\\Users\\ACER\\OneDrive\\Masaüstü\\Final_Project\\Bookle\\Bookle.MVC\\wwwroot\\admin\\assets\\css\\admin.css",
       "PackagePath": "staticwebassets\\admin\\assets\\css\\admin.css"
     },

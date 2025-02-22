@@ -5,6 +5,7 @@ using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
+using Bookle.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bookle.BL.Services.Implements;
@@ -114,10 +115,22 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 
 	}
 
-	public Task<List<BookCountOfAuthor>> GetBookCountOfAuthor(int? id)
-	{
-		throw new NotImplementedException();
-	}
+    public async Task<List<BookCountOfAuthor>> GetAuthorsWithBookCounts()
+    {
+        return await _context.Authors
+            .Select(a => new BookCountOfAuthor
+            {
+                AuthorId = a.Id,
+                AuthorFullName = a.AuthorName,
+                BookCount = a.Books.Count()
+            })
+            .ToListAsync();
+    }
+
+ //   public Task<List<BookCountOfAuthor>> GetBookCountOfAuthor(int? id)
+	//{
+	//	throw new NotImplementedException();
+	//}
 
 	public async Task RestoreAuthorAsync(int id)
 	{
@@ -154,5 +167,5 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		await _repo.SaveAsync();
 	}
 
-
+   
 }
