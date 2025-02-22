@@ -89,7 +89,15 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			Author author = new Author
 			{
 				AuthorName = vm.AuthorName,
-				AuthorImage = "/imgs/authors/" + newFileName
+				AuthorImage = "/imgs/authors/" + newFileName,
+				Biography = vm.Biography,	
+				Country = vm.Country,	
+				BirthYear = vm.BirthYear,	
+				DeathYear = vm.DeathYear,	
+				FacebookUrl = vm.FacebookUrl,	
+				InstagramUrl = vm.InstagramUrl,
+				TwitterUrl = vm.TwitterUrl,	
+				LinkedInUrl = vm.LinkedInUrl		
 
 			};
 			await _service.AddAuthorAsync(author);
@@ -102,6 +110,14 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 				.Select(x => new AuthorUpdateVM
 				{
 					AuthorName = x.AuthorName,
+					Biography= x.Biography,	
+					Country = x.Country,	
+					BirthYear = x.BirthYear,
+					DeathYear = x.DeathYear,
+					FacebookUrl = x.FacebookUrl,
+					InstagramUrl = x.InstagramUrl,
+					TwitterUrl = x.TwitterUrl,
+					LinkedInUrl=x.LinkedInUrl,
 					FileUrl = x.AuthorImage
 				}).FirstOrDefaultAsync();
 

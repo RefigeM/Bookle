@@ -29,8 +29,10 @@
 								<th>ID</th>
 								<th>Profil Image</th>
 								<th>Fullname</th>
+								<th>Country</th>
+								<th>Lived Years</th>
 								<th>IsDeleted</th>
-								<th>ACTIONS</th>
+								<th>Delete</th>
 
 
 							</tr>
@@ -45,6 +47,14 @@
 								<td>
 									<div class="catalog__text"><a href="#">@Model.AuthorName</a></div>
 								</td>
+								<td>
+									<div class="catalog__text"><a href="#">@Model.Country</a></div>
+								</td>
+								<td>
+									<div class="catalog__text"><a href="#">@Model.BirthYear - @Model.DeathYear</a></div>
+								</td>
+															
+								
 								<td>
 									<div class="catalog__text catalog__text--red">@Model.IsDeleted</div>
 

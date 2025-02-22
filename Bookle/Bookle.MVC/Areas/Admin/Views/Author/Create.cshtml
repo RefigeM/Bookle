@@ -23,12 +23,47 @@
 			<!-- form -->
             <form enctype="multipart/form-data" method="post">
 
-                <div class="form-group">
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
                     <input asp-for="AuthorName" type="text" class="sign__input" placeholder="Fulname">
                     <span asp-for="AuthorName" class="text-danger" asp-validation-for="AuthorName"></span>
                 </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="Biography" type="text" class="sign__input" placeholder="Biography">
+                    <span class="text-danger" asp-validation-for="Biography"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="Country" type="text" class="sign__input" placeholder="Country">
+                    <span class="text-danger" asp-validation-for="Country"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="BirthYear" type="text" class="sign__input" placeholder="Birth Year">
+                    <span class="text-danger" asp-validation-for="BirthYear"></span>
+                </div>
+               
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="DeathYear" type="text" class="sign__input" placeholder="Death Year">
+                    <span class="text-danger" asp-validation-for="DeathYear"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="InstagramUrl" type="text" class="sign__input" placeholder="Instagram URL">
+                    <span class="text-danger" asp-validation-for="InstagramUrl"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="FacebookUrl" type="text" class="sign__input" placeholder="Facebook URL">
+                    <span class="text-danger" asp-validation-for="FacebookUrl"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="TwitterUrl" type="text" class="sign__input" placeholder="Twitter URL">
+                    <span class="text-danger" asp-validation-for="TwitterUrl"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
+                    <input asp-for="LinkedInUrl" type="text" class="sign__input" placeholder="LinkedIn URL">
+                    <span class="text-danger" asp-validation-for="LinkedInUrl"></span>
+                </div>
+
+
                 
-                <div class="form-group">
+                <div class="form-group" style="margin-bottom:5px; width: 700px">
                     <label class="text-white" asp-for="File">File</label>
                     <input class="form-control" asp-for="File" style="color: white; background-color: #1a191f;">
                     <span class="text-danger" asp-validation-for="File"></span>

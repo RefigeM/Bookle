@@ -159,7 +159,17 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		if (author == null) throw new NotFoundException();
 
 		author.AuthorName = vm.AuthorName;
-		if (vm.File != null)
+		author.Country = vm.Country;	
+		author.Biography = vm.Biography;	
+		author.BirthYear = vm.BirthYear;	
+		author.DeathYear = vm.DeathYear;	
+		author.FacebookUrl = vm.FacebookUrl;	
+		author.TwitterUrl = vm.TwitterUrl;
+        author.InstagramUrl = vm.InstagramUrl;
+		author.LinkedInUrl = vm.LinkedInUrl;
+
+
+        if (vm.File != null)
 		{
 			string newFileName = await vm.File.UploadAsync("wwwroot/imgs/authors");
 			author.AuthorImage = "/imgs/authors/" + newFileName;
