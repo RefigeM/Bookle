@@ -1,6 +1,5 @@
 ﻿using Bookle.BL.Extentions;
 using Bookle.BL.Services.Interfaces;
-using Bookle.BL.ViewModels.AuthorVMs;
 using Bookle.BL.ViewModels.BlogVMs;
 using Bookle.Core.Entities;
 using Bookle.DAL.Contexts;
@@ -12,10 +11,10 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
 	[Authorize(Roles = "Admin")]
-    public class BlogController(IBlogService _blogService, IWebHostEnvironment _env,BookleDbContext _context) : Controller
-    {
+	public class BlogController(IBlogService _blogService, IWebHostEnvironment _env, BookleDbContext _context) : Controller
+	{
 		public async Task<IActionResult> Index()
-        {
+		{
 			var blogs = await _blogService.GetAllRecentPostsAsync(); // Buradakı kodun işləyişini yoxlayın
 
 			if (blogs == null)
@@ -58,49 +57,49 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 			Blog blog = new Blog
 			{
-				Title= vm.Title,	
+				Title = vm.Title,
 				Content = vm.Content,
-				ImageUrl= "/imgs/blogs/" + newFileName,
-				CreatedDate= DateTime.Now
+				ImageUrl = "/imgs/blogs/" + newFileName,
+				CreatedDate = DateTime.Now
 
 			};
 			await _blogService.AddPostAsync(blog);
 			return RedirectToAction(nameof(Index));
 		}
-		public async Task<IActionResult> Update(int id) 
+		public async Task<IActionResult> Update(int id)
 		{
-            if (id == null) return BadRequest();
-            var data = await _context.Blogs.Where(x => x.Id == id)
-                .Select(x => new BlogUpdateVM
-                {
-                  
-                    FileUrl = x.ImageUrl,
-					Content = x.Content,	
+			if (id == null) return BadRequest();
+			var data = await _context.Blogs.Where(x => x.Id == id)
+				.Select(x => new BlogUpdateVM
+				{
+
+					FileUrl = x.ImageUrl,
+					Content = x.Content,
 					Title = x.Title
-                }).FirstOrDefaultAsync();
+				}).FirstOrDefaultAsync();
 
-            if (data == null) return NotFound();
-            return View(data);
-        }
-        [HttpPost]
-        public async Task<IActionResult> Update(int? id, BlogUpdateVM vm)
-        {
-            await _blogService.UpdatePostAsync(id.Value, vm);
+			if (data == null) return NotFound();
+			return View(data);
+		}
+		[HttpPost]
+		public async Task<IActionResult> Update(int? id, BlogUpdateVM vm)
+		{
+			await _blogService.UpdatePostAsync(id.Value, vm);
 
-            return RedirectToAction(nameof(Index));
+			return RedirectToAction(nameof(Index));
 
-        }
-		public async Task<IActionResult> Info(int? id) 
+		}
+		public async Task<IActionResult> Info(int? id)
 		{
 			if (id == null) return BadRequest();
 			var data = await _blogService.GetBlogByIdAsync(id.Value);
-            if (data == null)
-            {
+			if (data == null)
+			{
 				return NotFound();
-            }
-			return View(data);	
-        }
-		public async Task<IActionResult> Delete(int? id) 
+			}
+			return View(data);
+		}
+		public async Task<IActionResult> Delete(int? id)
 		{
 			if (id == null) return BadRequest();
 			var commet = await _blogService.GetBlogByIdAsync(id.Value);
@@ -123,11 +122,12 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 			return RedirectToAction(nameof(Index));
 		}
-		public async Task<IActionResult> ToggleIsVisible(int? id) 
+		public async Task<IActionResult> ToggleIsVisible(int? id)
 		{
-		if(!id.HasValue) return BadRequest();	
-            _blogService.ToggleIsVisible(id.Value);	
-			return View(nameof(Index));	
+			if (id == null) return BadRequest();
+			await _blogService.ToggleIsVisible(id.Value);
+			return RedirectToAction(nameof(Index));
+
 
 		}
 

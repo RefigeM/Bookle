@@ -24,6 +24,7 @@
 						<thead>
 							<tr>
 								<th>ID</th>
+								<th>Image</th>
 								<th>Title</th>
 
 								<th>Content</th>
@@ -47,9 +48,13 @@
 									<td>
 										<div class="catalog__text">@item.Id</div>
 									</td>
+										<td><img src="@Url.Content(item.ImageUrl)" width="70" /></td>
+
+
 									<td>
 										<div class="catalog__text">@item.Title</div>
 									</td>
+
 									<td>
 										<div class="catalog__text">@item.Content</div>
 									</td>
@@ -58,7 +63,6 @@
 										{
 											<a asp-action="ToggleIsVisible" asp-controller="Blog" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
 												<i class="bi bi-pin-angle"></i>
-
 											</a>
 										}
 										else
@@ -80,40 +84,14 @@
 											<div class="catalog__text catalog__text--green">@item.IsDeleted</div>
 
 										}
-									<td>
-											@if (item.IsVisibleOnHomepage == false)
-											{
-											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--edit">
-												<i class="bi bi-pin-angle"></i>
-
-											</a>
-											}
-											else
-											{
-											<a asp-action="ToggleIsFeatured" asp-asp-controller="Book" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
-												<i class="bi bi-pin-fill"></i>
-											</a>
-											}
-									</td>
+									
 
 									</td>
 									<td>
 										<div class="catalog__btns">
 
 
-											@if (item.IsDeleted == false)
-											{
-												<a asp-action="Hide" asp-controller="Blog" asp-route-id="@item.Id" class="catalog__btn catalog__btn--view">
-													<i class="ti ti-lock"></i>
-
-												</a>
-											}
-											else
-											{
-												<a asp-action="Show" asp-controller="Blog" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
-													<i class="ti ti-lock"></i>
-												</a>
-											}
+											
 											<a asp-action="Info" asp-controller="Blog" asp-route-id="@item.Id" class="catalog__btn catalog__btn--banned">
 												<i class="ti ti-eye"></i>
 											</a>

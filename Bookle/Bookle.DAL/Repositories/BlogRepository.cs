@@ -19,13 +19,13 @@ public class BlogRepository : GenericRepository<Blog>, IBlogRepository
         return await _context.Blogs.OrderByDescending(p => p.CreatedDate).ToListAsync();
     }
 
-	public async Task ToggleIsVisible(int id)
-	{
-      var data= await   _context.Blogs.FindAsync(id);
-        if (data == null) throw new Exception();
-        data.IsDeleted = !data.IsDeleted;   
+	//public async Task ToggleIsVisible(int id)
+	//{
+ //     var data= await   _context.Blogs.FindAsync(id);
+ //       if (data == null) throw new Exception();
+ //       data.IsDeleted = !data.IsDeleted;   
 
            
 
-	}
+	//}
 }

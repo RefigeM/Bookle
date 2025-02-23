@@ -10,7 +10,7 @@
 		<div class="row">
 			<!-- main title -->
 			<div class="col-12">
-				<h2 class="text-white">Author Info</h2>
+				<h2 class="text-white">Blog Info</h2>
 
 				<div class="main__title">
 					<li class="sidebar__nav-item">
@@ -27,7 +27,7 @@
 						<thead>
 							<tr>
 								<th>ID</th>
-								<th>Profil Image</th>
+								<th>Image</th>
 								<th>Title</th>
 								<th>Content</th>								
 								<th>IsDeleted</th>
@@ -44,7 +44,7 @@
 								<td>
 									<div class="catalog__text">@Model.Id</div>
 								</td>
-								<td><img src="@Url.Content(Model.Title)" width="70" /></td>
+								<td><img src="@Url.Content(Model.ImageUrl)" width="70" /></td>
 								<td>
 									<div class="catalog__text"><a href="#">@Model.Title</a></div>
 								</td>
