@@ -26,14 +26,7 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
         return Enum.GetValues(typeof(Genre)).Cast<Genre>().ToList();
     }
 
-    public async Task<IEnumerable<Book>> GetAllWithDetailsAsync()
-	{
-		return await _context.Books
-			.Include(b => b.Author)
-			//.Include(b => b.Read)
-			.Include(b => b.BookRatings)
-				.ToListAsync();
-	}
+   
 
     public IEnumerable<Book> GetBooksByAuthor(string authorName)
     {
@@ -103,5 +96,12 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
 		return await _context.Books
 				   .Where(b => b.Title.Contains(title))
 				   .ToListAsync();
+	}
+	public IQueryable<Book> GetAllBooksWithDetails()
+	{
+		return _context.Books
+			.Include(b => b.Author)
+			.Include(b => b.BookRatings)
+			.AsQueryable();
 	}
 }

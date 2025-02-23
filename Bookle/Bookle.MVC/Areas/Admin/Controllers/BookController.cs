@@ -5,6 +5,7 @@ using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.BookVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Enums;
+using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -17,12 +18,31 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 	[Authorize(Roles = RoleConstants.Book)]
 
 
-	public class BookController(BookleDbContext _context, IWebHostEnvironment _env, IBookService _service) : Controller
+	public class BookController(BookleDbContext _context, IWebHostEnvironment _env, IBookService _service, IBookRepository _bookRepo) : Controller
 	{
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index(int? page = 1, int? take = 4)
 		{
-			return View(await _service.GetAllBooksWithDetailsAsync());
+			if (!page.HasValue) page = 1;
+			if (!take.HasValue) take = 4;
+
+			var query = _bookRepo.GetAllBooksWithDetails();
+
+			decimal bookCount = await query.CountAsync();
+
+			var data = await query
+				.Skip(take.Value * (page.Value - 1)) 
+				.Take(take.Value) 
+				.ToListAsync();  
+
+			decimal pageCount = Math.Ceiling(bookCount / (decimal)take.Value);
+			ViewBag.PageCount = pageCount;  
+			ViewBag.Take = take; 
+			ViewBag.AktivePage = page;  
+
+			return View(data);
 		}
+
+
 		public async Task<IActionResult> Delete(int? id)
 		{
 			if (id == null) return BadRequest();

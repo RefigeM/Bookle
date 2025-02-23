@@ -9,6 +9,8 @@ using Bookle.Core.Entities;
 using Bookle.Core.Enums;
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
+using Microsoft.EntityFrameworkCore;
+
 using Bookle.DAL.Repositories;
 
 namespace Bookle.BL.Services.Implements;
@@ -39,10 +41,9 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
 
     public async Task<IEnumerable<Book>> GetAllBooksWithDetailsAsync()
     {
-        var data = await _repo.GetAllWithDetailsAsync();
-        if (data == null) throw new NotFoundException();
-        return data;
-    }
+		var query =_repo.GetAllBooksWithDetails();  
+		return await query.ToListAsync();
+	}
 
     public IEnumerable<Format> GetAllFormats()
     {
@@ -153,7 +154,7 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
 	public async Task<IEnumerable<Book>> SearchBooksAsync(string searchQuery)
 	{
 		return string.IsNullOrEmpty(searchQuery)
-			? await _repo.GetAllWithDetailsAsync()
+			? await _repo.GetAllBooksWithDetails().ToListAsync()
 			: await _repo.SearchByTitleAsync(searchQuery);
 	}
 
