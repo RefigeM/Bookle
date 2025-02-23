@@ -1,9 +1,4 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
-
-<!-- main content -->
+﻿@model DashboardVm
 <main class="main">
 	<div class="container-fluid">
 		<div class="row">
@@ -14,4 +9,194 @@
 
 				</div>
 			</div>
-			<!-- end main title -->
+			
+		</div>
+
+		<div class="row">
+			<!-- dashbox -->
+			<div class="col-12 col-xl-6">
+				<div class="dashbox">
+					<div class="dashbox__title">
+						<h3><i class="ti ti-trophy"></i> Top books</h3>
+
+						
+					</div>
+
+					<div class="dashbox__table-wrap dashbox__table-wrap--1">
+						<table class="dashbox__table">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>TITLE</th>
+									<th>Author</th>
+									<th>Genre</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								@foreach (var item in Model.Books)
+									{
+								<tr>
+									
+										<td>
+											<div class="dashbox__table-text">@item.Id</div>
+										</td>
+										
+										<td>
+											<div class="dashbox__table-text"><a href="#">@item.Title</a></div>
+										</td>
+										<td>
+											<div class="dashbox__table-text dashbox__table-text--grey">"@item.Author.AuthorName"</div>
+										</td>
+										
+										<td>
+											<div class="dashbox__table-text dashbox__table-text--rate">@item.Genre</div>
+										</td>
+									
+								</tr>
+									}
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- end dashbox -->
+			<!-- dashbox -->
+			<div class="col-12 col-xl-6">
+				<div class="dashbox">
+					<div class="dashbox__title">
+						<h3><i class="ti ti-movie"></i> Latest authors</h3>
+
+					
+					</div>
+
+					<div class="dashbox__table-wrap dashbox__table-wrap--2">
+						<table class="dashbox__table">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>FullName</th>
+									<th>Country</th>
+								</tr>
+							</thead>
+
+							<tbody>
+							@foreach (var item in Model.Authors)
+								{
+									<tr>
+										<td>
+											<div class="dashbox__table-text dashbox__table-text--grey">@item.Id</div>
+										</td>
+										<td>
+											<div class="dashbox__table-text"><a href="#">@item.AuthorName</a></div>
+										</td>
+										<td>
+											<div class="dashbox__table-text">@item.Country</div>
+										</td>
+									
+									</tr>
+
+								}
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- end dashbox -->
+			<!-- dashbox -->
+			<div class="col-12 col-xl-6">
+				<div class="dashbox">
+					<div class="dashbox__title">
+						<h3><i class="ti ti-users"></i>Users</h3>
+
+						
+					</div>
+
+					<div class="dashbox__table-wrap dashbox__table-wrap--3">
+						<table class="dashbox__table">
+							<thead>
+								<tr>
+									<th>FULL NAME</th>
+									<th>EMAIL</th>
+									<th>USERNAME</th>
+									<th>ID</th>
+
+								</tr>
+							</thead>
+							<tbody>
+							@foreach (var item in Model.Users)
+								{
+									<tr>
+										
+										<td>
+											<div class="dashbox__table-text"><a href="#">@item.Fullname</a></div>
+										</td>
+										<td>
+											<div class="dashbox__table-text dashbox__table-text--grey">@item.Email</div>
+										</td>
+										<td>
+											<div class="dashbox__table-text">@item.UserName</div>
+										</td>
+										<td>
+											<div class="dashbox__table-text">@item.Id</div>
+										</td>
+									</tr>
+
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- end dashbox -->
+			<!-- dashbox -->
+			<div class="col-12 col-xl-6">
+				<div class="dashbox">
+					<div class="dashbox__title">
+						<h3><i class="ti ti-star-half-filled"></i> Latest blogs</h3>
+
+					
+					</div>
+
+					<div class="dashbox__table-wrap dashbox__table-wrap--4">
+						<table class="dashbox__table">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Title</th>
+									<th>AUTHOR</th>
+									<th>Created Date</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								@foreach (var item in Model.Blogs)
+								{
+									<tr>
+										<td>
+											<div class="dashbox__table-text dashbox__table-text--grey">@item.Id</div>
+										</td>
+										<td>
+											<div class="dashbox__table-text"><a href="#">@item.Title</a></div>
+										</td>
+										<td>
+											<div class="dashbox__table-text">By Admin</div>
+										</td>
+										<td>
+											<div class="dashbox__table-text dashbox__table-text--rate">@item.CreatedDate</div>
+										</td>
+									</tr>
+
+								}
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- end dashbox -->
+		</div>
+	</div>
+</main>

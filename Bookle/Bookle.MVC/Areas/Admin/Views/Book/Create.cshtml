@@ -25,7 +25,7 @@
 							<div class="row">
 								<div class="col-12">
 									<div class="sign__group">
-										<input asp-for="Title" class="sign__input" placeholder="Title" />
+										<input asp-for="Title" class="sign__input" placeholder="Title*" />
 										<span asp-validation-for="Title" class="text-danger"></span>
 									</div>
 								</div>
@@ -51,7 +51,7 @@
 								
 
 								<div class="form-group">
-									<label class="text-white" asp-for="File">Cover Image</label>
+									<label class="text-white" asp-for="File">Cover Image*</label>
 									<input accept="image/*" class="form-control" asp-for="File" style="color: white; background-color: #1a191f;">
 									<span class="text-danger" asp-validation-for="File" class="text-danger"></span>
 								</div>
@@ -66,7 +66,7 @@
 
 								<div  class="col-12 col-md-6">
 									<div  class="sign__group">
-										<input asp-for="PublishedYear" type="text" class="sign__input" placeholder="Publish Year">
+										<input asp-for="PublishedYear" type="text" class="sign__input" placeholder="Publish Year*">
 										<span class="text-danger" asp-validation-for="PublishedYear" class="text-danger"></span>
 
 									</div>
@@ -88,7 +88,7 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<div class="sign__group">
-										<select asp-for="Language" asp-items="ViewBag.Languages" type="text" class="sign__input" placeholder="Language">
+										<select asp-for="Language" asp-items="ViewBag.Languages" type="text" class="sign__input" placeholder="Language*">
 											<option disabled selected> Language</option>
 										</select>
 										<span asp-validation-for="Language" class="text-danger"></span>
@@ -97,8 +97,8 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<div  class="sign__group">
-										<select asp-for="Country" asp-items="ViewBag.Countries" type="text" class="sign__input" placeholder="Country">
-											<option disabled selected> Country</option>
+										<select asp-for="Country" asp-items="ViewBag.Countries" type="text" class="sign__input" placeholder="Country*">
+											<option disabled selected>Select Country</option>
 										</select>										
 										<span asp-validation-for="Country" class="text-danger"></span>
 
@@ -106,8 +106,8 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<div class="sign__group">
-										<select asp-for="Genre" asp-items="ViewBag.Genres" type="text" class="sign__input" placeholder="Genres">
-											<option disabled selected> Genre</option>
+										<select asp-for="Genre" asp-items="ViewBag.Genres" type="text" class="sign__input" placeholder="Genres*">
+											<option disabled selected>Select Genre</option>
 										</select>										
 										<span asp-validation-for="Genre" class="text-danger"></span>
 
@@ -115,8 +115,8 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<div class="sign__group">
-										<select asp-for="Format" asp-items="ViewBag.Formats" class="sign__input" type="text" class="sign__input" placeholder="Format">
-											<option disabled selected> Format</option>
+										<select asp-for="Format" asp-items="ViewBag.Formats" class="sign__input" type="text" class="sign__input" placeholder="Format*">
+											<option disabled selected>Select Format</option>
 										</select>									
 										<span asp-validation-for="Format" class="text-danger"></span>
 
@@ -124,14 +124,14 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<div class="sign__group">
-										<input asp-for="PageCount" type="text" class="sign__input" placeholder="Page Count">
+										<input asp-for="PageCount" type="text" class="sign__input" placeholder="Page Count*">
 										<span asp-validation-for="PageCount" class="text-danger"></span>
 
 									</div>
 								</div>
 								<div class="col-12 col-md-6">
 									<div class="sign__group">
-										<input asp-for="Price" type="text" class="sign__input" placeholder="Price">
+										<input asp-for="Price" type="text" class="sign__input" placeholder="Price*">
 										<span asp-validation-for="Price" class="text-danger"></span>
 
 									</div>
