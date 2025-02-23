@@ -7,7 +7,6 @@ using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Bookle.BL.Services.Implements;
 
 public class UserService : IUserService
@@ -124,5 +123,12 @@ public class UserService : IUserService
 
         return userProfile;
     }
+
+	public async Task<IEnumerable<User>> SearchUsersAsync(string searchQuery)
+	{
+		return string.IsNullOrEmpty(searchQuery)
+					? await _userRepository.GetAllAsync()
+					: await _userRepository.SearchByUserAsync(searchQuery);
+	}
 }
 

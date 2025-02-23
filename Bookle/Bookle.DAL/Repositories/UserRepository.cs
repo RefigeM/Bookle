@@ -49,10 +49,19 @@ public class UserRepository : IUserRepository
 		return await _context.SaveChangesAsync();
 	}
 
+	public async Task<IEnumerable<User>> SearchByUserAsync(string user)
+	{
+		return await _context.Users
+						   .Where(b => b.UserName.Contains(user))
+						   .ToListAsync();
+	}
+
 	public void Update(User user)
 	{
 		_context.Users.Update(user);
 		_context.SaveChanges();
 
-	}	
+	}
+
+
 }

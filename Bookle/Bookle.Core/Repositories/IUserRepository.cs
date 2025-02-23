@@ -12,5 +12,7 @@ public interface IUserRepository
 	void Update(User user);
 	void Delete(User user);
 	Task<int> SaveAsync();
+	Task<IEnumerable<User>> SearchByUserAsync(string user);
+
 
 }

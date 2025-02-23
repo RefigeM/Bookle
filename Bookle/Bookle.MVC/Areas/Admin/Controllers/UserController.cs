@@ -26,6 +26,17 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			await _userService.DeleteUserAsync(userId);
 			return RedirectToAction(nameof(Index));
 		}
+		public async Task<IActionResult> UserSearch(string searchQuery)
+		{
+			if (string.IsNullOrEmpty(searchQuery))
+			{
+				return RedirectToAction("Index");  
+			}
+
+			var users = await _userService.SearchUsersAsync(searchQuery);
+			ViewData["searchQuery"] = searchQuery; 
+			return View("Index", users);
+		}
 
 
 	}

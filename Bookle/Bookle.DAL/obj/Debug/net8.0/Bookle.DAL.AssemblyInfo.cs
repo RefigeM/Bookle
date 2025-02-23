@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bookle.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b63e7833c14ca2bbb0678b5dcde7a2aae4850406")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a668e7af8e3249df1618efc69a335954e9efe916")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bookle.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bookle.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
