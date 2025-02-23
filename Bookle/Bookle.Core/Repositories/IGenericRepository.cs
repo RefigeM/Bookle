@@ -1,4 +1,5 @@
 ﻿using Bookle.Core.Entities.Common;
+using System.Linq.Expressions;
 
 namespace Bookle.Core.Repositories;
 
@@ -13,5 +14,6 @@ public interface IGenericRepository<T> where T : BaseEntity, new()
 	Task<int> SaveAsync();
 	Task RestoreAsync(int id);
 	Task SoftDeleteAsync(int id);
+	IEnumerable<T> Search(Expression<Func<T, bool>> predicate);
 
 }

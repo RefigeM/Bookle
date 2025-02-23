@@ -110,6 +110,10 @@ namespace Bookle.MVC.Controllers
 			await _signManager.SignOutAsync();
 			return RedirectToAction(nameof(Login));
 		}
+        public async Task<IActionResult> AccessDenied()
+        {
+            return View();
+        }
 
-	}
+    }
 }

@@ -149,4 +149,12 @@ public class BookService(IBookRepository _repo, BookleDbContext _context, IAutho
         await _repo.SaveAsync();
 
     }
+
+	public async Task<IEnumerable<Book>> SearchBooksAsync(string searchQuery)
+	{
+		return string.IsNullOrEmpty(searchQuery)
+			? await _repo.GetAllWithDetailsAsync()
+			: await _repo.SearchByTitleAsync(searchQuery);
+	}
+
 }

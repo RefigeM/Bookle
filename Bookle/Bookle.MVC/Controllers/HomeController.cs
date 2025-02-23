@@ -55,10 +55,10 @@ namespace Bookle.MVC.Controllers
 
             var books = await _service.GetAllBooksWithDetailsAsync();
             var authorsWithBookCounts = await _authorService.GetAuthorsWithBookCounts();
-            var blogs=await _blogService.GetAllPostsVisiblePostsAsync();
+            var blogs = await _blogService.GetAllPostsVisiblePostsAsync();
             var comments = _context.Comments
-        .Include(c => c.User) // User məlumatını çəkmək üçün
-        .Include(c => c.Book) // Kitab adını göstərə bilmək üçün
+        .Include(c => c.User)
+        .Include(c => c.Book)
         .ToList();
             foreach (var book in books)
             {
@@ -77,7 +77,7 @@ namespace Bookle.MVC.Controllers
                 TopRatedBooks = topRatedBooks.ToList(),
                 Comments = comments.ToList(),
                 AuthorsWithBookCounts = authorsWithBookCounts,
-                Blogs=blogs.ToList(),
+                Blogs = blogs.ToList(),
 
             };
 
@@ -109,27 +109,15 @@ namespace Bookle.MVC.Controllers
                 ViewBag.Rating = rating > 0 ? rating : 0;
                 ViewBag.UserRating = rating;
 
-                // **Kitab oxunmuş siyahısındadırmı?**
-                //bool isReaded = await _context.ReadLists
-                //    .AnyAsync(r => r.UserId == userId && r.BookId == id && r.IsReaded);
 
-                //ViewBag.IsReaded = isReaded;
             }
             else
             {
                 ViewBag.Rating = 0;
-                //ViewBag.IsReaded = false;
             }
 
             return View(book);
         }
-
-
-        public async Task<IActionResult> AccessDenied()
-        {
-            return View();
-        }
-
         [HttpPost]
         public IActionResult SubmitRating(int bookId, int star)
         {

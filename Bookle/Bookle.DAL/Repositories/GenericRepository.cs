@@ -2,6 +2,7 @@
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Bookle.DAL.Repositories;
 
@@ -55,6 +56,11 @@ public class GenericRepository<T>(BookleDbContext _context) : IGenericRepository
 	public async Task<int> SaveAsync()
 	{
 		return await _context.SaveChangesAsync();
+	}
+
+	public IEnumerable<T> Search(Expression<Func<T, bool>> predicate)
+	{
+		return Table.Where(predicate).ToList();
 	}
 
 	public async Task SoftDeleteAsync(int id)

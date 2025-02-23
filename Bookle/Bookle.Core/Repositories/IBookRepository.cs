@@ -14,9 +14,11 @@ namespace Bookle.Core.Repositories
         IEnumerable<Book> GetBooksByAuthor(string authorName);
         IEnumerable<Book> GetBooksByFormat(Format? format);
         IEnumerable<Format> GetAllFormat();
+		Task<IEnumerable<Book>> SearchByTitleAsync(string title); 
 
 
 
 
-    }
+
+	}
 }

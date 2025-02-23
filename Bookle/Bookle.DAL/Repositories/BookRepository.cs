@@ -96,5 +96,12 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
         return books;
     }
 
-  
+	
+
+	public async Task<IEnumerable<Book>> SearchByTitleAsync(string title)
+	{
+		return await _context.Books
+				   .Where(b => b.Title.Contains(title))
+				   .ToListAsync();
+	}
 }

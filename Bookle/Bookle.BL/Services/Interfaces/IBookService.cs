@@ -27,6 +27,8 @@ public interface IBookService
     FormatBookVM GetBooksByFormat(Format? format);
 
     IEnumerable<Format> GetAllFormats();
+	Task<IEnumerable<Book>> SearchBooksAsync(string searchQuery);
+
 
 
 }
