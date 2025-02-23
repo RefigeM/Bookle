@@ -126,7 +126,7 @@
                                 </div>
                                 <div class="offcanvas__contact-text">
                                     <a href="mailto:info@example.com">
-                                        <span class="mailto:info@example.com">info@example.com</span>
+                                        <span class="mailto:info@example.com">bookle@example.com</span>
                                     </a>
                                 </div>
                             </li>
@@ -148,8 +148,8 @@
                             </li>
                         </ul>
                         <div class="header-button mt-4">
-                            <a href="contact.html" class="theme-btn text-center">
-                                Get A Quote <i class="fa-solid fa-arrow-right-long"></i>
+                            <a asp-action="Index" asp-controller="ContactUs" class="theme-btn text-center">
+                                Contact Us <i class="fa-solid fa-arrow-right-long"></i>
                             </a>
                         </div>
                         <div class="social-icon d-flex align-items-center">
@@ -227,7 +227,6 @@
                                                         <i class="fas fa-angle-down"></i>
                                                     </a>
                                                     <ul class="submenu">
-                                                        <li><a href="about.html">About Us</a></li>
                                                         <li><a asp-action="Index" asp-controller="UserProfile">My profile</a></li>
                                                         <li class="has-dropdown">
 
@@ -262,7 +261,7 @@
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="contact.html">Contact</a>
+                                                    <a asp-controller="ContactUs" asp-action="Index">Contact</a>
                                                 </li>
                                                 <li>
                                                     <div class="single-sidebar-widget">
@@ -319,12 +318,16 @@
 
 
                                 <div class="menu-cart">
-                                    <a asp-controller="Wishlist" asp-action="Index" class="cart-icon">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a asp-controller="UserProfile" asp-action="Index" class="cart-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </a>
+                                    <div>
+
+                                        <a asp-controller="Wishlist" asp-action="Index"><i class="fa-regular fa-heart"></i></a>
+
+                                    </div>
+                                    <div>
+
+                                        <a asp-controller="UserProfile" asp-action="Index"><i class="fa-solid fa-user"></i></a>
+
+                                    </div>
 
 
 
@@ -374,7 +377,6 @@
                                                         <i class="fas fa-angle-down"></i>
                                                     </a>
                                                     <ul class="submenu">
-                                                        <li><a href="about.html">About Us</a></li>
                                                         <li><a asp-action="Index" asp-controller="UserProfile">My profile</a></li>
                                                         <li class="has-dropdown">
                                                         
@@ -409,7 +411,7 @@
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="contact.html">Contact</a>
+                                                    <a asp-controller="ContactUs" asp-action="Index">Contact</a>
                                                 </li>
                                                 <li>
                                                     <div class="single-sidebar-widget">
@@ -466,12 +468,25 @@
                                
 
                                 <div class="menu-cart">
-                                    <a asp-controller="Wishlist" asp-action="Index" class="cart-icon">
+
+                                    <div>
+
+                                        <a asp-controller="Wishlist" asp-action="Index"><i class="fa-regular fa-heart"></i></a>
+
+                                    </div>
+                                       <div>
+                                    
+                                            <a asp-controller="UserProfile" asp-action="Index"><i class="fa-solid fa-user"></i></a>
+                                     
+                                       </div>
+                                       
+
+                                   @*  <a asp-controller="Wishlist" asp-action="Index" class="cart-icon">
                                         <i class="fa-regular fa-heart"></i>
                                     </a>
                                     <a asp-controller="UserProfile" asp-action="Index" class="cart-icon">
                                         <i class="fa-solid fa-user"></i>
-                                    </a>
+                                    </a> *@
 
 
 

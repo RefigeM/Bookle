@@ -7,48 +7,56 @@
       "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\filter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\filter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\userprofile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\userprofile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\filter\\filterbygenre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\filter\\filterbygenre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\contactus\\messagesent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\contactus\\messagesent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\contactus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\contactus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\filter\\filterbyformat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\filter\\filterbyformat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\wishlist\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\wishlist\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\author\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\author\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.core\\entities\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|solutionrelative:bookle.core\\entities\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\author\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\author\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.dal\\migrations\\20250223125705_contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|solutionrelative:bookle.dal\\migrations\\20250223125705_contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.dal\\contexts\\bookledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|solutionrelative:bookle.dal\\contexts\\bookledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\blog\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\blog\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Migrations\\20250223125311_contactUs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bookle.DAL\\Migrations\\20250223125311_contactUs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\wishlist\\getwishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\wishlist\\getwishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\filter\\filterbygenre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\filter\\filterbygenre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,24 +78,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 234,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "IBlogService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
               "RelativeDocumentMoniker": "Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
               "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T20:42:27.983Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "BlogService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BlogService.cs",
               "RelativeDocumentMoniker": "Bookle.BL\\Services\\Implements\\BlogService.cs",
@@ -100,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "IBlogRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBlogRepository.cs",
               "RelativeDocumentMoniker": "Bookle.Core\\Repositories\\IBlogRepository.cs",
@@ -113,132 +122,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FilterByGenre.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\UserProfile\\Index.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\UserProfile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\UserProfile\\Index.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Views\\UserProfile\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:40:59.836Z",
+              "WhenOpened": "2025-02-23T13:50:51.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessageSent.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\ContactUs\\MessageSent.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\ContactUs\\MessageSent.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\ContactUs\\MessageSent.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Views\\ContactUs\\MessageSent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T13:06:05.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FilterByFormat.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:40:33.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Bookle.MVC\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAYwFoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T11:26:23.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Home\\Details.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Home\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Home\\Details.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Home\\Details.cshtml",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:22:30.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\Index.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Filter\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\Index.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Filter\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAA5AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\ContactUs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\ContactUs\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\ContactUs\\Index.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Views\\ContactUs\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:19:44.486Z",
+              "WhenOpened": "2025-02-23T13:00:10.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Blog\\Details.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Blog\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Blog\\Details.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Blog\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:13:31.53Z",
+              "DocumentIndex": 5,
+              "Title": "ContactUsController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\ContactUsController.cs",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Controllers\\ContactUsController.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\ContactUsController.cs",
+              "RelativeToolTip": "Bookle.MVC\\Controllers\\ContactUsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T12:58:51.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Blog\\Index.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Blog\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Blog\\Index.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Blog\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:10:29.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Profile.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Author\\Profile.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Author\\Profile.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Author\\Profile.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Author\\Profile.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:08:13.831Z",
+              "Title": "20250223125705_contactUs.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Migrations\\20250223125705_contactUs.cs",
+              "RelativeDocumentMoniker": "Bookle.DAL\\Migrations\\20250223125705_contactUs.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Migrations\\20250223125705_contactUs.cs",
+              "RelativeToolTip": "Bookle.DAL\\Migrations\\20250223125705_contactUs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T12:57:06.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Author\\Index.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Author\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Author\\Index.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Author\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T11:06:10.034Z",
+              "Title": "ContactMessage.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Entities\\ContactMessage.cs",
+              "RelativeDocumentMoniker": "Bookle.Core\\Entities\\ContactMessage.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Entities\\ContactMessage.cs",
+              "RelativeToolTip": "Bookle.Core\\Entities\\ContactMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T12:55:20.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookleDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Contexts\\BookleDbContext.cs",
+              "RelativeDocumentMoniker": "Bookle.DAL\\Contexts\\BookleDbContext.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Contexts\\BookleDbContext.cs",
+              "RelativeToolTip": "Bookle.DAL\\Contexts\\BookleDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T12:54:37.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "UserProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\UserProfileController.cs",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Controllers\\UserProfileController.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\UserProfileController.cs",
-              "RelativeToolTip": "Bookle.MVC\\Controllers\\UserProfileController.cs",
+              "Title": "20250223125311_contactUs.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Migrations\\20250223125311_contactUs.cs",
+              "RelativeDocumentMoniker": "Bookle.DAL\\Migrations\\20250223125311_contactUs.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Migrations\\20250223125311_contactUs.cs",
+              "RelativeToolTip": "Bookle.DAL\\Migrations\\20250223125311_contactUs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T11:03:55.938Z",
+              "WhenOpened": "2025-02-23T12:53:11.988Z",
               "EditorCaption": ""
             },
             {
@@ -249,22 +232,74 @@
               "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Shared\\_Layout.cshtml*",
               "RelativeToolTip": "Bookle.MVC\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAF4BAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAAAHsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T10:56:44.702Z",
+              "WhenOpened": "2025-02-23T12:33:14.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Bookle.MVC\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAF4AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T10:33:28.059Z",
+              "WhenOpened": "2025-02-23T12:22:05.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FilterByFormat.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Views\\Filter\\FilterByFormat.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T12:16:22.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Wishlist\\Index.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Wishlist\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Wishlist\\Index.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Views\\Wishlist\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T12:15:21.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetWishlist.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Wishlist\\GetWishlist.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Wishlist\\GetWishlist.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Wishlist\\GetWishlist.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Views\\Wishlist\\GetWishlist.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T12:15:20.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FilterByGenre.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Views\\Filter\\FilterByGenre.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T12:15:03.021Z",
               "EditorCaption": ""
             }
           ]

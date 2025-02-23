@@ -6,6 +6,7 @@
     @foreach (var item in Model)
     {
         <li>
+            asp-action="Index" asp-controller="Home"
             @item.Book.Title
             <a asp-action="RemoveFromWishlist" asp-route-bookId="@item.BookId">Remove</a>
         </li>
