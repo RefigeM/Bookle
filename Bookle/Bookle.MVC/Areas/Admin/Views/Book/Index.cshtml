@@ -8,18 +8,19 @@
 	<div class="container-fluid">
 		<div class="row">
 			<!-- main title -->
+			
 			<div class="col-12">
-				<div class="main__title" >
-					<h2 style="margin-right:40px">Books</h2>
-
+				<div class="main__title">
+					<h2 style="margin-right:40px">
+						<a asp-action="Index" asp-controller="Books">Books</a>
+					</h2>
 					<div>
 						<form method="get" action="@Url.Action("BookSearch", "Book")" class="search-form">
 							<input type="text" class="form-control" name="searchQuery" placeholder="Search by book title" value="@ViewData["searchQuery"]" />
 							<button type="submit" class="btn btn-primary">Search</button>
 						</form>
 					</div>
-				
-					<a asp-action="Create" asp-asp-controller="Book" class="main__title-link">add item</a>
+					<a asp-action="Create" asp-asp-controller="Book" class="main__title-link">add book</a>
 				</div>
 			</div>
 			<!-- end main title -->

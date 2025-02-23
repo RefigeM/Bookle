@@ -7,60 +7,52 @@
       "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\areas\\admin\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\areas\\admin\\views\\author\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\areas\\admin\\views\\author\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.dal\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|solutionrelative:bookle.dal\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\areas\\admin\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\areas\\admin\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\areas\\admin\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\areas\\admin\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\areas\\admin\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\areas\\admin\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\implements\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\implements\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\interfaces\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\interfaces\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\implements\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.core\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|solutionrelative:bookle.core\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|solutionrelative:bookle.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.core\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|solutionrelative:bookle.core\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\controllers\\filtercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\controllers\\filtercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.mvc\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31012087-68B1-41A6-9B6E-4D348C1A232C}|Bookle.MVC\\Bookle.MVC.csproj|solutionrelative:bookle.mvc\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.core\\repositories\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|solutionrelative:bookle.core\\repositories\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.core\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|solutionrelative:bookle.core\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.bl\\services\\implements\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F620823-DF1A-4713-86B8-CD00ACBB66F9}|Bookle.BL\\Bookle.BL.csproj|solutionrelative:bookle.bl\\services\\implements\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.dal\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|solutionrelative:bookle.dal\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.dal\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F677A992-5C3A-4AB1-920F-F67DCC997181}|Bookle.DAL\\Bookle.DAL.csproj|solutionrelative:bookle.dal\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|c:\\users\\acer\\onedrive\\masa\u00FCst\u00FC\\final_project\\bookle\\bookle.core\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0CEB48-9907-48BA-A6C4-94DFA4B61F48}|Bookle.Core\\Bookle.Core.csproj|solutionrelative:bookle.core\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,150 +62,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 234,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IBlogService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
-              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
-              "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T20:42:27.983Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BlogService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BlogService.cs",
-              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Implements\\BlogService.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BlogService.cs",
-              "RelativeToolTip": "Bookle.BL\\Services\\Implements\\BlogService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwCIAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T20:42:35.528Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IBlogRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBlogRepository.cs",
-              "RelativeDocumentMoniker": "Bookle.Core\\Repositories\\IBlogRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBlogRepository.cs",
-              "RelativeToolTip": "Bookle.Core\\Repositories\\IBlogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T20:42:55.092Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAQwLAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:46:24.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BookService.cs",
-              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Implements\\BookService.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BookService.cs",
-              "RelativeToolTip": "Bookle.BL\\Services\\Implements\\BookService.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAUwJsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:39:37.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBookService.cs",
-              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Interfaces\\IBookService.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBookService.cs",
-              "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\IBookService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA2wB0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:39:17.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\BookRepository.cs",
-              "RelativeDocumentMoniker": "Bookle.DAL\\Repositories\\BookRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\BookRepository.cs",
-              "RelativeToolTip": "Bookle.DAL\\Repositories\\BookRepository.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAGoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:37:41.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IBookRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBookRepository.cs",
-              "RelativeDocumentMoniker": "Bookle.Core\\Repositories\\IBookRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBookRepository.cs",
-              "RelativeToolTip": "Bookle.Core\\Repositories\\IBookRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:37:22.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Bookle.DAL\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "Bookle.DAL\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAYwEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:36:21.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Bookle.Core\\Repositories\\IGenericRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IGenericRepository.cs",
-              "RelativeToolTip": "Bookle.Core\\Repositories\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:35:55.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SearchController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\SearchController.cs",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Areas\\Admin\\Controllers\\SearchController.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\SearchController.cs",
-              "RelativeToolTip": "Bookle.MVC\\Areas\\Admin\\Controllers\\SearchController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:33:24.564Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Views\\Author\\Index.cshtml",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Areas\\Admin\\Views\\Author\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Views\\Author\\Index.cshtml",
+              "RelativeToolTip": "Bookle.MVC\\Areas\\Admin\\Views\\Author\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T15:54:37.802Z",
               "EditorCaption": ""
             },
             {
@@ -224,48 +85,152 @@
               "RelativeDocumentMoniker": "Bookle.MVC\\Areas\\Admin\\Views\\Book\\Index.cshtml",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Views\\Book\\Index.cshtml*",
               "RelativeToolTip": "Bookle.MVC\\Areas\\Admin\\Views\\Book\\Index.cshtml*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T14:29:22.858Z",
+              "WhenOpened": "2025-02-23T15:54:27.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAALYBAAAAAAAAAAAAAM4BAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T14:28:49.954Z",
+              "DocumentIndex": 2,
+              "Title": "AuthorController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\AuthorController.cs",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Areas\\Admin\\Controllers\\AuthorController.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\AuthorController.cs",
+              "RelativeToolTip": "Bookle.MVC\\Areas\\Admin\\Controllers\\AuthorController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAuwI4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:52:30.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Bookle.MVC\\Areas\\Admin\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAYwKYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:52:05.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BookService.cs",
+              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Implements\\BookService.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\BookService.cs",
+              "RelativeToolTip": "Bookle.BL\\Services\\Implements\\BookService.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAYwJwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:50:29.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthorService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\AuthorService.cs",
+              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Implements\\AuthorService.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Implements\\AuthorService.cs",
+              "RelativeToolTip": "Bookle.BL\\Services\\Implements\\AuthorService.cs",
+              "ViewState": "AgIAANcAAAAAAAAAAAAYwOQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:49:59.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthorService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IAuthorService.cs",
+              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Interfaces\\IAuthorService.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IAuthorService.cs",
+              "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\IAuthorService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:49:43.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\IBookService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:49:35.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IBlogService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
+              "RelativeDocumentMoniker": "Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
+              "RelativeToolTip": "Bookle.BL\\Services\\Interfaces\\IBlogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:49:34.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "FilterController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\FilterController.cs",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Controllers\\FilterController.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Controllers\\FilterController.cs",
-              "RelativeToolTip": "Bookle.MVC\\Controllers\\FilterController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAAAXAAAAAAAAAA==",
+              "Title": "AuthorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\AuthorRepository.cs",
+              "RelativeDocumentMoniker": "Bookle.DAL\\Repositories\\AuthorRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\AuthorRepository.cs",
+              "RelativeToolTip": "Bookle.DAL\\Repositories\\AuthorRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:28:31.917Z",
+              "WhenOpened": "2025-02-23T15:47:20.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "Bookle.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "Bookle.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-23T14:27:53.891Z",
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\BookRepository.cs",
+              "RelativeDocumentMoniker": "Bookle.DAL\\Repositories\\BookRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.DAL\\Repositories\\BookRepository.cs",
+              "RelativeToolTip": "Bookle.DAL\\Repositories\\BookRepository.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAwGgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:47:16.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IAuthorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IAuthorRepository.cs",
+              "RelativeDocumentMoniker": "Bookle.Core\\Repositories\\IAuthorRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IAuthorRepository.cs",
+              "RelativeToolTip": "Bookle.Core\\Repositories\\IAuthorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:47:05.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "Bookle.Core\\Repositories\\IBookRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Masa\u00FCst\u00FC\\Final_Project\\Bookle\\Bookle.Core\\Repositories\\IBookRepository.cs",
+              "RelativeToolTip": "Bookle.Core\\Repositories\\IBookRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:46:57.56Z",
               "EditorCaption": ""
             }
           ]

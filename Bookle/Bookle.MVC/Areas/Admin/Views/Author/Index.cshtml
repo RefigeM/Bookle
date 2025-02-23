@@ -10,10 +10,16 @@
 			<!-- main title -->
 			<div class="col-12">
 				<div class="main__title">
-					
-					<h2 style="display: block;">Authors</h2>
-					
-					<a asp-action="Create" asp-asp-controller="Author" class="main__title-link">add item</a>
+					<h2 style="margin-right:40px">
+						<a asp-action="Index" asp-controller="Author">Authors</a>
+					</h2>
+					<div>
+						<form method="get" action="@Url.Action("AuthorSearch", "Author")" class="search-form">
+							<input type="text" class="form-control" name="searchQuery" placeholder="Search by book title" value="@ViewData["searchQuery"]" />
+							<button type="submit" class="btn btn-primary">Search</button>
+						</form>
+					</div>
+					<a asp-action="Create" asp-asp-controller="Author" class="main__title-link">add author</a>
 				</div>
 			</div>
 			<!-- end main title -->
@@ -99,7 +105,7 @@
 												<i class="ti ti-edit"></i>
 											</a>
 
-											<a asp-action="Delete" asp-controller="author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
+											<a asp-action="Delete" asp-controller="Author" asp-route-id="@item.Id" class="catalog__btn catalog__btn--delete">
 												<i class="ti ti-trash"></i>
 											</a>
 
@@ -115,4 +121,55 @@
 				</div>
 			</div>
 			<!-- end items -->
+<style>
+				/* Dark Mode üçün ümumi tərtibat */
+				body {
+					background-color: #121212;
+					color: #e0e0e0;
+				}
 
+				/* Formanın ümumi dizaynı */
+				.search-form {
+					display: flex;
+					align-items: center;
+					max-width: 600px;
+					margin: 20px auto;
+					background-color: #1f1f1f;
+					padding: 10px;
+					border-radius: 8px;
+				}
+
+					/* Input sahəsi üçün stil */
+					.search-form .form-control {
+						background-color: #333;
+						color: #fff; /* Yazının ağ olması üçün */
+						border: 1px solid #555;
+						border-radius: 5px;
+						padding: 10px;
+						font-size: 16px;
+						flex-grow: 1;
+					}
+
+					/* Button üçün stil */
+					.search-form .btn-primary {
+						background-color: #6200ea;
+						color: white; /* Yazının ağ olması üçün */
+						border: none;
+						border-radius: 5px;
+						padding: 10px 20px;
+						font-size: 16px;
+						cursor: pointer;
+						margin-left: 10px;
+					}
+
+						/* Button hover effekti */
+						.search-form .btn-primary:hover {
+							background-color: #3700b3;
+						}
+
+					/* Placeholder stili */
+					.search-form .form-control::placeholder {
+						color: #bbb;
+					}
+
+			</style>

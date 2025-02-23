@@ -28,5 +28,10 @@ public class AuthorRepository : GenericRepository<Author>, IAuthorRepository
 
 	}
 
-   
+	public async Task<IEnumerable<Author>> SearchByAuthorAsync(string name)
+	{
+		return await _context.Authors
+						   .Where(b => b.AuthorName.Contains(name))
+						   .ToListAsync();
+	}
 }

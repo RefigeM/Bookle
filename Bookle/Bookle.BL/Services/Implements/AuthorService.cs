@@ -60,7 +60,7 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 				AuthorId = a.Id,
 				AuthorName = a.AuthorName,
 				AuthorImg = a.AuthorImage,
-				BookCount = a.Books != null ? a.Books.Count() : 0 // Əgər NULL-dırsa, 0 qaytar
+				BookCount = a.Books != null ? a.Books.Count() : 0 
 			})
 			.ToListAsync();
 	}
@@ -96,7 +96,7 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 						AuthorId = a.Id,
 						AuthorName = a.AuthorName,
 						AuthorImg = a.AuthorImage,
-						BookCount = a.Books != null ? a.Books.Count() : 0 // Əgər NULL-dırsa, 0 qaytar
+						BookCount = a.Books != null ? a.Books.Count() : 0 
 					})
 					.ToListAsync();
 	}
@@ -148,10 +148,7 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 
 
 
-    //   public Task<List<BookCountOfAuthor>> GetBookCountOfAuthor(int? id)
-    //{
-    //	throw new NotImplementedException();
-    //}
+   
 
     public async Task RestoreAuthorAsync(int id)
 	{
@@ -223,4 +220,11 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
             Books = author.Books.ToList()
         };
     }
+
+	public async Task<IEnumerable<Author>> SearchAuthorsAsync(string searchQuery)
+	{
+		return string.IsNullOrEmpty(searchQuery)
+					? await _repo.GetAllAuthorsWithDetailsAsync()
+					: await _repo.SearchByAuthorAsync(searchQuery);
+	}
 }

@@ -20,6 +20,8 @@ public interface IAuthorService
 	Task ToggleAuthorIsFeaturedAsync(int id);
 	Task<List<BookCountOfAuthor>>  GetAuthorsWithBookCounts();
 	Task<AuthorAllDataVM?> GetAuthorWithBooksAsync(int authorId);
+	Task<IEnumerable<Author>> SearchAuthorsAsync(string searchQuery);
+
 
 
 

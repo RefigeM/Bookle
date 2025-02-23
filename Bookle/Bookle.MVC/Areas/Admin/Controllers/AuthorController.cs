@@ -140,6 +140,16 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			return RedirectToAction(nameof(Index));
 
 		}
+		public async Task<IActionResult> AuthorSearch(string searchQuery)
+		{
+			if (string.IsNullOrEmpty(searchQuery))
+			{
+				return RedirectToAction("Index");  // Əgər searchQuery boşdursa, əsas səhifəyə qayıdın
+			}
 
+			var authors = await _service.SearchAuthorsAsync(searchQuery);
+			ViewData["searchQuery"] = searchQuery;  // searchQuery-ni ViewData ilə göndəririk
+			return View("Index", authors); // Axtarış nəticələrini Index view-da göstəririk
+		}
 	}
 }
