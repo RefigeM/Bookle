@@ -5,6 +5,7 @@ using Bookle.BL.ViewModels.CommentVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
+using Bookle.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bookle.BL.Services.Implements;
@@ -119,7 +120,9 @@ public class CommentService(BookleDbContext _context, ICommentRepository _repo) 
 
 	}
 
-
-
-
+	public IQueryable<Comment> GetAllCommentsWithDetails()
+	{
+		var query = _repo.GetAllCommentsWithDetails();
+		return query;
+	}
 }

@@ -13,10 +13,10 @@ public class AuthorRepository : GenericRepository<Author>, IAuthorRepository
 		_context = context;
 	}
 
-	public async Task<List<Author>> GetAllAuthorsWithDetailsAsync()
+	public IQueryable<Author> GetAllAuthorsWithDetailsAsync()
 	{
-		var authors = await _context.Authors
-				.Include(a => a.Books).ToListAsync();
+		var authors =  _context.Authors
+				.Include(a => a.Books);
 		return authors;
 	}
 

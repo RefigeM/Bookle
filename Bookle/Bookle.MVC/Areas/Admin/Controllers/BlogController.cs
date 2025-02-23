@@ -2,6 +2,7 @@
 using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.BlogVMs;
 using Bookle.Core.Entities;
+using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,21 +12,30 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 {
 	[Area("Admin")]
 	[Authorize(Roles = "Admin")]
-	public class BlogController(IBlogService _blogService, IWebHostEnvironment _env, BookleDbContext _context) : Controller
+	public class BlogController(IBlogService _blogService, IWebHostEnvironment _env, BookleDbContext _context,IBlogRepository _blog) : Controller
 	{
-		public async Task<IActionResult> Index()
-		{
-			var blogs = await _blogService.GetAllRecentPostsAsync(); // Buradakı kodun işləyişini yoxlayın
+        public async Task<IActionResult> Index(int? page = 1, int? take = 4)
+        {
+            if (!page.HasValue) page = 1;
+            if (!take.HasValue) take = 4;
 
-			if (blogs == null)
-			{
-				// Əgər burada `blogs` null olarsa, səhifəyə keçilməməli və ya xəbərdarlıq mesajı göstərilməlidir
-				return View(new List<Blog>());
-			}
+            var query = _blog.GetAllRecentPostsAsync();
 
-			return View(blogs);
-		}
-		public ActionResult Create()
+            decimal bookCount = await query.CountAsync();
+
+            var data = await query
+                .Skip(take.Value * (page.Value - 1))
+                .Take(take.Value)
+                .ToListAsync();
+
+            decimal pageCount = Math.Ceiling(bookCount / (decimal)take.Value);
+            ViewBag.PageCount = pageCount;
+            ViewBag.Take = take;
+            ViewBag.AktivePage = page;
+
+            return View(data);
+        }
+        public ActionResult Create()
 		{
 			return View();
 		}

@@ -13,17 +13,19 @@ public class BlogRepository : GenericRepository<Blog>, IBlogRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<Blog>> GetAllPostsVisiblePostsAsync()
+    public IQueryable<Blog> GetAllPostsVisiblePostsAsync()
     {
-        return await _context.Blogs
+        return  _context.Blogs
             .Where(b => b.IsVisibleOnHomepage==true)
-            .OrderByDescending(p => p.CreatedDate).ToListAsync();
+            .OrderByDescending(p => p.CreatedDate).AsQueryable();
     }
 
-    public async  Task<IEnumerable<Blog>> GetAllRecentPostsAsync()
+    public  IQueryable<Blog> GetAllRecentPostsAsync()
     {
-        return await _context.Blogs.OrderByDescending(p => p.CreatedDate).ToListAsync();
-    }
+		return _context.Blogs
+			   .OrderByDescending(p => p.CreatedDate)
+			   .AsQueryable();
+	}
 
 	//public async Task ToggleIsVisible(int id)
 	//{

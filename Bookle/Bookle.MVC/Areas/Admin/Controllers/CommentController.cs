@@ -25,11 +25,28 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 		}
 
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index(int? page = 1, int? take = 4)
 		{
-		
-			return View(await _service.GetCommentWithBookAndUser());
+			if (!page.HasValue) page = 1;
+			if (!take.HasValue) take = 4;
+
+			var query = _service.GetAllCommentsWithDetails();
+
+			decimal bookCount = await query.CountAsync();
+
+			var data = await query
+				.Skip(take.Value * (page.Value - 1))
+				.Take(take.Value)
+				.ToListAsync();
+
+			decimal pageCount = Math.Ceiling(bookCount / (decimal)take.Value);
+			ViewBag.PageCount = pageCount;
+			ViewBag.Take = take;
+			ViewBag.AktivePage = page;
+
+			return View(data);
 		}
+
 		public async Task<IActionResult> Delete(int? id)
 		{
 			if (id == null) return BadRequest();

@@ -89,10 +89,7 @@
                                                 <h3><a href="shop-details.html">@book.Title</a></h3>
                                                 <ul class="price-list">
                                                     <li>$@book.Price</li>
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        3.4 (25)
-                                                    </li>
+                                                    
                                                 </ul>
                                                 @if (book.IsReaded)
                                                 {
@@ -117,11 +114,29 @@
 
                             </div>
                         </div>
-
+                        
                     </div>
 
                 </div>
             </div>
         </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" asp-route-take="@ViewBag.Take" asp-route-page="@((ViewBag.AktivePage > 1 ? ViewBag.AktivePage - 1 : 1))">Previous</a>
+                </li>
+
+                @for (int i = 1; i <= ViewBag.PageCount; i++)
+                {
+                    <li class="page-item @(i == ViewBag.AktivePage ? "active" : "")">
+                        <a class="page-link" asp-route-take="@ViewBag.Take" asp-route-page="@i">@i</a>
+                    </li>
+                }
+
+                <li class="page-item">
+                    <a class="page-link" asp-route-take="@ViewBag.Take" asp-route-page="@((ViewBag.AktivePage < ViewBag.PageCount ? ViewBag.AktivePage + 1 : ViewBag.PageCount))">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </section>

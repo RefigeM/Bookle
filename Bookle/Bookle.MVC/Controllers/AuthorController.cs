@@ -2,6 +2,7 @@
 using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.HomeVM;
 using Bookle.Core.Entities;
+using Bookle.Core.Repositories;
 using Bookle.DAL.Contexts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,8 +16,12 @@ namespace Bookle.MVC.Controllers
         private readonly IRatingService _ratingService;
         private readonly ICommentService _commentService;
         private readonly IAuthorService _authorService;
-        private readonly UserManager<User> _userManager; 
+        private readonly UserManager<User> _userManager;
         private readonly IBookService _bookService;
+
+
+
+
 
         public AuthorController(BookleDbContext context, IBookService bookService, IRatingService ratingService, ICommentService commentService, IAuthorService authorService, UserManager<User> userManager)
         {
@@ -25,7 +30,8 @@ namespace Bookle.MVC.Controllers
             _commentService = commentService;
             _authorService = authorService;
             _userManager = userManager;
-            _bookService = bookService; 
+            _bookService = bookService;
+
         }
 
         public async Task<IActionResult> Index()
@@ -45,8 +51,8 @@ namespace Bookle.MVC.Controllers
             var books = await _bookService.GetAllBooksWithDetailsAsync();
             var authorsWithBookCounts = await _authorService.GetAuthorsWithBookCounts();
             var comments = _context.Comments
-        .Include(c => c.User) // User məlumatını çəkmək üçün
-        .Include(c => c.Book) // Kitab adını göstərə bilmək üçün
+        .Include(c => c.User) 
+        .Include(c => c.Book) 
         .ToList();
             foreach (var book in books)
             {

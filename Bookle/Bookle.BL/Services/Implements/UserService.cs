@@ -108,10 +108,9 @@ public class UserService : IUserService
 
         if (user == null)
         {
-            return null; // İstifadəçi tapılmadıqda null qaytarılır
+            return null;
         }
 
-        // User modelini ViewModel formatına çeviririk
         var userProfile = new UserProfileVM
         {
             UserId = user.Id,
@@ -130,5 +129,9 @@ public class UserService : IUserService
 					? await _userRepository.GetAllAsync()
 					: await _userRepository.SearchByUserAsync(searchQuery);
 	}
+    public IQueryable<User> GetAllUsers()
+    {
+        return _userRepository.GetAllUsers(); 
+    }
 }
 

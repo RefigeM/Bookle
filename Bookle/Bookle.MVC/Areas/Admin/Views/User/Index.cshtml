@@ -68,6 +68,26 @@
 						</tbody>
 					</table>
 				</div>
+				<nav aria-label="Page navigation example">
+					<ul class="pagination">
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@((ViewBag.AktivePage > 1 ? ViewBag.AktivePage - 1 : 1))" asp-route-take="@ViewBag.Take">Previous</a>
+						</li>
+
+						@for (int i = 1; i <= ViewBag.PageCount; i++)
+						{
+							<li class="page-item @(i == ViewBag.AktivePage ? "active" : "")">
+								<a class="page-link" asp-route-page="@i" asp-route-take="@ViewBag.Take">@i</a>
+							</li>
+						}
+
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@((ViewBag.AktivePage < ViewBag.PageCount ? ViewBag.AktivePage + 1 : ViewBag.PageCount))" asp-route-take="@ViewBag.Take">Next</a>
+						</li>
+					</ul>
+				</nav>
+
+
 			</div>
 			<!-- end items -->
 

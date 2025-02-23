@@ -4,8 +4,8 @@ namespace Bookle.Core.Repositories;
 
 public interface IBlogRepository :IGenericRepository<Blog>
 {
-    Task<IEnumerable<Blog>> GetAllRecentPostsAsync();
-    Task<IEnumerable<Blog>> GetAllPostsVisiblePostsAsync();
+	IQueryable<Blog> GetAllRecentPostsAsync();
+	IQueryable<Blog> GetAllPostsVisiblePostsAsync();
     //Task ToggleIsVisible(int id);
 
 

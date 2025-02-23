@@ -10,10 +10,29 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 	[Authorize(Roles = "Admin")]
 	public class UserController(IUserService _userService, IWebHostEnvironment _env, IAuthorService _service) : Controller
     {
-        public async Task<IActionResult> Index()
-        {
-            return View(await _userService.GetAllUsersAsync());
-        }
+		public async Task<IActionResult> Index(int? page = 1, int? take = 10)
+		{
+			if (!page.HasValue) page = 1;
+			if (!take.HasValue) take = 10;
+
+			var query = _userService.GetAllUsers();
+
+			decimal userCount = await query.CountAsync();
+
+			var data = await query
+				.Skip(take.Value * (page.Value - 1))
+				.Take(take.Value)
+				.ToListAsync();
+
+			decimal pageCount = Math.Ceiling(userCount / (decimal)take.Value);
+			ViewBag.PageCount = pageCount;
+			ViewBag.Take = take;
+			ViewBag.AktivePage = page;
+
+			return View(data);
+		}
+
+
 
 		[HttpGet("Delete/{userId}")]
 		public async Task<IActionResult> Delete([FromRoute] string userId)

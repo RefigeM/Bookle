@@ -18,6 +18,7 @@ public interface ICommentService
 	Task<List<Comment>> GetCommentWithBookAndUser();
 	Task<Comment> ToggleApprovalAsync(int id);
 	Task<Comment> GetCommentIdtWithDetailsAsync(int id);
+	IQueryable<Comment> GetAllCommentsWithDetails();
 
 
 }

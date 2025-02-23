@@ -40,5 +40,13 @@ namespace Bookle.DAL.Repositories
 
 			return comment;
 		}
+		public IQueryable<Comment> GetAllCommentsWithDetails()
+		{
+			return _context.Comments
+				.Include(c => c.User)  
+				.Include(c => c.Book)  
+				.AsQueryable();
+		}
+
 	}
 }

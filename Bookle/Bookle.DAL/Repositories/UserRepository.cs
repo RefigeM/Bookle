@@ -63,5 +63,8 @@ public class UserRepository : IUserRepository
 
 	}
 
-
+    public IQueryable<User> GetAllUsers()
+    {
+        return _context.Users.AsQueryable();
+    }
 }

@@ -4,6 +4,7 @@ using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.BlogVMs;
 using Bookle.Core.Entities;
 using Bookle.Core.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Bookle.BL.Services.Implements;
 
@@ -34,22 +35,14 @@ public class BlogService : IBlogService
 
     public async Task<IEnumerable<Blog>> GetAllPostsVisiblePostsAsync()
     {
-        var blogs = await _repo.GetAllRecentPostsAsync();
-        if (blogs == null || !blogs.Any())
-        {
-            return new List<Blog>();
-        }
-        return blogs;
-    }
+		var blogs = await _repo.GetAllPostsVisiblePostsAsync().ToListAsync();
+		return blogs ?? new List<Blog>();
+	}
 
     public async Task<IEnumerable<Blog>> GetAllRecentPostsAsync()
 	{
-		var blogs = await _repo.GetAllRecentPostsAsync();
-		if (blogs == null || !blogs.Any())
-		{
-			return new List<Blog>();
-		}
-		return blogs;
+		var blogs = await _repo.GetAllRecentPostsAsync().ToListAsync();
+		return blogs ?? new List<Blog>();
 	}
 
 	public async Task<Blog> GetBlogByIdAsync(int id)

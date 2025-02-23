@@ -13,6 +13,7 @@ public interface IUserRepository
 	void Delete(User user);
 	Task<int> SaveAsync();
 	Task<IEnumerable<User>> SearchByUserAsync(string user);
+	IQueryable<User> GetAllUsers();
 
 
 }

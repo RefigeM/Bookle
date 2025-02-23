@@ -16,5 +16,6 @@ public interface IUserService
 	Task<bool> AuthenticateUserAsync(string email, string password);
 	Task<UserProfileVM> GetUserProfileAsync(string userId);
 	Task<IEnumerable<User>> SearchUsersAsync(string searchQuery);
+	IQueryable<User> GetAllUsers();
 
 }

@@ -2,7 +2,10 @@
 using Bookle.BL.Services.Interfaces;
 using Bookle.BL.ViewModels.FilterVMs;
 using Bookle.Core.Enums;
+using Bookle.Core.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace Bookle.MVC.Controllers
 {
@@ -10,19 +13,38 @@ namespace Bookle.MVC.Controllers
     public class FilterController : Controller
     {
         private readonly IBookService _service;
-        private readonly IAuthorService _authorService;
+		private readonly IAuthorService _authorService;
+        private readonly IBookRepository _book;
 
-        public FilterController(IBookService service)
+
+		public FilterController(IBookService service, IBookRepository book)
         {
             _service = service;
+            _book = book;   
         }
 
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page = 1, int? take = 4)
         {
-            return View(await _service.GetAllBooksWithDetailsAsync());
+            if (!page.HasValue) page = 1;
+            if (!take.HasValue) take = 4;
 
+            var query = _book.GetAllBooksWithDetails();
+
+            decimal bookCount = await query.CountAsync();
+
+            var data = await query
+                .Skip(take.Value * (page.Value - 1))
+                .Take(take.Value)
+                .ToListAsync();
+
+            decimal pageCount = Math.Ceiling(bookCount / (decimal)take.Value);
+            ViewBag.PageCount = pageCount;
+            ViewBag.Take = take;
+            ViewBag.AktivePage = page;
+
+            return View(data);
         }
 
         public IActionResult Search(string query)

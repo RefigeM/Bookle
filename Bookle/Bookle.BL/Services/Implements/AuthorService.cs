@@ -20,13 +20,7 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 		await _repo.SaveAsync();
 	}
 
-	//public async Task DeleteAuthorAsync(int id)
-	//{
-	//	var author = await _repo.GetByIdAsync(id);
-	//	if (author == null) throw new NotFoundException();
-	//	await _repo.DeleteAsync(id);
-	//	await _repo.SaveAsync();
-	//}
+	
 	public async Task DeleteAuthorAsync(int id)
 	{
 		var author = await _repo.GetByIdAsync(id);
@@ -67,24 +61,17 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 
     public async Task<IEnumerable<Author>> GetAllAuthorsAsync()
     {
-        var authors = await _repo.GetAllAuthorsWithDetailsAsync();
-
-        if (authors == null || !authors.Any())
-        {
-            return new List<Author>(); 
-        }
-
-        return authors; 
+        var query = _repo.GetAllAuthorsWithDetailsAsync();
+        return await query.ToListAsync();
     }
 
 
 
     public async Task<List<Author>> GetAllAuthorsWithBooksAsync()
 	{
-		var authors = await _repo.GetAllAuthorsWithDetailsAsync();
-		if (authors.Count == 0) throw new NotFoundException();
-		return authors;
-	}
+        var query = _repo.GetAllAuthorsWithDetailsAsync();
+        return await query.ToListAsync();
+    }
 
 	public async Task<List<AuthorAllDataVM>> GetAllFeaturedAuthorProfilesAsync()
 	{
@@ -224,7 +211,7 @@ public class AuthorService(IAuthorRepository _repo, BookleDbContext _context) : 
 	public async Task<IEnumerable<Author>> SearchAuthorsAsync(string searchQuery)
 	{
 		return string.IsNullOrEmpty(searchQuery)
-					? await _repo.GetAllAuthorsWithDetailsAsync()
+					?  _repo.GetAllAuthorsWithDetailsAsync()
 					: await _repo.SearchByAuthorAsync(searchQuery);
 	}
 }

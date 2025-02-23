@@ -6,5 +6,6 @@ namespace Bookle.Core.Repositories
 	{
 		Task<List<Comment>> GetAllCommentsWithDetailsAsync();
 		Task<Comment> GetCommentWithBookUserAuthorWithIdAsync(int id);
+		IQueryable<Comment> GetAllCommentsWithDetails();
 	}
 }
