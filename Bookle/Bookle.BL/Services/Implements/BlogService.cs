@@ -32,7 +32,17 @@ public class BlogService : IBlogService
 		await _repo.SaveAsync();
 	}
 
-	public async Task<IEnumerable<Blog>> GetAllRecentPostsAsync()
+    public async Task<IEnumerable<Blog>> GetAllPostsVisiblePostsAsync()
+    {
+        var blogs = await _repo.GetAllRecentPostsAsync();
+        if (blogs == null || !blogs.Any())
+        {
+            return new List<Blog>();
+        }
+        return blogs;
+    }
+
+    public async Task<IEnumerable<Blog>> GetAllRecentPostsAsync()
 	{
 		var blogs = await _repo.GetAllRecentPostsAsync();
 		if (blogs == null || !blogs.Any())

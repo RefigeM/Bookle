@@ -18,11 +18,13 @@ namespace Bookle.MVC.Controllers
         private readonly IRatingService _ratingService;
         private readonly ICommentService _commentService;
         private readonly IAuthorService _authorService;
+        private readonly IBlogService _blogService;
         private readonly UserManager<User> _userManager;
 
 
 
-        public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService, ICommentService commentService, IAuthorService authorService, UserManager<User> userManager)
+
+        public HomeController(BookleDbContext context, IBookService service, IRatingService ratingService, ICommentService commentService, IAuthorService authorService, UserManager<User> userManager, IBlogService blogService)
         {
             _context = context;
             _service = service;
@@ -30,6 +32,7 @@ namespace Bookle.MVC.Controllers
             _commentService = commentService;
             _authorService = authorService;
             _userManager = userManager;
+            _blogService = blogService;
 
         }
 
@@ -52,6 +55,7 @@ namespace Bookle.MVC.Controllers
 
             var books = await _service.GetAllBooksWithDetailsAsync();
             var authorsWithBookCounts = await _authorService.GetAuthorsWithBookCounts();
+            var blogs=await _blogService.GetAllPostsVisiblePostsAsync();
             var comments = _context.Comments
         .Include(c => c.User) // User məlumatını çəkmək üçün
         .Include(c => c.Book) // Kitab adını göstərə bilmək üçün
@@ -72,7 +76,9 @@ namespace Bookle.MVC.Controllers
                 Authors = authors.ToList(),
                 TopRatedBooks = topRatedBooks.ToList(),
                 Comments = comments.ToList(),
-                AuthorsWithBookCounts = authorsWithBookCounts
+                AuthorsWithBookCounts = authorsWithBookCounts,
+                Blogs=blogs.ToList(),
+
             };
 
             return View(model);

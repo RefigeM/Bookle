@@ -15,6 +15,8 @@ namespace Bookle.BL.ViewModels.HomeVM
         public List<Comment> Comments { get; set; } = new List<Comment>();
         public List<User> Users { get; set; } = new List<User>();
         public List<BookCountOfAuthor> AuthorsWithBookCounts { get; set; } = new List<BookCountOfAuthor>();
+        public List<Blog> Blogs { get; set; } = new List<Blog>();
+
 
 
 

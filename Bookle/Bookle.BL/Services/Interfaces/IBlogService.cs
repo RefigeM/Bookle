@@ -13,5 +13,6 @@ public interface IBlogService
 	Task RestoreBlogAsync(int id);
 	Task SoftDeketeAsync(int id);
     Task ToggleIsVisible(int id);
+    Task<IEnumerable<Blog>> GetAllPostsVisiblePostsAsync();
 
 }

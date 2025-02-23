@@ -13,7 +13,13 @@ public class BlogRepository : GenericRepository<Blog>, IBlogRepository
         _context = context;
     }
 
-  
+    public async Task<IEnumerable<Blog>> GetAllPostsVisiblePostsAsync()
+    {
+        return await _context.Blogs
+            .Where(b => b.IsVisibleOnHomepage==true)
+            .OrderByDescending(p => p.CreatedDate).ToListAsync();
+    }
+
     public async  Task<IEnumerable<Blog>> GetAllRecentPostsAsync()
     {
         return await _context.Blogs.OrderByDescending(p => p.CreatedDate).ToListAsync();
