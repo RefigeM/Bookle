@@ -13,12 +13,12 @@
 
                         <div class="single-sidebar-widget">
                             <div class="wid-title">
-                                <h5>Genres</h5>
+                                <h5>Filter</h5>
                             </div>
                             <div class="categories-list">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li>
-                                    <form asp-action="FilterByGenre" asp-controller="Filter" method="get">
+                                    <form asp-action="FilterByGenre" asp-controller="Filter" method="get" style="margin-bottom: 20px">
                                         <input type="hidden" name="genre" value="Fiction" />
                                         <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
                                             Genres
@@ -35,12 +35,12 @@
                                     </li>
 
                                        <li></li>
-                                    <form asp-action="FilterByAuthor" asp-controller="Filter" method="get">
+                                    @* <form asp-action="FilterByAuthor" asp-controller="Filter" method="get">
                                         <input type="hidden" name="genre" value="Refiqe" />
                                         <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
                                             Authors
                                         </button>
-                                    </form>
+                                    </form> *@
                                     
                                 </ul>
                             </div>
@@ -80,12 +80,6 @@
 
                                                     </li>
 
-                                                    <li>
-                                                        <a href="shop-cart.html">
-                                                            <img class="icon" src="~/assets/img/icon/shuffle.svg"
-                                                                 alt="svg-icon">
-                                                        </a>
-                                                    </li>
                                                     <li>
                                                         <a asp-action="Details" asp-controller="Home" asp-route-id="@book.Id"><i class="far fa-eye"></i></a>
                                                     </li>
