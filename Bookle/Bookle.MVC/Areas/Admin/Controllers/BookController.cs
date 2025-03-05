@@ -188,12 +188,12 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 		{
 			if (string.IsNullOrEmpty(searchQuery))
 			{
-				return RedirectToAction("Index");  // Əgər searchQuery boşdursa, əsas səhifəyə qayıdın
+				return RedirectToAction("Index");  
 			}
 
 			var books = await _service.SearchBooksAsync(searchQuery);
-			ViewData["searchQuery"] = searchQuery;  // searchQuery-ni ViewData ilə göndəririk
-			return View("Index", books); // Axtarış nəticələrini Index view-da göstəririk
+			ViewData["searchQuery"] = searchQuery;  
+			return View("Index", books); 
 		}
 
 

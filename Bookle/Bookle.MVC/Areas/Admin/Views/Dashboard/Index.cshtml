@@ -11,14 +11,49 @@
 			</div>
 			
 		</div>
-
+		<div style="display:flex">
+			<div class="col-12 col-sm-6 col-xl-3" style="margin-right:8px;">
+				<div class="stats">
+					<span>Total count of Books </span>
+					<!-- or .red -->
+					<p>@Model.TotalBookCount</p>
+					<i class="ti ti-diamond"></i>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-xl-3" style="margin-right:8px;">
+				<div class="stats">
+					<span>Total count of Users</span>
+					<!-- or .red -->
+					<p>@Model.TotalUserCount</p>
+					<i class="ti ti-users"></i>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-xl-3" style="margin-right:10px;">
+					<div class="stats">
+						<span>Total count of Authors </span>
+						<!-- or .red -->
+					<p>@Model.TotalAuthorCount</p>
+					<i class="ti ti-users"></i>
+				</div>
+				</div>
+			<div class="col-12 col-sm-6 col-xl-3" style="margin-right:10px;">
+				<div class="stats">
+					<span>Total count of Blogs</span>
+					<!-- or .red -->
+					<p>@Model.TotalBlogCount</p>
+					<i class="ti ti-eye"></i>
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<!-- dashbox -->
 			<div class="col-12 col-xl-6">
 				<div class="dashbox">
 					<div class="dashbox__title">
 						<h3><i class="ti ti-trophy"></i> Top books</h3>
-
+						<div class="dashbox__wrap">
+							<a asp-action="Index" asp-controller="Book">View All</a>
+						</div>
 						
 					</div>
 
@@ -67,7 +102,9 @@
 				<div class="dashbox">
 					<div class="dashbox__title">
 						<h3><i class="ti ti-movie"></i> Latest authors</h3>
-
+						<div class="dashbox__wrap">
+							<a asp-action="Index" asp-controller="Author">View All</a>
+						</div>
 					
 					</div>
 
@@ -110,7 +147,9 @@
 				<div class="dashbox">
 					<div class="dashbox__title">
 						<h3><i class="ti ti-users"></i>Users</h3>
-
+						<div class="dashbox__wrap">
+							<a asp-action="Index" asp-controller="User">View All</a>
+						</div>
 						
 					</div>
 
@@ -156,7 +195,9 @@
 				<div class="dashbox">
 					<div class="dashbox__title">
 						<h3><i class="ti ti-star-half-filled"></i> Latest blogs</h3>
-
+						<div class="dashbox__wrap">
+							<a asp-action="Index" asp-controller="Blog">View All</a>
+						</div>
 					
 					</div>
 

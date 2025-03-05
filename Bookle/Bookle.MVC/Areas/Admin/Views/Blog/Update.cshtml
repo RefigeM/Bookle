@@ -31,7 +31,7 @@
                     <div class="d-flex">
                         <img src="@Url.Content(Model.FileUrl)" width="70" />
                     </div>
-                    <label class="text-white" asp-for="File">File</label>
+                    <label class="text-white" asp-for="File">File*</label>
                     <input class="form-control" asp-for="File" style="color: white; background-color: #1a191f;">
                     <span class="text-danger" asp-validation-for="File"></span>
                     @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })

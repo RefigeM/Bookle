@@ -24,16 +24,31 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 			var users = _userService.GetAllUsers();
 
+            var lastFiveBooks = books.OrderByDescending(b => b.Id).Take(5).ToList();
+            var lastFiveAuthors = authors.OrderByDescending(a => a.Id).Take(5).ToList();
+            var lastFiveBlogs = blogs.OrderByDescending(b => b.Id).Take(5).ToList();
+            var lastFiveTopRatedBooks = topRatedBooks.OrderByDescending(b => b.Id).Take(5).ToList();
+            var lastFiveUsers = users.OrderByDescending(b => b.Id).Take(5).ToList();
 
+			var totalBookCount = books.Count();
+			var totalBlogCount = blogs.Count();
+			var totalAuthorCount = authors.Count();
+			var totalUserCount = users.Count();
 
 			var model = new DashboardVm
 			{
-				Books = books.ToList(),
-				Authors = authors.ToList(),
-				Blogs = blogs.ToList(),
-				TopRatedBooks = topRatedBooks.ToList(),
-				Users= users.ToList()
-			};
+				Books = lastFiveBooks,
+				Authors = lastFiveAuthors,
+				Blogs = lastFiveBlogs,
+				TopRatedBooks = lastFiveTopRatedBooks,
+				Users= lastFiveUsers,
+				TotalBookCount = totalBookCount,
+				TotalBlogCount = totalBlogCount,	
+				TotalAuthorCount = totalAuthorCount,	
+				TotalUserCount = totalUserCount
+
+
+            };
 
 			return View(model);
 		}

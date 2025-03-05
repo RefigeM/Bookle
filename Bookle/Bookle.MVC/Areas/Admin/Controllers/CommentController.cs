@@ -64,18 +64,14 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 
 			var comment = await _service.GetCommentByIdAsync(id);
 
-			// Books və Users məlumatlarını asinxron şəkildə əldə edirik
 			var books = await _bookService.GetAllBooksAsync();
 			var users = await _userService.GetAllUsersAsync();
 
-			// Books və Users-in null olub-olmadığını yoxlayırıq
 			if (books == null || users == null)
 			{
-				// Burada hər hansı bir səhv mesajı göstərmək olar
-				return View("Error");  // Səhv səhifəsi göstərmək
+				return View("Error");  
 			}
 
-			// ViewBag vasitəsilə məlumatları göndəririk
 			ViewBag.Books = new SelectList(books, "Id", "Title", comment.BookId);  // `BookId`-ni seçilmiş olaraq göstəririk
 			ViewBag.Authors = new SelectList(users, "Id", "UserName", comment.UserId); // `UserId`-ni seçilmiş olaraq göstəririk
 
@@ -129,8 +125,18 @@ namespace Bookle.MVC.Areas.Admin.Controllers
 			return RedirectToAction(nameof(Index));
 
 		}
+        public async Task<IActionResult> CommentUserSearch(string searchQuery)
+        {
+            if (string.IsNullOrEmpty(searchQuery))
+            {
+                return RedirectToAction("Index");
+            }
+
+            var users = await _userService.SearchUsersAsync(searchQuery);
+            ViewData["searchQuery"] = searchQuery;
+            return View("Index", users);
+        }
 
 
-
-	}
+    }
 }

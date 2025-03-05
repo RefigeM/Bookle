@@ -6,9 +6,12 @@ namespace Bookle.BL.ViewModels.BlogVMs
    public  class BlogUpdateVM
     {
         [Required(ErrorMessage = "Title is required.")]
+        [MaxLength(64, ErrorMessage = "Content must be less than 64.")]
+
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Content is required.")]
+        [MaxLength(4000, ErrorMessage = "Content must be less than 4000.")]
         public string Content { get; set; }
 
 
